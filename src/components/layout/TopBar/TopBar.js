@@ -1,8 +1,11 @@
 import React from 'react';
+import Button from '../../common/Button/Button';
 
 const TopBar = () => (
   <div>
-    <a href="/#">Contact Me</a>
+    <Button>
+      Contact Me
+    </Button>
   </div>
 );
 
