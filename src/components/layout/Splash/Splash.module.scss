@@ -12,11 +12,11 @@
   font-family: $font-anton;
   font-size: 45px;
   margin-top: 20vh;
-  animation: slideInRight 2s;
+  animation: slideInRight $animation-time;
 }
 
 .subtitle {
-  animation: slideInLeft 2s;
+  animation: slideInLeft $animation-time;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -29,5 +29,5 @@
   padding: 18px;
   border: 2px solid $icon-border-color;
   border-radius: 50px;
-  animation: fadeInResize 2s;
+  animation: fadeInResize $animation-time;
 }
