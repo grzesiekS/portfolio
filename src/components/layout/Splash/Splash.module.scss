@@ -29,6 +29,5 @@
   padding: 18px;
   border: 2px solid $icon-border-color;
   border-radius: 50px;
-  animation-duration: 2s;
-  animation-name: fadeInResize;
+  animation: fadeInResize 2s;
 }
