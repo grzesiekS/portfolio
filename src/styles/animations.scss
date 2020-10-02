@@ -1,0 +1,33 @@
+@import "./settings.scss";
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  to { opacity: 1;}
+}
+
+@keyframes slideInRight {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    left: -100%;
+  }
+
+  to {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
