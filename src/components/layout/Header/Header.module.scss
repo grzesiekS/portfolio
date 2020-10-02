@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  position: relative;
 
   &::before {
     position: absolute;
@@ -16,5 +17,16 @@
     height: 0;
     border-top: 50vh solid $triangle-color;
     border-right: 50vh solid transparent;
+  }
+  &::after {
+    position: absolute;
+    content: '';
+    top: 100%;
+    left: 100%;
+    transform: translate(-100%, -100%);
+    width: 0;
+    height: 0;
+    border-bottom: 50vh solid $triangle-color;
+    border-left: 50vh solid transparent;
   }
 }
