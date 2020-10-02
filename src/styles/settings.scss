@@ -4,6 +4,7 @@ $font-anton: 'Anton', sans-serif;
 $font-raleway: 'Raleway', sans-serif;
 
 $mintyGreen: #0be881;
+$white: #ffffff;
 
 // GLOBAL
 $scrollbar-color: $mintyGreen;
@@ -11,3 +12,10 @@ $scrollbar-color: $mintyGreen;
 // SPLASH
 $icon-color: $mintyGreen;
 $icon-border-color: $mintyGreen;
+
+// BUTTON
+$button-border-color: $mintyGreen;
+$button-content-color: $mintyGreen;
+
+$button-content-hover-color: $white;
+$button-bg-hover-color: $mintyGreen;

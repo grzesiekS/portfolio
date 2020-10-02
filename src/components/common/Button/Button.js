@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './Button.module.scss';
 
 const Button =({ children, Type = 'a'}) => {
   return (
-    <Type href='/#'>
+    <Type href='/#' className={styles.main} >
       {children}
     </Type>
   );
