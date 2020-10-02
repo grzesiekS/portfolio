@@ -5,7 +5,7 @@ import styles from './TopBar.module.scss';
 const TopBar = () => (
   <div className={styles.container}>
     <div className={styles['flex-box']}>
-      <Button>
+      <Button animation={true}>
         Contact Me
       </Button>
     </div>
