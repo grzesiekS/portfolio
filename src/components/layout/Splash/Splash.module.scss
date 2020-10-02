@@ -1,15 +1,25 @@
-@import '../../../styles/global.scss';
+@import "../../../styles/global.scss";
+@import "../../../styles/animations.scss";
 
 .container {
   max-width: $container-width;
   margin: auto;
   text-align: center;
+  position: relative;
 }
 
 .title {
   font-family: $font-anton;
   font-size: 45px;
   margin-top: 20vh;
+  animation: slideInRight 2s;
+}
+
+.subtitle {
+  animation: slideInLeft 2s;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .icon {
@@ -19,4 +29,6 @@
   padding: 18px;
   border: 2px solid $icon-border-color;
   border-radius: 50px;
+  animation-duration: 2s;
+  animation-name: fadeIn;
 }
