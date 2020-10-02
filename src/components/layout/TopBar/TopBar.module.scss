@@ -1,0 +1,12 @@
+@import '../../../styles/settings.scss';
+
+.container {
+  max-width: $container-width;
+  margin: auto;
+}
+
+.flex-box {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 25px;
+}
