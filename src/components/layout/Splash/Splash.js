@@ -7,7 +7,7 @@ const Splash = () => (
   <div className={styles.container}>
     <h1 className={styles.title}>Front-end Developer</h1>
     <FontAwesomeIcon className={styles.icon}  icon={faLaptopCode} />
-    <h2 className={styles.subtitle}>I code websites from scratches</h2>
+    <h2 className={styles.subtitle}>I code websites from scratche</h2>
   </div>
 );
 
