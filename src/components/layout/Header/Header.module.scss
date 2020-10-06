@@ -9,24 +9,24 @@
   position: relative;
 
   &::before {
-    position: absolute;
+    position: fixed;
     content: '';
     top: 0;
     left: 0;
     width: 0;
     height: 0;
-    border-top: 50vh solid $triangle-color;
-    border-right: 50vh solid transparent;
+    border-top: 30vh solid $triangle-color;
+    border-right: 30vh solid transparent;
   }
   &::after {
-    position: absolute;
+    position: fixed;
     content: '';
     top: 100%;
     left: 100%;
     transform: translate(-100%, -100%);
     width: 0;
     height: 0;
-    border-bottom: 50vh solid $triangle-color;
-    border-left: 50vh solid transparent;
+    border-bottom: 30vh solid $triangle-color;
+    border-left: 30vh solid transparent;
   }
 }
