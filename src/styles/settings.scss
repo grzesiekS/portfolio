@@ -7,6 +7,10 @@ $container-width: 1078px;
 
 $animation-time: 2s;
 
+// SECTION TITLE
+$section-title-font-size: 35px;
+$secition-title-font-family: $font-anton;
+
 // COLORS
 $mintyGreen: #67f890;
 $white: #ffffff;
@@ -33,3 +37,7 @@ $button-content-color: $mintyGreen;
 
 $button-content-hover-color: $white;
 $button-bg-hover-color: $mintyGreen;
+
+// ABOUT ME
+$border-color: $mintyGreen;
+$text-color: $mintyGreen;
