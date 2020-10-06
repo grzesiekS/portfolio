@@ -13,6 +13,7 @@
   font-size: 45px;
   margin-top: 20vh;
   animation: slideInRight $animation-time;
+  color: $title-color;
 }
 
 .subtitle {
@@ -20,6 +21,7 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  color: $subtitle-color;
 }
 
 .icon {

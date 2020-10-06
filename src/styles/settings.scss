@@ -7,8 +7,13 @@ $container-width: 1078px;
 
 $animation-time: 2s;
 
-$mintyGreen: #0be881;
+// COLORS
+$mintyGreen: #67f890;
 $white: #ffffff;
+$darkGrey: #545454;
+
+// BODY
+$bg-color: $darkGrey;
 
 // GLOBAL
 $scrollbar-color: $mintyGreen;
@@ -19,6 +24,8 @@ $triangle-color: $mintyGreen;
 // SPLASH
 $icon-color: $mintyGreen;
 $icon-border-color: $mintyGreen;
+$title-color: $mintyGreen;
+$subtitle-color: $white;
 
 // BUTTON
 $button-border-color: $mintyGreen;
