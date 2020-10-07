@@ -1,5 +1,5 @@
 import React from 'react';
-import AboutMe from '../features/AboutMe/AboutMe';
+import AboutMe from '../features/AboutMe/AboutMeContainer';
 
 const Homepage = () => (
   <AboutMe />

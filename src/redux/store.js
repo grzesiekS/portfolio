@@ -2,6 +2,7 @@ import {combineReducers, createStore} from 'redux';
 import aboutMeData from '../data/aboutMe.json';
 
 import globalReducer from './globalRedux';
+import aboutMeReducer from './aboutMeRedux';
 
 const initialState = {
   aboutMe: aboutMeData,
@@ -9,7 +10,7 @@ const initialState = {
 
 // define reducers
 const reducers = {
-
+  aboutMe: aboutMeReducer,
 };
 
 // add blank reducers for initial state properties without reducers

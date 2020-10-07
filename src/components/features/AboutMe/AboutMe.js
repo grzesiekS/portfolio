@@ -1,13 +1,28 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './AboutMe.module.scss';
 
-const AboutMe = () => (
-  <div className={styles.container}>
-    <div className={styles.aboutMe}>
-      <h1 className={styles.title}>About Me</h1>
-      <p className={styles.content}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur consequat sodales sapien, id gravida est interdum sit amet. Nulla tempor ut magna sollicitudin interdum. Praesent in tincidunt nisl. Aenean molestie, nisl ut iaculis faucibus, risus magna dictum velit, vel imperdiet dolor ligula a diam. Sed et varius diam, a auctor magna. Suspendisse tempus posuere urna id tempor. Duis molestie nec urna eget ultricies.</p>
+const AboutMe = (props) => {
+
+  const {header, description} = props.content[0];
+
+  return (
+    <div className={styles.container}>
+      <div className={styles.aboutMe}>
+        <h1 className={styles.title}>{header}</h1>
+        <p className={styles.content}>{description}</p>
+      </div>
     </div>
-  </div>
-);
+  );
+};
+
+AboutMe.propTypes = {
+  content: PropTypes.arrayOf(
+    PropTypes.shape({
+      header: PropTypes.string,
+      description: PropTypes.string,
+    })
+  ),
+};
 
 export default AboutMe;
