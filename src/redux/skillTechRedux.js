@@ -1,11 +1,11 @@
 /* SELECTORS */
-
-export const getEnAboutMe = ({aboutMe}) => aboutMe.filter(about => about.language === 'EN');
+export const getSkills = ({skillTech}) => skillTech.skillTech.skills;
+export const getTech = ({skillTech}) => skillTech.skillTech.technologies;
 
 /* ACTIONS */
 
 // action name creator
-// const reducerName = 'aboutMe';
+// const reducerName = 'skillTech';
 // const createActionName = name => `app/${reducerName}/${name}`;
 
 // Action types

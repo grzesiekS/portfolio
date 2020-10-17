@@ -1,16 +1,20 @@
 import {combineReducers, createStore} from 'redux';
 import aboutMeData from '../data/aboutMe.json';
+import skillTechData from '../data/skillTech.json';
 
 import globalReducer from './globalRedux';
 import aboutMeReducer from './aboutMeRedux';
+import skillTechReducer from './skillTechRedux';
 
 const initialState = {
   aboutMe: aboutMeData,
+  skillTech: skillTechData,
 };
 
 // define reducers
 const reducers = {
   aboutMe: aboutMeReducer,
+  skillTech: skillTechReducer,
 };
 
 // add blank reducers for initial state properties without reducers

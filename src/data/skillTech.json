@@ -1,85 +1,82 @@
-[
+{ 
+  "skillTech":
     {
-        "SkillTech": [
-            {
-              "Skills": [
-                "Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum"
-              ],
-              "Technologies": [
-                {
-                  "TechName": "HTML",
-                  "Icon": ""
-                },
-                {
-                  "TechName": "CSS",
-                  "Icon": ""
-                },
-                {
-                  "TechName": "SASS",
-                  "Icon": ""
-                },
-                {
-                  "TechName": "Bootstrap",
-                  "Icon": ""
-                },
-                {
-                  "TechName": "npm",
-                  "Icon": ""
-                },
-                {
-                  "TechName": "JavaScript",
-                  "Icon": ""
-                },
-                {
-                  "TechName": "React",
-                  "Icon": ""
-                },
-                {
-                  "TechName": "Redux",
-                  "Icon": ""
-                },
-                {
-                  "TechName": "MaterialUI",
-                  "Icon": ""
-                },
-                {
-                  "TechName": "MongoDB",
-                  "Icon": ""
-                },
-                {
-                  "TechName": "Mongoose",
-                  "Icon": ""
-                },
-                {
-                  "TechName": "Node.js",
-                  "Icon": ""
-                },
-                {
-                  "TechName": "HTML",
-                  "Icon": ""
-                },
-                {
-                  "TechName": "Express",
-                  "Icon": ""
-                },
-                {
-                  "TechName": "Handlebars",
-                  "Icon": ""
-                },
-                {
-                  "TechName": "VBA",
-                  "Icon": ""
-                },
-                {
-                  "TechName": "Java",
-                  "Icon": ""
-                },
-                {
-                  "TechName": "SQL",
-                  "Icon": ""
-                }
-              ]
-            }
-        ]
+      "skills": [
+      "Lorem Ipsum", "Lorem Ipsum", "Lorem Ipsum"
+      ],
+      "technologies": [
+        {
+          "TechName": "HTML",
+          "Icon": ""
+        },
+        {
+          "TechName": "CSS",
+          "Icon": ""
+        },
+        {
+          "TechName": "SASS",
+          "Icon": ""
+        },
+        {
+          "TechName": "Bootstrap",
+          "Icon": ""
+        },
+        {
+          "TechName": "npm",
+          "Icon": ""
+        },
+        {
+          "TechName": "JavaScript",
+          "Icon": ""
+        },
+        {
+          "TechName": "React",
+          "Icon": ""
+        },
+        {
+          "TechName": "Redux",
+          "Icon": ""
+        },
+        {
+          "TechName": "MaterialUI",
+          "Icon": ""
+        },
+        {
+          "TechName": "MongoDB",
+          "Icon": ""
+        },
+        {
+          "TechName": "Mongoose",
+          "Icon": ""
+        },
+        {
+          "TechName": "Node.js",
+          "Icon": ""
+        },
+        {
+          "TechName": "HTML",
+          "Icon": ""
+        },
+        {
+          "TechName": "Express",
+          "Icon": ""
+        },
+        {
+          "TechName": "Handlebars",
+          "Icon": ""
+        },
+        {
+          "TechName": "VBA",
+          "Icon": ""
+        },
+        {
+          "TechName": "Java",
+          "Icon": ""
+        },
+        {
+          "TechName": "SQL",
+          "Icon": ""
+        }
+      ]
     }
-]
+}
