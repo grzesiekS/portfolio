@@ -30,3 +30,15 @@
     border-left: 30vh solid transparent;
   }
 }
+
+@media (max-width: 1024px) {
+  .root {
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+}
