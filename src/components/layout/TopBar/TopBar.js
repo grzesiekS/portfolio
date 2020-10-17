@@ -5,7 +5,17 @@ import styles from './TopBar.module.scss';
 const TopBar = () => (
   <div className={styles.container}>
     <div className={styles['flex-box']}>
-      <Button animation={true}>
+      <nav>
+        <ul>
+          <li>
+            <a href='#aboutMe'>About Me</a>
+          </li>
+          <li>
+            <a href='#techSkills'>{`Tech & Skills`}</a>
+          </li>
+        </ul>
+      </nav>
+      <Button href='/#' animation={true}>
         Contact Me
       </Button>
     </div>

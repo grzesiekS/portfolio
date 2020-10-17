@@ -8,7 +8,7 @@ const AboutMe = (props) => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.aboutMe}>
+      <div id='aboutMe' className={styles.aboutMe}>
         <h1 className={styles.title}>{header}</h1>
         <p className={styles.content}>{description}</p>
       </div>

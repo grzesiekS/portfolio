@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Button.module.scss';
 
-const Button =({ children, Type = 'a', animation = false}) => {
+const Button =({ children, Type = 'a', animation = false, ...props}) => {
   const classes = [];
 
   classes.push(styles.main);
@@ -10,7 +10,7 @@ const Button =({ children, Type = 'a', animation = false}) => {
   if(animation) classes.push(styles.fadeIn);
 
   return (
-    <Type href='/#' className={classes.join(' ')} >
+    <Type className={classes.join(' ')} {...props}>
       {children}
     </Type>
   );

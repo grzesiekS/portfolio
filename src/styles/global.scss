@@ -1,5 +1,9 @@
 @import './settings.scss';
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: $font-raleway;
   margin: 0;
