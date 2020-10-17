@@ -4,75 +4,75 @@
   ],
   "technologies": [
     {
-      "TechName": "HTML",
+      "techName": "HTML",
       "Icon": ""
     },
     {
-      "TechName": "CSS",
+      "techName": "CSS",
       "Icon": ""
     },
     {
-      "TechName": "SASS",
+      "techName": "SASS",
       "Icon": ""
     },
     {
-      "TechName": "Bootstrap",
+      "techName": "Bootstrap",
       "Icon": ""
     },
     {
-      "TechName": "npm",
+      "techName": "npm",
       "Icon": ""
     },
     {
-      "TechName": "JavaScript",
+      "techName": "JavaScript",
       "Icon": ""
     },
     {
-      "TechName": "React",
+      "techName": "React",
       "Icon": ""
     },
     {
-      "TechName": "Redux",
+      "techName": "Redux",
       "Icon": ""
     },
     {
-      "TechName": "MaterialUI",
+      "techName": "MaterialUI",
       "Icon": ""
     },
     {
-      "TechName": "MongoDB",
+      "techName": "MongoDB",
       "Icon": ""
     },
     {
-      "TechName": "Mongoose",
+      "techName": "Mongoose",
       "Icon": ""
     },
     {
-      "TechName": "Node.js",
+      "techName": "Node.js",
       "Icon": ""
     },
     {
-      "TechName": "HTML",
+      "techName": "HTML",
       "Icon": ""
     },
     {
-      "TechName": "Express",
+      "techName": "Express",
       "Icon": ""
     },
     {
-      "TechName": "Handlebars",
+      "techName": "Handlebars",
       "Icon": ""
     },
     {
-      "TechName": "VBA",
+      "techName": "VBA",
       "Icon": ""
     },
     {
-      "TechName": "Java",
+      "techName": "Java",
       "Icon": ""
     },
     {
-      "TechName": "SQL",
+      "techName": "SQL",
       "Icon": ""
     }
   ]
