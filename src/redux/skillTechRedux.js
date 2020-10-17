@@ -1,6 +1,6 @@
 /* SELECTORS */
-export const getSkills = ({skillTech}) => skillTech.skillTech.skills;
-export const getTech = ({skillTech}) => skillTech.skillTech.technologies;
+export const getSkills = ({skillTech}) => skillTech.skills;
+export const getTech = ({skillTech}) => skillTech.technologies;
 
 /* ACTIONS */
 
