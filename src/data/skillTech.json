@@ -12,10 +12,6 @@
       "icon": ""
     },
     {
-      "name": "SASS",
-      "icon": ""
-    },
-    {
       "name": "JavaScript",
       "icon": ""
     },
@@ -33,6 +29,10 @@
     }
   ],
   "technologies": [
+    {
+      "name": "SASS",
+      "icon": ""
+    },
     {
       "name": "Bootstrap",
       "icon": ""
