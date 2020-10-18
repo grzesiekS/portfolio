@@ -1,79 +1,74 @@
 { 
   "skills": [
-   "Lorem Ipsum1", "Lorem Ipsum2", "Lorem Ipsum3"
+    {
+      "name": "HTML",
+      "icon": ""
+    },
+    {
+      "name": "CSS",
+      "icon": ""
+    },
+    {
+      "name": "SASS",
+      "icon": ""
+    },
+    {
+      "name": "JavaScript",
+      "icon": ""
+    },
+    {
+      "name": "VBA",
+      "icon": ""
+    },
+    {
+      "name": "Java",
+      "icon": ""
+    },
+    {
+      "name": "SQL",
+      "icon": ""
+    }
   ],
   "technologies": [
     {
-      "techName": "HTML",
-      "Icon": ""
+      "name": "Bootstrap",
+      "icon": ""
     },
     {
-      "techName": "CSS",
-      "Icon": ""
+      "name": "npm",
+      "icon": ""
     },
     {
-      "techName": "SASS",
-      "Icon": ""
+      "name": "React",
+      "icon": ""
     },
     {
-      "techName": "Bootstrap",
-      "Icon": ""
+      "name": "Redux",
+      "icon": ""
     },
     {
-      "techName": "npm",
-      "Icon": ""
+      "name": "MaterialUI",
+      "icon": ""
     },
     {
-      "techName": "JavaScript",
-      "Icon": ""
+      "name": "MongoDB",
+      "icon": ""
     },
     {
-      "techName": "React",
-      "Icon": ""
+      "name": "Mongoose",
+      "icon": ""
     },
     {
-      "techName": "Redux",
-      "Icon": ""
+      "name": "Node.js",
+      "icon": ""
     },
     {
-      "techName": "MaterialUI",
-      "Icon": ""
+      "name": "Express",
+      "icon": ""
     },
     {
-      "techName": "MongoDB",
-      "Icon": ""
-    },
-    {
-      "techName": "Mongoose",
-      "Icon": ""
-    },
-    {
-      "techName": "Node.js",
-      "Icon": ""
-    },
-    {
-      "techName": "HTML",
-      "Icon": ""
-    },
-    {
-      "techName": "Express",
-      "Icon": ""
-    },
-    {
-      "techName": "Handlebars",
-      "Icon": ""
-    },
-    {
-      "techName": "VBA",
-      "Icon": ""
-    },
-    {
-      "techName": "Java",
-      "Icon": ""
-    },
-    {
-      "techName": "SQL",
-      "Icon": ""
+      "name": "Handlebars",
+      "icon": ""
     }
   ]
 }

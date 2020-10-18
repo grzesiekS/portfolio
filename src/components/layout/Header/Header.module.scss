@@ -17,6 +17,7 @@
     height: 0;
     border-top: 30vh solid $triangle-color;
     border-right: 30vh solid transparent;
+    z-index: -1;
   }
   &::after {
     position: fixed;
@@ -28,6 +29,7 @@
     height: 0;
     border-bottom: 30vh solid $triangle-color;
     border-left: 30vh solid transparent;
+    z-index: -1;
   }
 }
 

@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import styles from './SkillTechList.module.scss';
-import Skill from '../Skill/Skill';
-import Techs from '../Techs/Techs';
 
 const SkillTechList = (props) => (
   <div id='techSkills' className={styles.container}>
@@ -11,12 +9,16 @@ const SkillTechList = (props) => (
     <div className={styles.flexBox}>
       <div className={styles.skills}>
         {props.skills.map(skill => (
-          <Skill key={props.skills.indexOf(skill)} skillName={skill} />
+          <p key={props.skills.indexOf(skill)}>
+            {skill.name}
+          </p>
         ))}
       </div>
       <div className={styles.techs}>
         {props.techs.map(tech => (
-          <Techs key={props.techs.indexOf(tech)} techName={tech.techName}/>
+          <p key={props.techs.indexOf(tech)}>
+            {tech.name}
+          </p>
         ))}
       </div>
     </div>

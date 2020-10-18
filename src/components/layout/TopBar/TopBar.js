@@ -6,7 +6,7 @@ const TopBar = () => (
   <div className={styles.container}>
     <div className={styles['flex-box']}>
       <nav>
-        <ul>
+        <ul className={styles.navBar}>
           <li>
             <a href='#aboutMe'>About Me</a>
           </li>
