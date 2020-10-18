@@ -1,0 +1,24 @@
+@import "../../../styles/settings.scss";
+
+.container {
+    max-width: $container-width;
+    margin: 120px auto;
+}
+
+.title {
+    text-align: center;
+    font-family: $font-anton;
+    color: $skillTechList-title-color;
+}
+
+.flexBox {
+    display: flex;
+    justify-content: space-around;
+}
+
+.techs, .skills {
+    border: $border-width solid $skillTechList-border-color;
+    border-radius: $border-radius;
+    width: 250px;
+    text-align: center;
+}

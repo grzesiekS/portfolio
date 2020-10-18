@@ -4,7 +4,8 @@ $font-anton: 'Anton', sans-serif;
 $font-raleway: 'Raleway', sans-serif;
 
 $container-width: 1078px;
-
+$border-radius: 5px;
+$border-width: 3px;
 $animation-time: 2s;
 
 // SECTION TITLE
@@ -46,3 +47,7 @@ $text-color: $white;
 // TOPBAR
 $topbar-nav-text-color: $white;
 $topbar-nav-link-hover-color: $mintyGreen;
+
+// SKILL TECH LIST
+$skillTechList-title-color: $mintyGreen;
+$skillTechList-border-color: $mintyGreen;
