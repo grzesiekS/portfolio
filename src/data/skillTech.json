@@ -1,4 +1,7 @@
 { 
+  "title": "Skills and Technologies",
+  "skillTitle": "Languages that I know",
+  "techTitle": "Technologies that I know",
   "skills": [
     {
       "name": "HTML",

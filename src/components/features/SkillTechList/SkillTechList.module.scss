@@ -25,9 +25,16 @@
     font-weight: 700;
     position: relative;
 
+    h2 {
+        border-bottom: $border-width solid $skillTechList-border-color;
+        margin: 0;
+        padding: 15px 0;
+    }
+
     &::before {
         position: absolute;
         content: '';
+        z-index: -1;
         top: 0;
         left: 0;
         width: 0;
@@ -39,6 +46,7 @@
     &::after {
         position: absolute;
         content: '';
+        z-index: -1;
         top: 100%;
         left: 100%;
         transform: translate(-100%, -100%);
