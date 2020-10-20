@@ -9,6 +9,7 @@
 
 .flex-box {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   margin-top: 25px;
@@ -31,5 +32,15 @@
         color: $topbar-nav-link-hover-color;
       }
     }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+@media(max-width: 315px) {
+  .navBar {
+    flex: 100%;
   }
 }
