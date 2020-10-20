@@ -19,6 +19,7 @@
 .subtitle {
   animation: slideInLeft $animation-time;
   position: absolute;
+  width: 100%;
   left: 50%;
   transform: translateX(-50%);
   color: $subtitle-color;
@@ -32,4 +33,20 @@
   border: 2px solid $icon-border-color;
   border-radius: 50px;
   animation: fadeInResize $animation-time;
+}
+
+@media (max-width: 375px) {
+  .title {
+    font-size: 35px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 320px) {
+  .title {
+    font-size: 30px;
+  }
 }
