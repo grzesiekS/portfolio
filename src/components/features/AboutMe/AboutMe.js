@@ -19,10 +19,11 @@ const AboutMe = (props) => {
 AboutMe.propTypes = {
   content: PropTypes.arrayOf(
     PropTypes.shape({
-      header: PropTypes.string,
-      description: PropTypes.string,
+      header: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
     })
-  ),
+  ).isRequired,
 };
+
 
 export default AboutMe;
