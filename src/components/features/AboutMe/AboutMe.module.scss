@@ -2,14 +2,13 @@
 
 .container {
   max-width: $container-width;
-  margin: auto;
+  margin: $margin-top-buttom-section auto;
   text-align: center;
 }
 
 .aboutMe {
-  margin-top: 150px;
-  border: 5px solid $border-color;
-  border-radius: 15px;
+  border: $border-width solid $border-color;
+  border-radius: $border-radius;
 }
 
 .title {

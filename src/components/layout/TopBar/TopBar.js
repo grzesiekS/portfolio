@@ -11,7 +11,7 @@ const TopBar = () => (
             <a href='#aboutMe'>About Me</a>
           </li>
           <li>
-            <a href='#techSkills'>{`Tech & Skills`}</a>
+            <a href='#techSkills'>{`Tools & Skills`}</a>
           </li>
         </ul>
       </nav>

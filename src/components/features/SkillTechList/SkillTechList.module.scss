@@ -2,7 +2,7 @@
 
 .container {
     max-width: $container-width;
-    margin: 120px auto;
+    margin: $margin-top-buttom-section auto;
 }
 
 .title {
@@ -62,5 +62,5 @@
     .techs, .skills {
         flex: 100%;
         margin: 25px 0;
-    }   
+    }
 }
