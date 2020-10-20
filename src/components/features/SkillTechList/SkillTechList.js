@@ -28,11 +28,11 @@ const SkillTechList = (props) => (
 );
 
 SkillTechList.propTypes = {
-  skills: PropTypes.array,
-  techs: PropTypes.array,
-  title: PropTypes.string,
-  skillTitle: PropTypes.string,
-  techTitle: PropTypes.string,
+  skills: PropTypes.array.isRequired,
+  techs: PropTypes.array.isRequired,
+  title: PropTypes.string.isRequired,
+  skillTitle: PropTypes.string.isRequired,
+  techTitle: PropTypes.string.isRequired,
 };
 
 export default SkillTechList;
