@@ -1,6 +1,7 @@
 import {combineReducers, createStore} from 'redux';
 import aboutMeData from '../data/aboutMe.json';
 import skillTechData from '../data/skillTech.json';
+import myProjectsData from '../data/myProjects.json';
 
 import globalReducer from './globalRedux';
 import aboutMeReducer from './aboutMeRedux';
@@ -9,6 +10,7 @@ import skillTechReducer from './skillTechRedux';
 const initialState = {
   aboutMe: aboutMeData,
   skillTech: skillTechData,
+  myProjects: myProjectsData,
 };
 
 // define reducers
