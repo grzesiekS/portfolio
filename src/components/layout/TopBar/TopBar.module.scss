@@ -26,7 +26,7 @@
     a {
       text-decoration: none;
       color: $topbar-nav-text-color;
-      font-weight: 700;
+      font-weight: $bold-font-weight;
 
       &:hover {
         color: $topbar-nav-link-hover-color;
