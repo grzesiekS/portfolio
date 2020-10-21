@@ -4,3 +4,13 @@
   max-width: $container-width;
   margin: $margin-top-buttom-section auto;
 }
+
+.myProjects {
+  text-align: center;
+}
+
+.title {
+  font-size: $section-title-font-size;
+  font-family: $secition-title-font-family;
+  color: $myProjects-title-color;
+}
