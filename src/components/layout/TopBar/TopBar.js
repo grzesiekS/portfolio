@@ -13,6 +13,9 @@ const TopBar = () => (
           <li>
             <a href='#techSkills'>{`Tools & Skills`}</a>
           </li>
+          <li>
+            <a href='#myProjects'>My Projects</a>
+          </li>
         </ul>
       </nav>
       <Button href='/#' animation={true}>
