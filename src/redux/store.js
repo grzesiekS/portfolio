@@ -6,6 +6,7 @@ import myProjectsData from '../data/myProjects.json';
 import globalReducer from './globalRedux';
 import aboutMeReducer from './aboutMeRedux';
 import skillTechReducer from './skillTechRedux';
+import myProjectsReducer from './myProjectsRedux';
 
 const initialState = {
   aboutMe: aboutMeData,
@@ -17,6 +18,7 @@ const initialState = {
 const reducers = {
   aboutMe: aboutMeReducer,
   skillTech: skillTechReducer,
+  myProjects: myProjectsReducer,
 };
 
 // add blank reducers for initial state properties without reducers
