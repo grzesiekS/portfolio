@@ -1,5 +1,6 @@
 /* SELECTORS */
 export const getProjectsTitle = ({myProjects}) => myProjects.title;
+export const getProjectsDesc = ({myProjects}) => myProjects.description;
 export const getProjects = ({myProjects}) => myProjects.projects;
 
 /* ACTIONS */

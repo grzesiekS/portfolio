@@ -6,12 +6,13 @@ import styles from './MyProjects.module.scss';
 class MyProject extends React.Component {
   render() {
 
-    const {title} = this.props;
+    const {title, description} = this.props;
 
     return(
       <div className={styles.container}>
         <div id='myProjects' className={styles.myProjects}>
           <h1 className={styles.title}>{title}</h1>
+          <p>{description}</p>
         </div>
       </div>
     );
@@ -20,6 +21,7 @@ class MyProject extends React.Component {
 
 MyProject.propTypes = {
   title: PropTypes.string,
+  description: PropTypes.string,
 };
 
 export default MyProject;

@@ -7,6 +7,12 @@
 
 .myProjects {
   text-align: center;
+
+  p {
+    color: $myProjects-text-color;
+    font-weight: $bold-font-weight;
+    margin-top: 45px;
+  }
 }
 
 .title {

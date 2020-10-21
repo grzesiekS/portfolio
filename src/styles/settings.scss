@@ -3,11 +3,13 @@
 $font-anton: 'Anton', sans-serif;
 $font-raleway: 'Raleway', sans-serif;
 
+// SETTINGS
 $container-width: 1078px;
 $border-radius: 10px;
 $border-width: 3px;
 $animation-time: 2s;
 $margin-top-buttom-section: 200px;
+$bold-font-weight: 700;
 
 // SECTION TITLE
 $section-title-font-size: 35px;
@@ -57,3 +59,4 @@ $skillTechList-triangle-color: $mintyGreen;
 
 // MY PROJECTS
 $myProjects-title-color: $mintyGreen;
+$myProjects-text-color: $white;
