@@ -5,15 +5,15 @@
   "skills": [
     {
       "name": "HTML",
-      "icon": ""
+      "icon": "faHtml5"
     },
     {
       "name": "CSS",
-      "icon": ""
+      "icon": "faCss3Alt"
     },
     {
       "name": "JavaScript",
-      "icon": ""
+      "icon": "faJsSquare"
     },
     {
       "name": "VBA",
@@ -21,7 +21,7 @@
     },
     {
       "name": "Java",
-      "icon": ""
+      "icon": "faJava"
     },
     {
       "name": "SQL",
@@ -31,7 +31,7 @@
   "technologies": [
     {
       "name": "SASS",
-      "icon": ""
+      "icon": "faSass"
     },
     {
       "name": "Bootstrap",
@@ -39,11 +39,11 @@
     },
     {
       "name": "npm",
-      "icon": ""
+      "icon": "faNpm"
     },
     {
       "name": "React",
-      "icon": ""
+      "icon": "faReact"
     },
     {
       "name": "Redux",
@@ -63,7 +63,7 @@
     },
     {
       "name": "Node.js",
-      "icon": ""
+      "icon": "faNodeJs"
     },
     {
       "name": "Express",

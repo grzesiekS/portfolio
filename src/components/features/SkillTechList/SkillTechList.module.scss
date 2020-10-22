@@ -26,6 +26,11 @@
     font-weight: $bold-font-weight;
     position: relative;
 
+    svg {
+      margin-right: 15px;
+      color: $skillTechList-icon-color;
+    }
+
     h2 {
         border-bottom: $border-width solid $skillTechList-border-color;
         margin: 0;
