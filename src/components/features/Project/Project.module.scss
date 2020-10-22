@@ -1,1 +1,29 @@
 @import "../../../styles/settings.scss";
+
+.project {
+  border: $border-width solid;
+  padding: 20px;
+  flex: 28%;
+}
+
+.subtitle {
+  margin-top: 0;
+  font-family: $font-anton;
+  color: $project-title-color;
+}
+
+.buttons {
+  a {
+    display: block;
+    width: 40%;
+    margin: 15px auto;
+  }
+}
+
+.image {
+  object-fit: contain;
+  width: 12vh;
+  height: 12vh;
+  border-radius: 50%;
+  background-color: $project-image-bg-color;
+}

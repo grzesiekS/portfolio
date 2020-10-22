@@ -6,11 +6,13 @@ import Button from '../../common/Button/Button';
 
 const Project = (props) => (
   <div className={styles.project}>
-    <h2>{props.title}</h2>
-    <img src={props.picture} alt={props.title} />
+    <h2 className={styles.subtitle}>{props.title}</h2>
+    <img className={styles.image} src={props.picture} alt={props.title} />
     <p>{props.description}</p>
-    <Button href={props.link} target="_blank">Link</Button>
-    <Button href={props.gitLink} target="_blank">GitHub Link</Button>
+    <div className={styles.buttons}>
+      <Button href={props.link} target="_blank">Link</Button>
+      <Button href={props.gitLink} target="_blank">GitHub Link</Button>
+    </div>
   </div>
 );
 
