@@ -20,3 +20,10 @@
   font-family: $secition-title-font-family;
   color: $myProjects-title-color;
 }
+
+.flexBox {
+  margin-top: 90px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+}

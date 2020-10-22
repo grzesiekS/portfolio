@@ -3,13 +3,15 @@
   "description": "Collection of my recent projects that I have created. There will be more...",
   "projects": [
     {
+      "_id": "1",
       "title": "Project 1",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac velit vel purus condimentum placerat. Phasellus semper eu leo vitae viverra. Mauris efficitur nisl a justo tempor scelerisque. Ut vitae lobortis erat, nec pulvinar nisi.",
       "link": "http://www.myProject.com",
       "gitLink": "http://www.gitMyProject.com",
-      "picture": "img.jpg"
+      "picture": "./images/AdministrationPanel.jpg"
     },
     {
+      "_id": "2",
       "title": "Project 2",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac velit vel purus condimentum placerat. Phasellus semper eu leo vitae viverra. Mauris efficitur nisl a justo tempor scelerisque. Ut vitae lobortis erat, nec pulvinar nisi.",
       "link": "http://www.myProject.com",
@@ -17,6 +19,7 @@
       "picture": "img.jpg"
     },
     {
+      "_id": "3",
       "title": "Project 3",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac velit vel purus condimentum placerat. Phasellus semper eu leo vitae viverra. Mauris efficitur nisl a justo tempor scelerisque. Ut vitae lobortis erat, nec pulvinar nisi.",
       "link": "http://www.myProject.com",
