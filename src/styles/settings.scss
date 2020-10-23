@@ -10,6 +10,10 @@ $border-width: 3px;
 $animation-time: 2s;
 $margin-top-buttom-section: 200px;
 $bold-font-weight: 700;
+$transition: 1s all;
+
+// PROJECT SETTINGS
+$rotateIcon-font-size: 64px;
 
 // SECTION TITLE
 $section-title-font-size: 35px;
@@ -66,3 +70,5 @@ $myProjects-text-color: $white;
 $project-title-color: $mintyGreen;
 $project-border-color: $mintyGreen;
 $project-image-bg-color: $white;
+$project-rotate-icon-color: $white;
+$project-rotate-icon-hover-color: $mintyGreen;

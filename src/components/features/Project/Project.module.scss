@@ -27,3 +27,22 @@
   border-radius: 50%;
   background-color: $project-image-bg-color;
 }
+
+.rotate {
+  .rotateIcon {
+    font-size: $rotateIcon-font-size;
+    color: $project-rotate-icon-color;
+    transition: $transition;
+
+    &:hover {
+      cursor: pointer;
+      color: $project-rotate-icon-hover-color;
+    }
+  }
+}
+
+.description {
+  p {
+    margin-top: 0;
+  }
+}
