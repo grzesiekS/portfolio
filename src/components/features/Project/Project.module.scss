@@ -42,7 +42,13 @@
 }
 
 .description {
+  display: none;
+
   p {
     margin-top: 0;
+  }
+
+  &.active {
+    display: block;
   }
 }

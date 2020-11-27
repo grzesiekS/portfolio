@@ -9,6 +9,11 @@ import Button from '../../common/Button/Button';
 
 
 class Project extends React.Component {
+  state = {
+    descSecVis: false,
+    descSecStyles: [styles.description],
+  }
+
   render() {
 
     const {title, description, link, gitLink, picture} = this.props;
@@ -19,10 +24,10 @@ class Project extends React.Component {
         <img className={styles.image} src={picture} alt={title} />
 
         <div className={styles.rotate}>
-          <FontAwesomeIcon icon={faAngleDown} className={styles.rotateIcon} />
+          <FontAwesomeIcon icon={faAngleDown} className={styles.rotateIcon} onClick={() => this.descSecClassChange()} />
         </div>
 
-        <section className={styles.description}>
+        <section className={this.state.descSecStyles.join(' ')}>
           <p>{description}</p>
           <div className={styles.buttons}>
             <Button href={link} target="_blank">Link</Button>
