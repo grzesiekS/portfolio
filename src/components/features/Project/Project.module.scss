@@ -4,6 +4,11 @@
   border: $border-width solid;
   padding: 20px;
   flex: 28%;
+  margin-right: 12px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .subtitle {
@@ -29,6 +34,8 @@
 }
 
 .rotate {
+  margin: 0;
+
   .rotateIcon {
     font-size: $rotateIcon-font-size;
     color: $project-rotate-icon-color;

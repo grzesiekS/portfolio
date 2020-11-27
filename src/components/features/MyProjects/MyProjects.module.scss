@@ -26,12 +26,4 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-
-  div {
-    margin-right: 12px;
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
 }
