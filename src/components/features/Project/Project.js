@@ -14,9 +14,14 @@ class Project extends React.Component {
     descSecStyles: [styles.description],
   }
 
+  fliterDescriptionData = () => (
+    this.props.descriptionData
+      .filter(data => data.language === this.props.globalLanguage)[0].description
+  );
+
   render() {
 
-    const {title, description, link, gitLink, picture} = this.props;
+    const {title, link, gitLink, picture} = this.props;
 
     return (
       <div className={styles.project}>
@@ -28,7 +33,7 @@ class Project extends React.Component {
         </div>
 
         <section className={this.state.descSecStyles.join(' ')}>
-          <p>{description}</p>
+          <p>{this.fliterDescriptionData()}</p>
           <div className={styles.buttons}>
             <Button href={link} target="_blank">Link</Button>
             <Button href={gitLink} target="_blank">GitHub Link</Button>
@@ -41,10 +46,11 @@ class Project extends React.Component {
 
 Project.propTypes = {
   title: PropTypes.string,
-  description: PropTypes.string,
+  descriptionData: PropTypes.array,
   link: PropTypes.string,
   gitLink: PropTypes.string,
   picture: PropTypes.string,
+  globalLanguage: PropTypes.string,
 };
 
 export default Project;

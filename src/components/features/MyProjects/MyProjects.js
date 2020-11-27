@@ -7,7 +7,7 @@ import Project from '../Project/Project';
 class MyProject extends React.Component {
   render() {
 
-    const {title, description, projects} = this.props;
+    const {title, description, projects, globalLanguage} = this.props;
 
     return(
       <div className={styles.container}>
@@ -16,7 +16,7 @@ class MyProject extends React.Component {
           <p>{description}</p>
           <div className={styles.flexBox}>
             {projects.map(project => (
-              <Project key={project._id} {...project} />
+              <Project key={project._id} globalLanguage={globalLanguage} {...project} />
             ))}
           </div>
         </div>
@@ -29,6 +29,7 @@ MyProject.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   projects: PropTypes.array,
+  globalLanguage: PropTypes.string,
 };
 
 export default MyProject;
