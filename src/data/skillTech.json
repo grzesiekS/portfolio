@@ -1,7 +1,12 @@
 {
-  "title": "Skills and Tools",
-  "skillTitle": "Languages that I know",
-  "techTitle": "Tools that I know",
+  "data": [
+    {
+      "title": "Skills and Tools",
+      "skillTitle": "Languages that I know",
+      "techTitle": "Tools that I know",
+      "language": "EN"
+    }
+  ],
   "skills": [
     {
       "name": "HTML",

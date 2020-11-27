@@ -1,9 +1,8 @@
 /* SELECTORS */
 export const getSkills = ({skillTech}) => skillTech.skills;
 export const getTech = ({skillTech}) => skillTech.technologies;
-export const getSkillTechTitle = ({skillTech}) => skillTech.title;
-export const getSkillTitle = ({skillTech}) => skillTech.skillTitle;
-export const getTechTitle = ({skillTech}) => skillTech.techTitle;
+export const getSkillTechData = ({skillTech, globalSettings}) =>
+  skillTech.data.filter(data => data.language === globalSettings.globalLanguage)[0];
 
 /* ACTIONS */
 

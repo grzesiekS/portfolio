@@ -1,6 +1,6 @@
 /* SELECTORS */
 
-export const getEnAboutMe = ({aboutMe}) => aboutMe.filter(about => about.language === 'EN');
+export const getEnAboutMe = ({aboutMe, globalSettings}) => aboutMe.filter(about => about.language === globalSettings.globalLanguage);
 
 /* ACTIONS */
 
