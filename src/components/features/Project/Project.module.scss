@@ -49,13 +49,11 @@
 }
 
 .description {
-  display: block;
-
   p {
     margin-top: 0;
   }
+}
 
-  &.active {
-    display: block;
-  }
+.linkIcon {
+  margin-right: 7px;
 }

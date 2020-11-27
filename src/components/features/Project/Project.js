@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDown, faGlobeEurope } from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 import styles from './Project.module.scss';
 import Button from '../../common/Button/Button';
@@ -35,8 +36,14 @@ class Project extends React.Component {
         <section className={this.state.descSecStyles.join(' ')}>
           <p>{this.fliterDescriptionData()}</p>
           <div className={styles.buttons}>
-            <Button href={link} target="_blank">Link</Button>
-            <Button href={gitLink} target="_blank">GitHub Link</Button>
+            <Button href={link} target="_blank">
+              <FontAwesomeIcon icon={faGlobeEurope} className={styles.linkIcon} />
+              Link
+            </Button>
+            <Button href={gitLink} target="_blank">
+              <FontAwesomeIcon icon={faGithub} className={styles.linkIcon} />
+              GitHub Link
+            </Button>
           </div>
         </section>
       </div>
