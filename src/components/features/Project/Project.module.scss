@@ -1,7 +1,9 @@
 @import "../../../styles/settings.scss";
+@import "../../../styles/animations.scss";
 
 .project {
-  border: $border-width solid;
+  border: $border-width solid $project-border-color;
+  border-radius: $border-radius;
   padding: 20px;
   flex: 28%;
   margin-right: 12px;
@@ -40,17 +42,34 @@
     font-size: $rotateIcon-font-size;
     color: $project-rotate-icon-color;
     transition: $transition;
+    animation: rotate $animationTime;
+    animation-fill-mode: forwards;
 
     &:hover {
       cursor: pointer;
       color: $project-rotate-icon-hover-color;
     }
+
+    &.active {
+      animation: rotateBackwards $animationTime;
+      animation-fill-mode: forwards;
+    }
   }
 }
 
 .description {
+  transform: scaleY(0);
+  transform-origin: top;
+  max-height: 0;
+  transition: $transition-short;
+
   p {
     margin-top: 0;
+  }
+
+  &.active {
+    transform: scaleY(1);
+    max-height: $description-max-height;
   }
 }
 
