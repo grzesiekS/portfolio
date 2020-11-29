@@ -7,9 +7,35 @@
   padding: 20px;
   flex: 28%;
   margin-right: 12px;
+  position: relative;
 
   &:last-child {
     margin-right: 0;
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: $before-after-triangle-size solid $skillTechList-triangle-color;
+    border-right: $before-after-triangle-size solid transparent;
+  }
+
+  &::after {
+      position: absolute;
+      content: '';
+      z-index: -1;
+      top: 100%;
+      left: 100%;
+      transform: translate(-100%, -100%);
+      width: 0;
+      height: 0;
+      border-bottom: $before-after-triangle-size solid $triangle-color;
+      border-left: $before-after-triangle-size solid transparent;
   }
 }
 

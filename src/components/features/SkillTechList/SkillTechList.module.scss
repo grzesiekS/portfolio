@@ -45,8 +45,8 @@
         left: 0;
         width: 0;
         height: 0;
-        border-top: 15vh solid $skillTechList-triangle-color;
-        border-right: 15vh solid transparent;
+        border-top: $before-after-triangle-size solid $skillTechList-triangle-color;
+        border-right: $before-after-triangle-size solid transparent;
     }
 
     &::after {
@@ -58,8 +58,8 @@
         transform: translate(-100%, -100%);
         width: 0;
         height: 0;
-        border-bottom: 15vh solid $triangle-color;
-        border-left: 15vh solid transparent;
+        border-bottom: $before-after-triangle-size solid $triangle-color;
+        border-left: $before-after-triangle-size solid transparent;
     }
 }
 
