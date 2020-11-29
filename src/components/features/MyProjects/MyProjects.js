@@ -2,10 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCaretSquareLeft, faCaretSquareRight } from '@fortawesome/free-solid-svg-icons';
+
 import styles from './MyProjects.module.scss';
 import Project from '../Project/Project';
+import Button from '../../common/Button/Button';
 
-class MyProject extends React.Component {
+class MyProjects extends React.Component {
   state = {
     activePage: 0,
     projectsOnPage: 3,
@@ -15,6 +19,25 @@ class MyProject extends React.Component {
     this.setState({
       ...this.state,
       activePage: pageNumber,
+    });
+  }
+
+  nextPage = () => {
+    const pagesCount = Math.ceil(this.props.projects.length / this.state.projectsOnPage);
+
+    this.setState({
+      ...this.state,
+      activePage:
+        this.state.activePage >= pagesCount- 1
+          ? this.state.activePage
+          : this.state.activePage + 1,
+    });
+  }
+
+  previousPage = () => {
+    this.setState({
+      ...this.state,
+      activePage: this.state.activePage === 0 ? 0 : this.state.activePage - 1,
     });
   }
 
@@ -50,9 +73,29 @@ class MyProject extends React.Component {
               ))}
           </div>
           <div className={styles.pageNav}>
+            <Button
+              Type='div'
+              subType='icon'
+              onClick={() => this.previousPage()}
+            >
+              <FontAwesomeIcon
+                icon={faCaretSquareLeft}
+                className={styles.changeIconLeft}
+              />
+            </Button>
             {numbers.map(number => (
               number
             ))}
+            <Button
+              Type='div'
+              subType='icon'
+              onClick={() => this.nextPage()}
+            >
+              <FontAwesomeIcon
+                icon={faCaretSquareRight}
+                className={styles.changeIconRight}
+              />
+            </Button>
           </div>
         </div>
       </div>
@@ -60,11 +103,11 @@ class MyProject extends React.Component {
   }
 }
 
-MyProject.propTypes = {
+MyProjects.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   projects: PropTypes.array,
   globalLanguage: PropTypes.string,
 };
 
-export default MyProject;
+export default MyProjects;
