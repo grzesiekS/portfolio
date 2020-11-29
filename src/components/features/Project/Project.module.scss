@@ -102,3 +102,14 @@
 .linkIcon {
   margin-right: 7px;
 }
+
+@media (max-width: 1025px) {
+  .project {
+    flex: 100%;
+    margin: 0 12px 25px 12px;
+
+    &:last-child {
+      margin-right: 12px;
+    }
+  }
+}
