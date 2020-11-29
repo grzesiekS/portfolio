@@ -15,8 +15,15 @@
   font-weight: 700;
 
   &:hover {
+    cursor: pointer;
     background-position: 0 100%;
     color: $button-content-hover-color;
+  }
+
+  &.icon {
+    padding: 0;
+    border: none;
+    background-image: none;
   }
 }
 
