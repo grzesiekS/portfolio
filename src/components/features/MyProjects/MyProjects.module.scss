@@ -28,3 +28,24 @@
   flex-wrap: wrap;
   align-items: flex-start;
 }
+
+.pageNumber {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 18px;
+  user-select: none;
+  transition: $transition;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &.active {
+    color: $myProjects-pageNumber-active-color;
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: $myProjects-pageNumber-hover-color;
+  }
+}
