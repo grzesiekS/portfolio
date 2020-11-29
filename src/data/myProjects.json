@@ -19,7 +19,7 @@
       ],
       "link": "http://www.myProject.com",
       "gitLink": "http://www.gitMyProject.com",
-      "picture": "./images/AdministrationPanel.jpg"
+      "picture": "./images/projects/AdministrationPanel.jpg"
     },
     {
       "_id": "2",
@@ -32,7 +32,7 @@
       ],
       "link": "http://www.myProject.com",
       "gitLink": "http://www.gitMyProject.com",
-      "picture": "img.jpg"
+      "picture": "./images/projects/AdministrationPanel.jpg"
     },
     {
       "_id": "3",
@@ -44,7 +44,31 @@
         }
       ],"link": "http://www.myProject.com",
       "gitLink": "http://www.gitMyProject.com",
-      "picture": "img.jpg"
+      "picture": "./images/projects/AdministrationPanel.jpg"
+    },
+    {
+      "_id": "4",
+      "title": "Project 4",
+      "descriptionData": [
+        {
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac velit vel purus condimentum placerat. Phasellus semper eu leo vitae viverra. Mauris efficitur nisl a justo tempor scelerisque. Ut vitae lobortis erat, nec pulvinar nisi.",
+          "language": "EN"
+        }
+      ],"link": "http://www.myProject.com",
+      "gitLink": "http://www.gitMyProject.com",
+      "picture": "./images/projects/AdministrationPanel.jpg"
+    },
+    {
+      "_id": "5",
+      "title": "Project 5",
+      "descriptionData": [
+        {
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac velit vel purus condimentum placerat. Phasellus semper eu leo vitae viverra. Mauris efficitur nisl a justo tempor scelerisque. Ut vitae lobortis erat, nec pulvinar nisi.",
+          "language": "EN"
+        }
+      ],"link": "http://www.myProject.com",
+      "gitLink": "http://www.gitMyProject.com",
+      "picture": "./images/projects/AdministrationPanel.jpg"
     }
   ]
 }
