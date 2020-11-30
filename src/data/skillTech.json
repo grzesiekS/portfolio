@@ -94,6 +94,21 @@
       "_id": 11,
       "name": "Handlebars",
       "icon": ""
+    },
+    {
+      "_id": 12,
+      "name": "Github",
+      "icon": "faGithub"
+    },
+    {
+      "_id": 13,
+      "name": "Jira",
+      "icon": "faJira"
+    },
+    {
+      "_id": 14,
+      "name": "Enzyme",
+      "icon": ""
     }
   ]
 }
