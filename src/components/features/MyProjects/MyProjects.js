@@ -65,13 +65,6 @@ class MyProjects extends React.Component {
         <div id='myProjects' className={styles.myProjects}>
           <h1 className={styles.title}>{title}</h1>
           <p>{description}</p>
-          <div className={styles.flexBox}>
-            {projects
-              .slice(this.state.activePage * this.state.projectsOnPage, (this.state.activePage + 1) * this.state.projectsOnPage)
-              .map(project => (
-                <Project key={project._id} globalLanguage={globalLanguage} {...project} />
-              ))}
-          </div>
           <div className={styles.pageNav}>
             <Button
               Type='div'
@@ -96,6 +89,13 @@ class MyProjects extends React.Component {
                 className={styles.changeIconRight}
               />
             </Button>
+          </div>
+          <div className={styles.flexBox}>
+            {projects
+              .slice(this.state.activePage * this.state.projectsOnPage, (this.state.activePage + 1) * this.state.projectsOnPage)
+              .map(project => (
+                <Project key={project._id} globalLanguage={globalLanguage} {...project} />
+              ))}
           </div>
         </div>
       </div>
