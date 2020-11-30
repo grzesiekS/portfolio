@@ -9,72 +9,89 @@
   ],
   "skills": [
     {
+      "_id": 1,
       "name": "HTML",
       "icon": "faHtml5"
     },
     {
+      "_id": 2,
       "name": "CSS",
       "icon": "faCss3Alt"
     },
     {
+      "_id": 3,
       "name": "JavaScript",
       "icon": "faJsSquare"
     },
     {
+      "_id": 4,
       "name": "VBA",
       "icon": ""
     },
     {
+      "_id": 5,
       "name": "Java",
       "icon": "faJava"
     },
     {
+      "_id": 6,
       "name": "SQL",
       "icon": ""
     }
   ],
   "technologies": [
     {
+      "_id": 1,
       "name": "SASS",
       "icon": "faSass"
     },
     {
+      "_id": 2,
       "name": "Bootstrap",
       "icon": ""
     },
     {
+      "_id": 3,
       "name": "npm",
       "icon": "faNpm"
     },
     {
+      "_id": 4,
       "name": "React",
       "icon": "faReact"
     },
     {
+      "_id": 5,
       "name": "Redux",
       "icon": ""
     },
     {
+      "_id": 6,
       "name": "MaterialUI",
       "icon": ""
     },
     {
+      "_id": 7,
       "name": "MongoDB",
       "icon": ""
     },
     {
+      "_id": 8,
       "name": "Mongoose",
       "icon": ""
     },
     {
+      "_id": 9,
       "name": "Node.js",
       "icon": "faNodeJs"
     },
     {
+      "_id": 10,
       "name": "Express",
       "icon": ""
     },
     {
+      "_id": 11,
       "name": "Handlebars",
       "icon": ""
     }
