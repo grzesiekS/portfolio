@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { fab, faCodepen } from '@fortawesome/free-brands-svg-icons';
 import { faCode } from '@fortawesome/free-solid-svg-icons';
 
 import styles from './SkillTechList.module.scss';
+import IconsGenerator from '../../common/IconsGenerator/IconsGenerator';
 
 const SkillTechList = (props) => (
   <div id='techSkills' className={styles.container}>
@@ -14,23 +14,27 @@ const SkillTechList = (props) => (
       <div className={styles.skills}>
         <h2>{props.skillTitle}</h2>
         {props.skills.map(skill => (
-          <p key={props.skills.indexOf(skill)}>
-            {skill.icon === ''
-              ? <FontAwesomeIcon icon={faCode} />
-              : <FontAwesomeIcon icon={fab[skill.icon]} />}
+          <IconsGenerator
+            key={props.skills.indexOf(skill)}
+            iconName={skill.icon}
+            iconsList={fab}
+            alternativeIcon={faCode}
+          >
             {skill.name}
-          </p>
+          </IconsGenerator>
         ))}
       </div>
       <div className={styles.techs}>
         <h2>{props.techTitle}</h2>
         {props.techs.map(tech => (
-          <p key={props.techs.indexOf(tech)}>
-            {tech.icon === ''
-              ? <FontAwesomeIcon icon={faCodepen} />
-              : <FontAwesomeIcon icon={fab[tech.icon]} />}
+          <IconsGenerator
+            key={props.techs.indexOf(tech)}
+            iconName={tech.icon}
+            iconsList={fab}
+            alternativeIcon={faCodepen}
+          >
             {tech.name}
-          </p>
+          </IconsGenerator>
         ))}
       </div>
     </div>
