@@ -19,7 +19,9 @@
       ],
       "link": "http://www.myProject.com",
       "gitLink": "http://www.gitMyProject.com",
-      "picture": "./images/projects/AdministrationPanel.jpg"
+      "picture": "./images/projects/AdministrationPanel.jpg",
+      "skills": [3, 2, 1],
+      "tech": [1, 12, 3]
     },
     {
       "_id": "2",
@@ -32,7 +34,9 @@
       ],
       "link": "http://www.myProject.com",
       "gitLink": "http://www.gitMyProject.com",
-      "picture": "./images/projects/AdministrationPanel.jpg"
+      "picture": "./images/projects/AdministrationPanel.jpg",
+      "skills": [3, 2],
+      "tech": [4, 5, 1, 2, 3, 12, 13, 14]
     },
     {
       "_id": "3",
@@ -44,7 +48,9 @@
         }
       ],"link": "http://www.myProject.com",
       "gitLink": "http://www.gitMyProject.com",
-      "picture": "./images/projects/AdministrationPanel.jpg"
+      "picture": "./images/projects/AdministrationPanel.jpg",
+      "skills": [3, 2, 1],
+      "tech": [1, 12, 3]
     },
     {
       "_id": "4",
@@ -56,7 +62,9 @@
         }
       ],"link": "http://www.myProject.com",
       "gitLink": "http://www.gitMyProject.com",
-      "picture": "./images/projects/AdministrationPanel.jpg"
+      "picture": "./images/projects/AdministrationPanel.jpg",
+      "skills": [3, 2],
+      "tech": [4, 5, 1, 2, 3, 12, 13, 14]
     },
     {
       "_id": "5",
@@ -68,7 +76,9 @@
         }
       ],"link": "http://www.myProject.com",
       "gitLink": "http://www.gitMyProject.com",
-      "picture": "./images/projects/AdministrationPanel.jpg"
+      "picture": "./images/projects/AdministrationPanel.jpg",
+      "skills": [3, 2, 1],
+      "tech": [1, 12, 3]
     }
   ]
 }

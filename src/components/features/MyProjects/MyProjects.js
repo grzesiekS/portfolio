@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretSquareLeft, faCaretSquareRight } from '@fortawesome/free-solid-svg-icons';
 
 import styles from './MyProjects.module.scss';
-import Project from '../Project/Project';
+import Project from '../Project/ProjectContainer';
 import Button from '../../common/Button/Button';
 
 class MyProjects extends React.Component {

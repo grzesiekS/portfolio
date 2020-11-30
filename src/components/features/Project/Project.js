@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleUp, faGlobeEurope } from '@fortawesome/free-solid-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faAngleUp, faGlobeEurope, faCode } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, fab, faCodepen } from '@fortawesome/free-brands-svg-icons';
 
 import styles from './Project.module.scss';
 import Button from '../../common/Button/Button';
-
+import IconsGenerator from '../../common/IconsGenerator/IconsGenerator';
 
 class Project extends React.Component {
   state = {
@@ -29,7 +29,7 @@ class Project extends React.Component {
 
   render() {
 
-    const {title, link, gitLink, picture} = this.props;
+    const {title, link, gitLink, picture, skillsList, techList} = this.props;
 
     return (
       <div className={styles.project}>
@@ -49,6 +49,32 @@ class Project extends React.Component {
           className={this.state.descriptionActive
             ? clsx(styles.description, styles.active) : styles.description}>
           <p>{this.fliterDescriptionData()}</p>
+          <div className={styles.skillTech}>
+            <div className={styles.skill}>
+              {skillsList.map(skill => (
+                <IconsGenerator
+                  key={skillsList.indexOf(skill)}
+                  iconName={skill.icon}
+                  iconsList={fab}
+                  alternativeIcon={faCode}
+                >
+                  {skill.name}
+                </IconsGenerator>
+              ))}
+            </div>
+            <div className={styles.tech}>
+              {techList.map(tech => (
+                <IconsGenerator
+                  key={techList.indexOf(tech)}
+                  iconName={tech.icon}
+                  iconsList={fab}
+                  alternativeIcon={faCodepen}
+                >
+                  {tech.name}
+                </IconsGenerator>
+              ))}
+            </div>
+          </div>
           <div className={styles.buttons}>
             <Button href={link} target="_blank">
               <FontAwesomeIcon icon={faGlobeEurope} className={styles.linkIcon} />
@@ -72,6 +98,8 @@ Project.propTypes = {
   gitLink: PropTypes.string,
   picture: PropTypes.string,
   globalLanguage: PropTypes.string,
+  skillsList: PropTypes.array,
+  techList: PropTypes.array,
 };
 
 export default Project;
