@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Button from '../../common/Button/Button';
 import styles from './TopBar.module.scss';
 
-const TopBar = ({languageList, selectedLanguage}) => (
+const TopBar = ({languageList, selectedLanguage, changeLanguage}) => (
   <div className={styles.container}>
     <div className={styles['flex-box']}>
       <nav>
@@ -31,7 +31,10 @@ const TopBar = ({languageList, selectedLanguage}) => (
                 <li key={languageList.indexOf(lang)}>
                   <a
                     href='/#'
-                    onClick={event => event.preventDefault()}
+                    onClick={event => {
+                      event.preventDefault();
+                      changeLanguage(lang);
+                    }}
                   >
                     {lang}
                   </a>
@@ -51,6 +54,7 @@ const TopBar = ({languageList, selectedLanguage}) => (
 TopBar.propTypes = {
   languageList: PropTypes.array.isRequired,
   selectedLanguage: PropTypes.string,
+  changeLanguage: PropTypes.func,
 };
 
 export default TopBar;

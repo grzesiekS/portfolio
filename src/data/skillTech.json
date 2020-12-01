@@ -5,6 +5,12 @@
       "skillTitle": "Languages that I know",
       "techTitle": "Tools that I know",
       "language": "EN"
+    },
+    {
+      "title": "Technologie i Umiejętności",
+      "skillTitle": "Języki, które znam",
+      "techTitle": "Technologie, które znam",
+      "language": "PL"
     }
   ],
   "skills": [
