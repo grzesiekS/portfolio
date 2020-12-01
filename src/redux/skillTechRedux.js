@@ -2,7 +2,7 @@
 export const getSkills = ({skillTech}) => skillTech.skills;
 export const getTech = ({skillTech}) => skillTech.technologies;
 export const getSkillTechData = ({skillTech, globalSettings}) =>
-  skillTech.data.filter(data => data.language === globalSettings.globalLanguage)[0];
+  skillTech.data.filter(data => data.language === globalSettings.data.globalLanguage)[0];
 export const getFilterSkills = ({skillTech}, skillsArray) =>
   skillTech.skills.filter(skill => skillsArray.indexOf(skill._id) !== -1);
 export const getFilterTech = ({skillTech}, techArray) =>

@@ -1,8 +1,10 @@
-[
-  {
-    "header": "About Me",
-    "description": "I am a beginner web developer, who wants to start working in IT. I am very ambitious person who like to take new challenges. I want to continuously elevate my skills and learn new techniques and technology.",
-    "language": "EN"    
-  }
-]
+{
+  "data": [
+    {
+      "header": "About Me",
+      "description": "I am a beginner web developer, who wants to start working in IT. I am very ambitious person who like to take new challenges. I want to continuously elevate my skills and learn new techniques and technology.",
+      "language": "EN"
+    }
+  ]
+}
 

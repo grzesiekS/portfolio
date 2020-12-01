@@ -1,7 +1,7 @@
 /* SELECTORS */
 export const getProjects = ({myProjects}) => myProjects.projects;
 export const getProjectsData = ({myProjects, globalSettings}) =>
-  myProjects.data.filter(data => data.language === globalSettings.globalLanguage)[0];
+  myProjects.data.filter(data => data.language === globalSettings.data.globalLanguage)[0];
 
 /* ACTIONS */
 

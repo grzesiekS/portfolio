@@ -1,7 +1,7 @@
 /* SELECTORS */
 
 export const getEnAboutMe = ({aboutMe, globalSettings}) =>
-  aboutMe.filter(about => about.language === globalSettings.globalLanguage);
+  aboutMe.data.filter(about => about.language === globalSettings.data.globalLanguage);
 
 /* ACTIONS */
 

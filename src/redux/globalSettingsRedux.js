@@ -1,7 +1,7 @@
 /* SELECTORS */
 
 /* ACTIONS */
-export const getLanguage = ({globalSettings}) => globalSettings.globalLanguage;
+export const getLanguage = ({globalSettings}) => globalSettings.data.globalLanguage;
 
 // action name creator
 // const reducerName = 'globalSettings';
