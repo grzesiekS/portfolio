@@ -104,6 +104,15 @@
   margin-right: 7px;
 }
 
+.skillTech {
+  margin: 0 0 35px 55px;
+  text-align: justify;
+
+  svg {
+    margin-right: 15px;
+  }
+}
+
 @media (max-width: 1025px) {
   .project {
     flex: 100%;
