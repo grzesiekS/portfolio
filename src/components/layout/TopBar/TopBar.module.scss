@@ -39,6 +39,34 @@
   }
 }
 
+.languageSelector {
+  position: relative;
+
+  &:hover {
+    .languageList {
+      display: block;
+      animation: fadeIn $animationTime;
+    }
+  }
+}
+
+.languageList {
+  position: absolute;
+  display: none;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+
+  li {
+    display: block;
+    margin: 15px 0;
+  }
+}
+
+.green {
+  color: $span-green-color;
+}
+
 @media(max-width: 315px) {
   .navBar {
     flex: 100%;

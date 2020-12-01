@@ -1,6 +1,6 @@
 import React from 'react';
 import Splash from '../Splash/Splash';
-import TopBar from '../TopBar/TopBar';
+import TopBar from '../TopBar/TopBarContainer';
 import styles from './Header.module.scss';
 
 const Header = () => (

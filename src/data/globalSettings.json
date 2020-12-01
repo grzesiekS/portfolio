@@ -1,6 +1,7 @@
 {
   "data": {
-    "globalLanguage": "EN"
+    "globalLanguage": "EN",
+    "languages": ["EN", "PL"]
   }
 
 }
