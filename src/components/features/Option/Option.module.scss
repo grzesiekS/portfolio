@@ -1,0 +1,17 @@
+@import "../../../styles/settings.scss";
+
+.select {
+  select {
+    padding: 10px 15px;
+    background-color: #545454;
+    border: $border-width solid $select-border-color;
+    border-radius: $border-radius;
+    text-transform: uppercase;
+    color: $select-text-color;
+    outline: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
