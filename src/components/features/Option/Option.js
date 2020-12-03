@@ -4,10 +4,12 @@ import PropTypes from 'prop-types';
 import styles from './Option.module.scss';
 import OptionSelect from './OptionSelect';
 import OptionInput from './OptionInput';
+import OptionTextarea from './OptionTextarea';
 
 const optionTypes = {
   select: OptionSelect,
   input: OptionInput,
+  textarea: OptionTextarea,
 };
 
 const Option = ({type, ...otherProps}) => {
