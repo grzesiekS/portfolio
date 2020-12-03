@@ -2,6 +2,7 @@ import React from 'react';
 
 import styles from './ContactForm.module.scss';
 import Option from '../Option/Option';
+import Button from '../../common/Button/Button';
 
 class ContactForm extends React.Component {
   render() {
@@ -32,6 +33,9 @@ class ContactForm extends React.Component {
             type='textarea'
             title={'Message'}
           />
+          <Button Type='div' animation={true}>
+            Send Message
+          </Button>
         </form>
       </div>
     );
