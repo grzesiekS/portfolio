@@ -4,12 +4,11 @@ import PropTypes from 'prop-types';
 import styles from './Option.module.scss';
 
 const OptionInput = ({inputType, value, title, setOptionValue}) => (
-  <label>
-    {title}
+  <label className={styles.input}>
+    <p className={styles.title}>{title}</p>
     <input
       type={inputType}
       value={value || ''}
-      className={styles.input}
       onChange={e => setOptionValue(e.currentTarget.value)}
     ></input>
   </label>

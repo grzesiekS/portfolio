@@ -15,3 +15,26 @@
     }
   }
 }
+
+.input {
+  .title {
+    margin-bottom: 7px;
+    font-weight: $bold-font-weight;
+    color: $input-title-color;
+  }
+
+  input {
+    display: block;
+    margin: 0 auto;
+    padding: 7px;
+    margin-bottom: 18px;
+    width: $input-width;
+    background-color: $input-bg-color;
+    border: $border-width solid $input-border-color;
+    outline: none;
+    border-radius: $border-radius;
+    font-size: 18px;
+    color: $input-text-color;
+    font-family: $font-raleway;
+  }
+}

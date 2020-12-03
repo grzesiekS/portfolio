@@ -23,6 +23,9 @@ $description-max-height: 800px;
 $section-title-font-size: 35px;
 $secition-title-font-family: $font-anton;
 
+// OPTION - INPUT SETTINGS
+$input-width: 35vh;
+
 // COLORS
 $mintyGreen: #67f890;
 $white: #ffffff;
@@ -81,6 +84,12 @@ $project-rotate-icon-color: $white;
 $project-rotate-icon-hover-color: $mintyGreen;
 
 // OPTION
-// SELECT
-$select-border-color: $mintyGreen;
-$select-text-color: $mintyGreen;
+  // SELECT
+  $select-border-color: $mintyGreen;
+  $select-text-color: $mintyGreen;
+
+  // INPUT
+  $input-title-color: $white;
+  $input-bg-color: $darkGrey;
+  $input-border-color: $mintyGreen;
+  $input-text-color: $mintyGreen;
