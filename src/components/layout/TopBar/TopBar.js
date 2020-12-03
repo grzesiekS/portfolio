@@ -44,7 +44,7 @@ const TopBar = ({languageList, selectedLanguage, changeLanguage}) => (
           </li>
         </ul>
       </nav>
-      <Button href='/#' animation={true}>
+      <Button Type='Link' to='/contact' animation={true}>
         Contact Me
       </Button>
     </div>
