@@ -1,13 +1,19 @@
 import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
 import './styles/global.scss';
 import Homepage from './components/views/Homepage';
 
 import MainLayout from './components/layout/MainLayout/MainLayout';
 
 const App = () => (
-  <MainLayout>
-    <Homepage />
-  </MainLayout>
+  <BrowserRouter>
+    <MainLayout>
+      <Switch>
+        <Route exact path='/' component={Homepage} />
+      </Switch>
+    </MainLayout>
+  </BrowserRouter>
 );
 
 export default App;
