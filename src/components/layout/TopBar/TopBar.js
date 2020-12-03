@@ -10,13 +10,13 @@ const TopBar = ({languageList, selectedLanguage, changeLanguage}) => (
       <nav>
         <ul className={styles.navBar}>
           <li>
-            <a href='#aboutMe'>About Me</a>
+            <a href='/#aboutMe'>About Me</a>
           </li>
           <li>
-            <a href='#techSkills'>{`Tools & Skills`}</a>
+            <a href='/#techSkills'>{`Tools & Skills`}</a>
           </li>
           <li>
-            <a href='#myProjects'>My Projects</a>
+            <a href='/#myProjects'>My Projects</a>
           </li>
           <li className={styles.languageSelector}>
             <a
