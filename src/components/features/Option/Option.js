@@ -3,9 +3,11 @@ import PropTypes from 'prop-types';
 
 import styles from './Option.module.scss';
 import OptionSelect from './OptionSelect';
+import OptionInput from './OptionInput';
 
 const optionTypes = {
   select: OptionSelect,
+  input: OptionInput,
 };
 
 const Option = ({type, ...otherProps}) => {
