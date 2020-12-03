@@ -22,7 +22,7 @@ class ContactForm extends React.Component {
           <Option
             type='input'
             inputType='email'
-            title={'Last Name'}
+            title={'E-Mail'}
           />
           <Option
             type='input'

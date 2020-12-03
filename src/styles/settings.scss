@@ -25,6 +25,12 @@ $secition-title-font-family: $font-anton;
 
 // OPTION - INPUT SETTINGS
 $input-width: 35vh;
+$input-font-family: $font-raleway;
+
+// OPTION - TEXTAREA
+$textarea-width: 55vh;
+$textarea-height: 30vh;
+$textarea-font-family: $font-raleway;
 
 // COLORS
 $mintyGreen: #67f890;
@@ -93,3 +99,9 @@ $project-rotate-icon-hover-color: $mintyGreen;
   $input-bg-color: $darkGrey;
   $input-border-color: $mintyGreen;
   $input-text-color: $mintyGreen;
+
+  // TEXTAREA
+  $textarea-title-color: $white;
+  $textarea-bg-color: $darkGrey;
+  $textarea-border-color: $mintyGreen;
+  $textarea-text-color: $mintyGreen;

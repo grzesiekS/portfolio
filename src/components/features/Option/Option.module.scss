@@ -24,10 +24,9 @@
   }
 
   input {
-    display: block;
     margin: 0 auto;
     padding: 7px;
-    margin-bottom: 18px;
+    margin-bottom: 8px;
     width: $input-width;
     background-color: $input-bg-color;
     border: $border-width solid $input-border-color;
@@ -35,6 +34,28 @@
     border-radius: $border-radius;
     font-size: 18px;
     color: $input-text-color;
-    font-family: $font-raleway;
+    font-family: $input-font-family;
+  }
+}
+
+.textarea {
+  .title {
+    margin-bottom: 7px;
+    font-weight: $bold-font-weight;
+    color: $textarea-title-color;
+  }
+
+  textarea {
+    width: $textarea-width;
+    height: $textarea-height;
+    font-family: $textarea-font-family;
+    padding: 5px;
+    margin-bottom: 8px;
+    background-color: $textarea-bg-color;
+    outline: none;
+    border: $border-width solid $textarea-border-color;
+    border-radius: $border-radius;
+    color: $textarea-text-color;
+    resize: none;
   }
 }
