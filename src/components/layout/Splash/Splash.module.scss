@@ -2,10 +2,11 @@
 @import "../../../styles/animations.scss";
 
 .container {
-  max-width: $container-width;
   margin: auto;
   text-align: center;
   position: relative;
+  height: 80vh;
+  overflow-x: hidden;
 }
 
 .title {

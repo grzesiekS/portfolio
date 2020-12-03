@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import PropTypes from 'prop-types';
 import styles from './Button.module.scss';
 
@@ -17,11 +19,20 @@ const Button =({ children, Type = 'a', animation = false, subType, ...props}) =>
       classes.push(null);
   }
 
-  return (
-    <Type className={classes.join(' ')} {...props}>
-      {children}
-    </Type>
-  );
+  switch(Type) {
+    case 'Link':
+      return (
+        <Link className={classes.join(' ')} {...props}>
+          {children}
+        </Link>
+      );
+    default:
+      return (
+        <Type className={classes.join(' ')} {...props}>
+          {children}
+        </Type>
+      );
+  }
 };
 
 Button.propTypes = {
