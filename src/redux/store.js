@@ -3,18 +3,21 @@ import aboutMeData from '../data/aboutMe.json';
 import skillTechData from '../data/skillTech.json';
 import myProjectsData from '../data/myProjects.json';
 import globalSettingsData from '../data/globalSettings.json';
+import formsData from '../data/forms.json';
 
 import globalReducer from './globalRedux';
 import aboutMeReducer from './aboutMeRedux';
 import skillTechReducer from './skillTechRedux';
 import myProjectsReducer from './myProjectsRedux';
 import globalSettingsReducer from './globalSettingsRedux';
+import formsReducer from './formsRedux';
 
 const initialState = {
   aboutMe: aboutMeData,
   skillTech: skillTechData,
   myProjects: myProjectsData,
   globalSettings: globalSettingsData,
+  forms: formsData,
 };
 
 // define reducers
@@ -23,6 +26,7 @@ const reducers = {
   skillTech: skillTechReducer,
   myProjects: myProjectsReducer,
   globalSettings: globalSettingsReducer,
+  forms: formsReducer,
 };
 
 // add blank reducers for initial state properties without reducers
