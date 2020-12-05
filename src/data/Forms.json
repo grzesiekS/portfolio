@@ -1,0 +1,74 @@
+{
+    "data":[
+        {
+            "type": "input",
+            "inputType": "text",
+            "titles": [
+                {
+                    "language": "EN",
+                    "title": "Name"
+                },
+                {
+                    "language": "PL",
+                    "title": "Imię"
+                }
+            ]
+        },
+        {
+            "type": "input",
+            "inputType": "text",
+            "titles": [
+                {
+                    "language": "EN",
+                    "title": "Last Name"
+                },
+                {
+                    "language": "PL",
+                    "title": "Nazwisko"
+                }
+            ]
+        },
+        {
+            "type": "input",
+            "inputType": "email",
+            "titles": [
+                {
+                    "language": "EN",
+                    "title": "E-Mail"
+                },
+                {
+                    "language": "PL",
+                    "title": "E-Mail"
+                }
+            ]
+        },
+        {
+            "type": "input",
+            "inputType": "tel",
+            "titles": [
+                {
+                    "language": "EN",
+                    "title": "Phone Number"
+                },
+                {
+                    "language": "PL",
+                    "title": "Numer telefonu"
+                }
+            ]
+        },
+        {
+            "type": "textarea",
+            "inputType": "",
+            "titles": [
+                {
+                    "language": "EN",
+                    "title": "Message"
+                },
+                {
+                    "language": "PL",
+                    "title": "Wiadomość"
+                }
+            ]
+        }
+    ]
+}
