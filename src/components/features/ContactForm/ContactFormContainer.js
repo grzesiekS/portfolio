@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 
-import {getFormData} from '../../../redux/formsRedux';
+import {getFormData, changeInputValue} from '../../../redux/formsRedux';
 import {getLanguage} from '../../../redux/globalSettingsRedux';
 
 import ContactForm from './ContactForm';
@@ -10,4 +10,8 @@ const mapStateToProps = state => ({
   language: getLanguage(state),
 });
 
-export default connect(mapStateToProps)(ContactForm);
+const mapDispatchToProps = dispatch => ({
+  changeInputValue: (id, newValue) => dispatch(changeInputValue({id, newValue})),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(ContactForm);
