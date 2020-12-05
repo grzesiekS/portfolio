@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ContactForm from '../features/ContactForm/ContactForm';
+import ContactForm from '../features/ContactForm/ContactFormContainer';
 
 const ContactPage = () => (
   <ContactForm />
