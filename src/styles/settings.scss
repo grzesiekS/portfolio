@@ -18,6 +18,9 @@ $before-after-triangle-size: 13vh;
 // PROJECT SETTINGS
 $rotateIcon-font-size: 64px;
 $description-max-height: 800px;
+$image-width: 12vh;
+$image-height: 12vh;
+$before-border-size: 2px;
 
 // SECTION TITLE
 $section-title-font-size: 35px;
@@ -36,6 +39,7 @@ $textarea-font-family: $font-raleway;
 $mintyGreen: #67f890;
 $white: #ffffff;
 $darkGrey: #545454;
+$lightGrey: #d3d3d3;
 
 // BODY
 $bg-color: $darkGrey;
@@ -88,6 +92,8 @@ $project-border-color: $mintyGreen;
 $project-image-bg-color: $white;
 $project-rotate-icon-color: $white;
 $project-rotate-icon-hover-color: $mintyGreen;
+$project-image-before-border-color: $mintyGreen;
+$project-image-before-border-side-color: $lightGrey;
 
 // OPTION
   // SELECT

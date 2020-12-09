@@ -34,7 +34,9 @@ class Project extends React.Component {
     return (
       <div className={styles.project}>
         <h2 className={styles.subtitle}>{title}</h2>
-        <img className={styles.image} src={picture} alt={title} />
+        <div className={styles.image}>
+          <img src={picture} alt={title} />
+        </div>
 
         <div className={this.state.descriptionActive 
           ? clsx(styles.rotate, styles.animationDisable) 
