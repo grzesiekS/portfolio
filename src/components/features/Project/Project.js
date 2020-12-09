@@ -36,7 +36,9 @@ class Project extends React.Component {
         <h2 className={styles.subtitle}>{title}</h2>
         <img className={styles.image} src={picture} alt={title} />
 
-        <div className={styles.rotate}>
+        <div className={this.state.descriptionActive 
+          ? clsx(styles.rotate, styles.animationDisable) 
+          : styles.rotate}>
           <FontAwesomeIcon
             icon={faAngleUp}
             className={this.state.descriptionActive

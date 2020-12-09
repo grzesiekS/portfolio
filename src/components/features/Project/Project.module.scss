@@ -38,6 +38,12 @@
       border-bottom: $before-after-triangle-size solid $triangle-color;
       border-left: $before-after-triangle-size solid transparent;
   }
+
+  &:hover {
+    .rotate {
+      animation: none;
+    }
+  }
 }
 
 .subtitle {
@@ -64,6 +70,7 @@
 
 .rotate {
   margin: 0;
+  animation: translateUpDown $animation-time infinite ease-in-out;
 
   .rotateIcon {
     font-size: $rotateIcon-font-size;
@@ -81,6 +88,10 @@
       animation: rotateBackwards $animationTime;
       animation-fill-mode: forwards;
     }
+  }
+
+  &.animationDisable {
+    animation: none;
   }
 }
 
