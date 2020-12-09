@@ -40,6 +40,7 @@ const TopBar = ({languageList, selectedLanguage, changeLanguage}) => (
                 <li key={languageList.indexOf(lang)}>
                   <a
                     href='/#'
+                    className={styles.languageLink}
                     onClick={event => {
                       event.preventDefault();
                       changeLanguage(lang);
