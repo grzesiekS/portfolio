@@ -52,3 +52,9 @@
   50% {transform: translateY(20px);}
   100% {transform: translateY(0);}
 }
+
+@keyframes rotate360 {
+  0% {transform: rotate(0);}
+  50% {transform: rotate(180deg);}
+  100% {transform: rotate(360deg);}
+}
