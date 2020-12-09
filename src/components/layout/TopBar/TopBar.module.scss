@@ -67,6 +67,10 @@
   color: $span-green-color;
 }
 
+.homeLink {
+  font-size: 24px;
+}
+
 @media(max-width: 315px) {
   .navBar {
     flex: 100%;
