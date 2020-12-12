@@ -1,12 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import Header from '../Header/Header';
+import ScrollButton from '../../features/ScrollButton/ScrollButton';
 
 const MainLayout = ({children}) => (
-  <div>
-    <Header />
-    {children}
-  </div>
+  <ScrollButton>
+    <div>
+      <Header />
+      
+      {children}
+    </div>
+  </ScrollButton>
 );
 
 MainLayout.propTypes = {
