@@ -1,8 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import clsx from 'clsx';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCaretUp } from '@fortawesome/free-solid-svg-icons';
 
 import styles from './ScrollButton.module.scss';
-
+import Button from '../../common/Button/Button';
 
 class ScrollButton extends React.Component {
 
@@ -30,6 +34,11 @@ class ScrollButton extends React.Component {
     return (
       <div className={styles.container} >
         {children}
+        <div className={this.state.scrollButtonDisplay ? clsx(styles.scrollButton, styles.show) : styles.scrollButton}>
+          <Button Type='div'>
+            <FontAwesomeIcon icon={faCaretUp} className={styles.scrollIcon} />
+          </Button>
+        </div>
       </div>
     );
   }

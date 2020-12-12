@@ -1,7 +1,29 @@
 @import "../../../styles//settings.scss";
+@import "../../../styles/animations.scss";
 
 .container {
     height: 100%;
     width: 100%;
-    overflow-y: auto;
+    position: relative;
+}
+
+.scrollButton {
+    position: fixed;
+    top: 90%;
+    z-index: 200;
+    padding: 7px;
+    right: 2%;
+    background-color: $scrollButton-bg-color;
+    border-radius: 5px;
+    display: none;
+
+    &.show {
+        display: block;
+        animation: fadeIn $animation-time;
+    }
+}
+
+.scrollIcon {
+    font-size: 25px;
+    padding: 0 5px;
 }
