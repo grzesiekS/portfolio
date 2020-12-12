@@ -1,6 +1,8 @@
 /* SELECTORS */
 
 export const getSocialMediaList = ({socialMedia}) => socialMedia.data;
+export const getSocialMediaTitle = ({socialMedia, globalSettings}) => 
+  socialMedia.title.filter(title => title.language === globalSettings.data.globalLanguage)[0].titleName;
 
 /* ACTIONS */
 
