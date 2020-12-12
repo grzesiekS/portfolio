@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import styles from './IconsGenerator.module.scss';
+
 const IconsGenerator = ({iconName, iconsList, alternativeIcon, children}) => (
-  <p>
+  <p className={styles.icon}>
     {iconName === '' || iconsList[iconName] === undefined
       ? <FontAwesomeIcon icon={alternativeIcon} />
       : <FontAwesomeIcon icon={iconsList[iconName]} />
