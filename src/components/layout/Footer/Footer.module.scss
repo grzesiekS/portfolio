@@ -1,0 +1,28 @@
+@import "../../../styles/settings.scss";
+
+.footer {
+  text-align: center;
+  border-top: $border-width solid $footer-border-color;
+}
+
+.title {
+  color: $footer-title-color;
+  font-weight: 700;
+  margin: 10px 0 0 0;
+}
+
+.socialMediaList {
+  list-style-type: none;
+  padding: 0;
+  margin: 8px 0 0 0;
+
+  li {
+    display: inline-block;
+    font-size: 28px;
+    margin-right: 15px;
+    
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
