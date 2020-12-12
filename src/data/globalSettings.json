@@ -1,7 +1,8 @@
 {
   "data": {
     "globalLanguage": "EN",
-    "languages": ["EN", "PL"]
+    "languages": ["EN", "PL"],
+    "scrollButtonDisplayPosition": 700
   }
 
 }
