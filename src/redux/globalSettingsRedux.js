@@ -1,6 +1,7 @@
 /* SELECTORS */
 export const getLanguage = ({globalSettings}) => globalSettings.data.globalLanguage;
 export const getLanguagesList = ({globalSettings}) => globalSettings.data.languages;
+export const getScrollButtonDisplayPosition = ({globalSettings}) => globalSettings.data.scrollButtonDisplayPosition;
 
 /* ACTIONS */
 

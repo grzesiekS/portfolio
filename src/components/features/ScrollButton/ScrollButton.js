@@ -21,7 +21,7 @@ class ScrollButton extends React.Component {
   handleScroll = scrollPosition => {
     this.setState({
       ...this.state,
-      scrollButtonDisplay: scrollPosition >= 700 ? true : false,
+      scrollButtonDisplay: scrollPosition >= this.props.scrollButtonDisplayPosition ? true : false,
     });
   }
 
@@ -50,6 +50,7 @@ class ScrollButton extends React.Component {
 
 ScrollButton.propTypes = {
   children: PropTypes.node,
+  scrollButtonDisplayPosition: PropTypes.number,
 };
 
 export default ScrollButton;
