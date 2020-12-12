@@ -13,12 +13,14 @@
     {
       "_id": 1,
       "name": "LinkedIn",
-      "icon": "faLinkedin"
+      "icon": "faLinkedin",
+      "link": "www.linkedin.com/in/grzegorz-świeboda"
     },
     {
       "_id": 2,
       "name": "Github",
-      "icon": "faGithubSquare"
+      "icon": "faGithubSquare",
+      "link": "https://github.com/grzesiekS"
     }
   ]
 }
