@@ -4,6 +4,11 @@
       "_id": 1,
       "name": "LinkedIn",
       "icon": "faLinkedin"
+    },
+    {
+      "_id": 2,
+      "name": "Github",
+      "icon": "faGithubSquare"
     }
   ]
 }
