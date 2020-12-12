@@ -1,4 +1,14 @@
 {
+  "title": [
+    {
+      "titleName": "Find Me on social media",
+      "language": "EN"
+    },
+    {
+      "titleName": "Znajdź mnie w mediach społecznościowych",
+      "language": "PL"
+    }
+  ],
   "data": [
     {
       "_id": 1,
