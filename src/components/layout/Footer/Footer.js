@@ -10,7 +10,7 @@ import Button from '../../common/Button/Button';
 
 const Footer = ({socialMediaList, title}) => (
   <footer className={styles.footer}>
-    <p>{title}</p>
+    <p className={styles.title}>{title}</p>
     <ul className={styles.socialMediaList}>
       {socialMediaList.map(social => (
         <li key={social._id}>
