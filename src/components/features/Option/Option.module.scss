@@ -59,3 +59,17 @@
     resize: none;
   }
 }
+
+@media(max-width: 650px) {
+  .textarea {
+    textarea {
+      width: 93%;
+    }
+  }
+
+  .input {
+    input {
+      width: 93%;
+    }
+  }
+}
