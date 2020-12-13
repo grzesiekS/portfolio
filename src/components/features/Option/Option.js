@@ -27,7 +27,7 @@ const Option = ({type, ...otherProps}) => {
 };
 
 Option.propTypes = {
-  type: PropTypes.string.isRequired,
+  type: PropTypes.string,
 };
 
 export default Option;

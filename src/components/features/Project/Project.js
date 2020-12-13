@@ -15,10 +15,16 @@ class Project extends React.Component {
     descriptionActive: false,
   }
 
-  fliterDescriptionData = () => (
-    this.props.descriptionData
-      .filter(data => data.language === this.props.globalLanguage)[0].description
-  );
+  fliterDescriptionData = () => {
+    if(this.props.descriptionData.length === 0) {
+      return null;
+    } else {
+      return (
+        this.props.descriptionData
+          .filter(data => data.language === this.props.globalLanguage)[0].description
+      );
+    }
+  };
 
   changeDescriptionActive = () => {
     this.setState({
@@ -104,6 +110,12 @@ Project.propTypes = {
   globalLanguage: PropTypes.string,
   skillsList: PropTypes.array,
   techList: PropTypes.array,
+};
+
+Project.defaultProps = {
+  descriptionData: [],
+  skillsList: [],
+  techList: [],
 };
 
 export default Project;
