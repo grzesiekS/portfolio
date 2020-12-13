@@ -110,4 +110,8 @@ MyProjects.propTypes = {
   globalLanguage: PropTypes.string,
 };
 
+MyProjects.defaultProps = {
+  projects: [],
+};
+
 export default MyProjects;
