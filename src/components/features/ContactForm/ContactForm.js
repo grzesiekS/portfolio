@@ -38,4 +38,8 @@ ContactForm.propTypes = {
   changeInputValue: PropTypes.func,
 };
 
+ContactForm.defaultProps = {
+  formData: [],
+};
+
 export default ContactForm;
