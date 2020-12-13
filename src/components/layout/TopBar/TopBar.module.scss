@@ -125,5 +125,14 @@
       text-align: center;
     }
   }
+
+  .languageList {
+    li {
+      margin-bottom: 0;
+    }
+    .languageLink {
+      padding: 9px 0;
+    }
+  }
 }
 
