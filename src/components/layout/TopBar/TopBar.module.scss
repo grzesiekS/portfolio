@@ -84,8 +84,55 @@
   font-size: 24px;
 }
 
-@media(max-width: 315px) {
+.barIcon {
+  font-size: 25px;
+}
+
+@media(max-width: 470px) {
+  .navContact {
+    flex: 100%;
+    text-align: center;
+    margin: 25px 0;
+  }
   .navBar {
     flex: 100%;
+    text-align: center;
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: $transition-short;
+    max-height: 0;
+
+    li {
+      display: block;
+      margin-bottom: 25px;
+      margin-right: 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &.active {
+      transform: scaleY(1);
+      max-height: 350px;
+    }
+  }
+
+  .flex-box {
+    flex-direction: column-reverse;
+
+    nav {
+      text-align: center;
+    }
+  }
+
+  .languageList {
+    li {
+      margin-bottom: 0;
+    }
+    .languageLink {
+      padding: 9px 0;
+    }
   }
 }
+
