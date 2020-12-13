@@ -133,7 +133,9 @@
 }
 
 .skillTech {
-  margin: 0 0 35px 55px;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 0 35px 0;
   text-align: justify;
 
   p {
@@ -153,5 +155,11 @@
     &:last-child {
       margin-right: 12px;
     }
+  }
+}
+
+@media (max-width: 280px) {
+  .skillTech {
+    justify-content: space-between;
   }
 }
