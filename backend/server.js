@@ -5,6 +5,7 @@ const path = require('path');
 const aboutMeRoutes = require('./routes/aboutMe.routes');
 const formsRoutes = require('./routes/forms.routes');
 const myProjectsRoutes = require('./routes/myProjects.routes');
+const skillTechRoutes = require('./routes/skillTech.routes');
 
 const app = express();
 
@@ -18,6 +19,7 @@ app.use(express.static(path.join(__dirname, '../public/images')));
 app.use('/api', aboutMeRoutes);
 app.use('/api', formsRoutes);
 app.use('/api', myProjectsRoutes);
+app.use('/api', skillTechRoutes);
 
 /* API ERROR PAGES */
 app.use('/api', (req, res) => {
