@@ -2,6 +2,8 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 
+const aboutMeRoutes = require('./routes/aboutMe.routes');
+
 const app = express();
 
 /* MIDDLEWARE */
@@ -11,6 +13,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, '../public/images')));
 
 /* API ENDPOINTS */
+app.use('/api', aboutMeRoutes);
 
 /* API ERROR PAGES */
 app.use('/api', (req, res) => {
