@@ -3,6 +3,7 @@ const cors = require('cors');
 const path = require('path');
 
 const aboutMeRoutes = require('./routes/aboutMe.routes');
+const formsRoutes = require('./routes/forms.routes');
 
 const app = express();
 
@@ -14,6 +15,7 @@ app.use(express.static(path.join(__dirname, '../public/images')));
 
 /* API ENDPOINTS */
 app.use('/api', aboutMeRoutes);
+app.use('/api', formsRoutes);
 
 /* API ERROR PAGES */
 app.use('/api', (req, res) => {
