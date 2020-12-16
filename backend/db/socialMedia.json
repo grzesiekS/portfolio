@@ -1,0 +1,26 @@
+{
+  "title": [
+    {
+      "titleName": "Find Me on social media",
+      "language": "EN"
+    },
+    {
+      "titleName": "Znajdź mnie w mediach społecznościowych",
+      "language": "PL"
+    }
+  ],
+  "data": [
+    {
+      "_id": 1,
+      "name": "LinkedIn",
+      "icon": "faLinkedin",
+      "link": "https://www.linkedin.com/in/grzegorz-swieboda"
+    },
+    {
+      "_id": 2,
+      "name": "Github",
+      "icon": "faGithubSquare",
+      "link": "https://github.com/grzesiekS"
+    }
+  ]
+}
