@@ -6,6 +6,7 @@ const aboutMeRoutes = require('./routes/aboutMe.routes');
 const formsRoutes = require('./routes/forms.routes');
 const myProjectsRoutes = require('./routes/myProjects.routes');
 const skillTechRoutes = require('./routes/skillTech.routes');
+const socialMediaRoutes = require('./routes/socialMedia.routes');
 
 const app = express();
 
@@ -20,6 +21,7 @@ app.use('/api', aboutMeRoutes);
 app.use('/api', formsRoutes);
 app.use('/api', myProjectsRoutes);
 app.use('/api', skillTechRoutes);
+app.use('/api', socialMediaRoutes);
 
 /* API ERROR PAGES */
 app.use('/api', (req, res) => {
