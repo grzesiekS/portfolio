@@ -2,7 +2,6 @@ import {combineReducers, createStore, applyMiddleware} from 'redux';
 import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
-import aboutMeData from '../data/aboutMe.json';
 import skillTechData from '../data/skillTech.json';
 import myProjectsData from '../data/myProjects.json';
 import globalSettingsData from '../data/globalSettings.json';
@@ -18,7 +17,6 @@ import formsReducer from './formsRedux';
 import socialMediaReducer from './socialMediaRedux';
 
 const initialState = {
-  aboutMe: aboutMeData,
   skillTech: skillTechData,
   myProjects: myProjectsData,
   globalSettings: globalSettingsData,
