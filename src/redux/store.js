@@ -5,7 +5,6 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import skillTechData from '../data/skillTech.json';
 import myProjectsData from '../data/myProjects.json';
 import globalSettingsData from '../data/globalSettings.json';
-import formsData from '../data/forms.json';
 import socialMediaData from '../data/socialMedia.json';
 
 import globalReducer from './globalRedux';
@@ -20,7 +19,6 @@ const initialState = {
   skillTech: skillTechData,
   myProjects: myProjectsData,
   globalSettings: globalSettingsData,
-  forms: formsData,
   socialMedia: socialMediaData,
 };
 
