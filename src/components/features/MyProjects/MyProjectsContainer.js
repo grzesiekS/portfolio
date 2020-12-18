@@ -1,6 +1,10 @@
 import {connect} from 'react-redux';
 import MyProjects from './MyProjects';
-import {getProjects, getProjectsData} from '../../../redux/myProjectsRedux';
+import {
+  getProjects, 
+  getProjectsData, 
+  fetchProjects, 
+  getLoadingStatus} from '../../../redux/myProjectsRedux';
 import { getLanguage } from '../../../redux/globalSettingsRedux';
 
 const mapStateToProps = state => ({
@@ -8,6 +12,11 @@ const mapStateToProps = state => ({
   description: getProjectsData(state).description,
   projects: getProjects(state),
   globalLanguage: getLanguage(state),
+  loadingStatus: getLoadingStatus(state),
 });
 
-export default connect(mapStateToProps)(MyProjects);
+const mapDispatchToProps = dispatch => ({
+  getProjectsData: () => dispatch(fetchProjects()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(MyProjects);

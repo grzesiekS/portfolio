@@ -1,10 +1,8 @@
-import {combineReducers, createStore} from 'redux';
-import aboutMeData from '../data/aboutMe.json';
-import skillTechData from '../data/skillTech.json';
-import myProjectsData from '../data/myProjects.json';
+import {combineReducers, createStore, applyMiddleware} from 'redux';
+import thunk from 'redux-thunk';
+import { composeWithDevTools } from 'redux-devtools-extension';
+
 import globalSettingsData from '../data/globalSettings.json';
-import formsData from '../data/forms.json';
-import socialMediaData from '../data/socialMedia.json';
 
 import globalReducer from './globalRedux';
 import aboutMeReducer from './aboutMeRedux';
@@ -15,12 +13,7 @@ import formsReducer from './formsRedux';
 import socialMediaReducer from './socialMediaRedux';
 
 const initialState = {
-  aboutMe: aboutMeData,
-  skillTech: skillTechData,
-  myProjects: myProjectsData,
   globalSettings: globalSettingsData,
-  forms: formsData,
-  socialMedia: socialMediaData,
 };
 
 // define reducers
@@ -53,7 +46,9 @@ const storeReducer = (state, action) => {
 const store = createStore(
   storeReducer,
   initialState,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  composeWithDevTools(
+    applyMiddleware(thunk)
+  ),
 );
 
 export default store;

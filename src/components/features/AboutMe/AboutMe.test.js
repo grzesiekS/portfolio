@@ -13,12 +13,6 @@ describe('AboutMe component',() => {
     expect(component).toBeTruthy();
   });
 
-  it('should have header and description props', () => {
-    const component = shallow(<AboutMe  content={content} />);
-    expect(component.find('.title').text()).toEqual('test');
-    expect(component.find('.content').text()).toEqual('test2');
-  });
-
   it('should throw an Error without content props', () => {
     expect(() => shallow(<AboutMe />)).toThrow();
   });

@@ -23,8 +23,4 @@ describe('SkillTechList component', () => {
     const component = shallow(<SkillTechList {...props} />);
     expect(component).toBeTruthy();
   });
-
-  it('should throw error without props', () => {
-    expect(() => shallow(<SkillTechList />)).toThrow();
-  });
 });
