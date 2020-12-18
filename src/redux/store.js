@@ -3,7 +3,6 @@ import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 import globalSettingsData from '../data/globalSettings.json';
-import socialMediaData from '../data/socialMedia.json';
 
 import globalReducer from './globalRedux';
 import aboutMeReducer from './aboutMeRedux';
@@ -15,7 +14,6 @@ import socialMediaReducer from './socialMediaRedux';
 
 const initialState = {
   globalSettings: globalSettingsData,
-  socialMedia: socialMediaData,
 };
 
 // define reducers
