@@ -3,7 +3,6 @@ import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 import skillTechData from '../data/skillTech.json';
-import myProjectsData from '../data/myProjects.json';
 import globalSettingsData from '../data/globalSettings.json';
 import socialMediaData from '../data/socialMedia.json';
 
@@ -17,7 +16,6 @@ import socialMediaReducer from './socialMediaRedux';
 
 const initialState = {
   skillTech: skillTechData,
-  myProjects: myProjectsData,
   globalSettings: globalSettingsData,
   socialMedia: socialMediaData,
 };
