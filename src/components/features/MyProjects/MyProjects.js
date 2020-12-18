@@ -41,9 +41,15 @@ class MyProjects extends React.Component {
     });
   }
 
+  componentDidMount() {
+    const {getProjectsData} = this.props;
+
+    getProjectsData();
+  }
+
   render() {
 
-    const {title, description, projects, globalLanguage} = this.props;
+    const {title, description, projects, globalLanguage, loadingStatus} = this.props;
 
     const pagesCount = Math.ceil(projects.length / this.state.projectsOnPage);
     const numbers = [];
@@ -61,44 +67,48 @@ class MyProjects extends React.Component {
     }
 
     return(
-      <div className={styles.container}>
-        <div id='myProjects' className={styles.myProjects}>
-          <h1 className={styles.title}>{title}</h1>
-          <p>{description}</p>
-          <div className={styles.pageNav}>
-            <Button
-              Type='div'
-              subType='icon'
-              onClick={() => this.previousPage()}
-            >
-              <FontAwesomeIcon
-                icon={faCaretSquareLeft}
-                className={styles.changeIconLeft}
-              />
-            </Button>
-            {numbers.map(number => (
-              number
-            ))}
-            <Button
-              Type='div'
-              subType='icon'
-              onClick={() => this.nextPage()}
-            >
-              <FontAwesomeIcon
-                icon={faCaretSquareRight}
-                className={styles.changeIconRight}
-              />
-            </Button>
-          </div>
-          <div className={styles.flexBox}>
-            {projects
-              .slice(this.state.activePage * this.state.projectsOnPage, (this.state.activePage + 1) * this.state.projectsOnPage)
-              .map(project => (
-                <Project key={project._id} globalLanguage={globalLanguage} {...project} />
+      loadingStatus === undefined || loadingStatus.active || loadingStatus.error
+        ?
+        null
+        :
+        <div className={styles.container}>
+          <div id='myProjects' className={styles.myProjects}>
+            <h1 className={styles.title}>{title}</h1>
+            <p>{description}</p>
+            <div className={styles.pageNav}>
+              <Button
+                Type='div'
+                subType='icon'
+                onClick={() => this.previousPage()}
+              >
+                <FontAwesomeIcon
+                  icon={faCaretSquareLeft}
+                  className={styles.changeIconLeft}
+                />
+              </Button>
+              {numbers.map(number => (
+                number
               ))}
+              <Button
+                Type='div'
+                subType='icon'
+                onClick={() => this.nextPage()}
+              >
+                <FontAwesomeIcon
+                  icon={faCaretSquareRight}
+                  className={styles.changeIconRight}
+                />
+              </Button>
+            </div>
+            <div className={styles.flexBox}>
+              {projects
+                .slice(this.state.activePage * this.state.projectsOnPage, (this.state.activePage + 1) * this.state.projectsOnPage)
+                .map(project => (
+                  <Project key={project._id} globalLanguage={globalLanguage} {...project} />
+                ))}
+            </div>
           </div>
         </div>
-      </div>
     );
   }
 }
@@ -108,10 +118,13 @@ MyProjects.propTypes = {
   description: PropTypes.string,
   projects: PropTypes.array,
   globalLanguage: PropTypes.string,
+  getProjectsData: PropTypes.func,
+  loadingStatus: PropTypes.object,
 };
 
 MyProjects.defaultProps = {
   projects: [],
+  getProjectsData: () => {},
 };
 
 export default MyProjects;
