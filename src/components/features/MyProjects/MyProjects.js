@@ -19,9 +19,13 @@ class MyProjects extends React.Component {
   }
 
   changeActivePage = (pageNumber) => {
+    const pagesCount = Math.ceil(this.props.projects.length / this.state.projectsOnPage);
+
     this.setState({
       ...this.state,
       activePage: pageNumber,
+      activePreviusPage: pageNumber > 0 ? true : false,
+      activeNextPage: pageNumber < pagesCount - 1 ? true : false,
     });
   }
 
