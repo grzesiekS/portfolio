@@ -4,12 +4,13 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import styles from './Button.module.scss';
 
-const Button =({ children, Type = 'a', animation = false, subType, ...props}) => {
+const Button =({ children, Type = 'a', animation = false, subType, active = true, ...props}) => {
   const classes = [];
 
   classes.push(styles.main);
 
   if(animation) classes.push(styles.fadeIn);
+  if(!active) classes.push(styles.deactivate);
 
   switch(subType) {
     case 'icon':
@@ -40,6 +41,7 @@ Button.propTypes = {
   Type: PropTypes.string,
   animation: PropTypes.bool,
   subType: PropTypes.string,
+  active: PropTypes.bool,
 };
 
 export default Button;

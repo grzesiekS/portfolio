@@ -25,6 +25,16 @@
     border: none;
     background-image: none;
   }
+
+  &.deactivate {
+    color: $button-content-color-deactivate;
+    border-color: $button-border-color-deactivate;
+    background-image: none;
+
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
 }
 
 .fadeIn {

@@ -27,7 +27,6 @@ class MyProjects extends React.Component {
 
   nextPage = () => {
     const pagesCount = Math.ceil(this.props.projects.length / this.state.projectsOnPage);
-    console.log(pagesCount);
     this.setState({
       ...this.state,
       activePage:
@@ -87,6 +86,7 @@ class MyProjects extends React.Component {
                 Type='div'
                 subType='icon'
                 onClick={() => this.previousPage()}
+                active={this.state.activePreviusPage}
               >
                 <FontAwesomeIcon
                   icon={faCaretSquareLeft}
@@ -100,6 +100,7 @@ class MyProjects extends React.Component {
                 Type='div'
                 subType='icon'
                 onClick={() => this.nextPage()}
+                active={this.state.activeNextPage}
               >
                 <FontAwesomeIcon
                   icon={faCaretSquareRight}
