@@ -8,6 +8,7 @@ import { faCaretSquareLeft, faCaretSquareRight } from '@fortawesome/free-solid-s
 import styles from './MyProjects.module.scss';
 import Project from '../Project/ProjectContainer';
 import Button from '../../common/Button/Button';
+import Swipeable from '../Swipeable/Swipeable';
 
 class MyProjects extends React.Component {
   state = {
@@ -100,13 +101,18 @@ class MyProjects extends React.Component {
                 />
               </Button>
             </div>
-            <div className={styles.flexBox}>
-              {projects
-                .slice(this.state.activePage * this.state.projectsOnPage, (this.state.activePage + 1) * this.state.projectsOnPage)
-                .map(project => (
-                  <Project key={project._id} globalLanguage={globalLanguage} {...project} />
-                ))}
-            </div>
+            <Swipeable
+              leftAction={() => this.previousPage()}
+              rightAction={() => this.nextPage()}
+            >
+              <div className={styles.flexBox}>
+                {projects
+                  .slice(this.state.activePage * this.state.projectsOnPage, (this.state.activePage + 1) * this.state.projectsOnPage)
+                  .map(project => (
+                    <Project key={project._id} globalLanguage={globalLanguage} {...project} />
+                  ))}
+              </div>
+            </Swipeable>
           </div>
         </div>
     );
