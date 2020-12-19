@@ -14,6 +14,8 @@ class MyProjects extends React.Component {
   state = {
     activePage: 0,
     projectsOnPage: 3,
+    activePreviusPage: false,
+    activeNextPage: true,
   }
 
   changeActivePage = (pageNumber) => {
@@ -25,13 +27,15 @@ class MyProjects extends React.Component {
 
   nextPage = () => {
     const pagesCount = Math.ceil(this.props.projects.length / this.state.projectsOnPage);
-
+    console.log(pagesCount);
     this.setState({
       ...this.state,
       activePage:
         this.state.activePage >= pagesCount- 1
           ? this.state.activePage
           : this.state.activePage + 1,
+      activePreviusPage: true,
+      activeNextPage: this.state.activePage >= pagesCount- 2 ? false : true,
     });
   }
 
@@ -39,6 +43,8 @@ class MyProjects extends React.Component {
     this.setState({
       ...this.state,
       activePage: this.state.activePage === 0 ? 0 : this.state.activePage - 1,
+      activeNextPage: true,
+      activePreviusPage: this.state.activePage - 1 <= 0 ? false : true,
     });
   }
 
