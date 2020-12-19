@@ -24,9 +24,9 @@ class Swipeable extends React.Component {
     const {leftAction, rightAction} = this.props;
 
     if(this.state.positionEnd <= this.state.positionStart * 0.8) {
-      leftAction();
-    } else if (this.state.positionEnd >= this.state.positionStart * 1.2) {
       rightAction();
+    } else if (this.state.positionEnd >= this.state.positionStart * 1.2) {
+      leftAction();
     }
   }
 
