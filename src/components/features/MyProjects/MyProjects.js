@@ -14,24 +14,31 @@ class MyProjects extends React.Component {
   state = {
     activePage: 0,
     projectsOnPage: 3,
+    activePreviusPage: false,
+    activeNextPage: true,
   }
 
   changeActivePage = (pageNumber) => {
+    const pagesCount = Math.ceil(this.props.projects.length / this.state.projectsOnPage);
+
     this.setState({
       ...this.state,
       activePage: pageNumber,
+      activePreviusPage: pageNumber > 0 ? true : false,
+      activeNextPage: pageNumber < pagesCount - 1 ? true : false,
     });
   }
 
   nextPage = () => {
     const pagesCount = Math.ceil(this.props.projects.length / this.state.projectsOnPage);
-
     this.setState({
       ...this.state,
       activePage:
         this.state.activePage >= pagesCount- 1
           ? this.state.activePage
           : this.state.activePage + 1,
+      activePreviusPage: true,
+      activeNextPage: this.state.activePage >= pagesCount- 2 ? false : true,
     });
   }
 
@@ -39,6 +46,8 @@ class MyProjects extends React.Component {
     this.setState({
       ...this.state,
       activePage: this.state.activePage === 0 ? 0 : this.state.activePage - 1,
+      activeNextPage: true,
+      activePreviusPage: this.state.activePage - 1 <= 0 ? false : true,
     });
   }
 
@@ -81,6 +90,7 @@ class MyProjects extends React.Component {
                 Type='div'
                 subType='icon'
                 onClick={() => this.previousPage()}
+                active={this.state.activePreviusPage}
               >
                 <FontAwesomeIcon
                   icon={faCaretSquareLeft}
@@ -94,6 +104,7 @@ class MyProjects extends React.Component {
                 Type='div'
                 subType='icon'
                 onClick={() => this.nextPage()}
+                active={this.state.activeNextPage}
               >
                 <FontAwesomeIcon
                   icon={faCaretSquareRight}
