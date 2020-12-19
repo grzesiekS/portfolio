@@ -32,7 +32,11 @@ class Swipeable extends React.Component {
 
   render() {
     return (
-      <div>
+      <div
+        onTouchStart={event => this.handleTouchStart(event)}
+        onTouchMove={event => this.handleTouchMove(event)}
+        onTouchEnd={event => this.handleTouchEnd(event)}
+      >
         {this.props.children}
       </div>
     );
