@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import styles from './ContactForm.module.scss';
 import Option from '../Option/Option';
 import Button from '../../common/Button/Button';
+import Load from '../../common/Load/Load';
 
 class ContactForm extends React.Component {
 
@@ -17,28 +18,29 @@ class ContactForm extends React.Component {
     const {formData, language, changeInputValue, loadingStatus} = this.props;
 
     return (
-      loadingStatus === undefined || loadingStatus.active || loadingStatus.error
+      loadingStatus === undefined || loadingStatus.active
         ?
-        null
+        loadingStatus === undefined || loadingStatus.error ? null : <Load />
         :
-        <div className={styles.container}>
-          <form>
-            {formData.map(data => (
-              <Option
-                key={data._id}
-                id={data._id}
-                value={data.value}
-                type={data.type}
-                inputType={data.inputType}
-                title={data.titles.filter(title => title.language === language)[0].title}
-                setOptionValue={(id, newVaule) => changeInputValue(id, newVaule)}
-              />
-            ))}
-            <Button Type='div' animation={true}>
-              Send Message
-            </Button>
-          </form>
-        </div>
+        loadingStatus === undefined || loadingStatus.error ? null :
+          <div className={styles.container}>
+            <form>
+              {formData.map(data => (
+                <Option
+                  key={data._id}
+                  id={data._id}
+                  value={data.value}
+                  type={data.type}
+                  inputType={data.inputType}
+                  title={data.titles.filter(title => title.language === language)[0].title}
+                  setOptionValue={(id, newVaule) => changeInputValue(id, newVaule)}
+                />
+              ))}
+              <Button Type='div' animation={true}>
+                Send Message
+              </Button>
+            </form>
+          </div>
     );
   }
 }

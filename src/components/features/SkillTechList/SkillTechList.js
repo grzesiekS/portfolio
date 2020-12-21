@@ -6,6 +6,7 @@ import { faCode } from '@fortawesome/free-solid-svg-icons';
 
 import styles from './SkillTechList.module.scss';
 import IconsGenerator from '../../common/IconsGenerator/IconsGenerator';
+import Load from '../../common/Load/Load';
 
 const SkillTechList = (props) => {
 
@@ -20,39 +21,40 @@ const SkillTechList = (props) => {
   return (
     loadingStatus === undefined || loadingStatus.active || loadingStatus.error
       ?
-      null
+      loadingStatus === undefined || loadingStatus.error ? null : <Load />
       :
-      <div id='techSkills' className={styles.container}>
-        <h1 className={styles.title}>{props.title}</h1>
-        <div className={styles.flexBox}>
-          <div className={styles.skills}>
-            <h2>{props.skillTitle}</h2>
-            {props.skills.map(skill => (
-              <IconsGenerator
-                key={props.skills.indexOf(skill)}
-                iconName={skill.icon}
-                iconsList={fab}
-                alternativeIcon={faCode}
-              >
-                {skill.name}
-              </IconsGenerator>
-            ))}
-          </div>
-          <div className={styles.techs}>
-            <h2>{props.techTitle}</h2>
-            {props.techs.map(tech => (
-              <IconsGenerator
-                key={props.techs.indexOf(tech)}
-                iconName={tech.icon}
-                iconsList={fab}
-                alternativeIcon={faCodepen}
-              >
-                {tech.name}
-              </IconsGenerator>
-            ))}
+      loadingStatus === undefined || loadingStatus.error ? null :
+        <div id='techSkills' className={styles.container}>
+          <h1 className={styles.title}>{props.title}</h1>
+          <div className={styles.flexBox}>
+            <div className={styles.skills}>
+              <h2>{props.skillTitle}</h2>
+              {props.skills.map(skill => (
+                <IconsGenerator
+                  key={props.skills.indexOf(skill)}
+                  iconName={skill.icon}
+                  iconsList={fab}
+                  alternativeIcon={faCode}
+                >
+                  {skill.name}
+                </IconsGenerator>
+              ))}
+            </div>
+            <div className={styles.techs}>
+              <h2>{props.techTitle}</h2>
+              {props.techs.map(tech => (
+                <IconsGenerator
+                  key={props.techs.indexOf(tech)}
+                  iconName={tech.icon}
+                  iconsList={fab}
+                  alternativeIcon={faCodepen}
+                >
+                  {tech.name}
+                </IconsGenerator>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
   );
 };
 

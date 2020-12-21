@@ -9,6 +9,7 @@ import styles from './MyProjects.module.scss';
 import Project from '../Project/ProjectContainer';
 import Button from '../../common/Button/Button';
 import Swipeable from '../Swipeable/Swipeable';
+import Load from '../../common/Load/Load';
 
 class MyProjects extends React.Component {
   state = {
@@ -77,55 +78,56 @@ class MyProjects extends React.Component {
     }
 
     return(
-      loadingStatus === undefined || loadingStatus.active || loadingStatus.error
+      loadingStatus === undefined || loadingStatus.active
         ?
-        null
+        loadingStatus === undefined || loadingStatus.error ? null : <Load />
         :
-        <div className={styles.container}>
-          <div id='myProjects' className={styles.myProjects}>
-            <h1 className={styles.title}>{title}</h1>
-            <p>{description}</p>
-            <div className={styles.pageNav}>
-              <Button
-                Type='div'
-                subType='icon'
-                onClick={() => this.previousPage()}
-                active={this.state.activePreviusPage}
-              >
-                <FontAwesomeIcon
-                  icon={faCaretSquareLeft}
-                  className={styles.changeIconLeft}
-                />
-              </Button>
-              {numbers.map(number => (
-                number
-              ))}
-              <Button
-                Type='div'
-                subType='icon'
-                onClick={() => this.nextPage()}
-                active={this.state.activeNextPage}
-              >
-                <FontAwesomeIcon
-                  icon={faCaretSquareRight}
-                  className={styles.changeIconRight}
-                />
-              </Button>
-            </div>
-            <Swipeable
-              leftAction={() => this.previousPage()}
-              rightAction={() => this.nextPage()}
-            >
-              <div className={styles.flexBox}>
-                {projects
-                  .slice(this.state.activePage * this.state.projectsOnPage, (this.state.activePage + 1) * this.state.projectsOnPage)
-                  .map(project => (
-                    <Project key={project._id} globalLanguage={globalLanguage} {...project} />
-                  ))}
+        loadingStatus === undefined || loadingStatus.error ? null :
+          <div className={styles.container}>
+            <div id='myProjects' className={styles.myProjects}>
+              <h1 className={styles.title}>{title}</h1>
+              <p>{description}</p>
+              <div className={styles.pageNav}>
+                <Button
+                  Type='div'
+                  subType='icon'
+                  onClick={() => this.previousPage()}
+                  active={this.state.activePreviusPage}
+                >
+                  <FontAwesomeIcon
+                    icon={faCaretSquareLeft}
+                    className={styles.changeIconLeft}
+                  />
+                </Button>
+                {numbers.map(number => (
+                  number
+                ))}
+                <Button
+                  Type='div'
+                  subType='icon'
+                  onClick={() => this.nextPage()}
+                  active={this.state.activeNextPage}
+                >
+                  <FontAwesomeIcon
+                    icon={faCaretSquareRight}
+                    className={styles.changeIconRight}
+                  />
+                </Button>
               </div>
-            </Swipeable>
+              <Swipeable
+                leftAction={() => this.previousPage()}
+                rightAction={() => this.nextPage()}
+              >
+                <div className={styles.flexBox}>
+                  {projects
+                    .slice(this.state.activePage * this.state.projectsOnPage, (this.state.activePage + 1) * this.state.projectsOnPage)
+                    .map(project => (
+                      <Project key={project._id} globalLanguage={globalLanguage} {...project} />
+                    ))}
+                </div>
+              </Swipeable>
+            </div>
           </div>
-        </div>
     );
   }
 }
