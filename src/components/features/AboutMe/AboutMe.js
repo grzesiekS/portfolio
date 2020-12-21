@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styles from './AboutMe.module.scss';
 
+import Load from '../../common/Load/Load';
+
 const AboutMe = (props) => {
   
   const {header, description} = props.content[0] !== undefined && props.content[0];
@@ -14,16 +16,17 @@ const AboutMe = (props) => {
   }, []);
 
   return (
-    loadingStatus === undefined || loadingStatus.active || loadingStatus.error 
+    loadingStatus === undefined || loadingStatus.active 
       ?
-      null
+      loadingStatus === undefined || loadingStatus.error ? null : <Load />
       :
-      <div className={styles.container}>
-        <div id='aboutMe' className={styles.aboutMe}>
-          <h1 className={styles.title}>{header}</h1>
-          <p className={styles.content}>{description}</p>
+      loadingStatus === undefined || loadingStatus.error ? null :
+        <div className={styles.container}>
+          <div id='aboutMe' className={styles.aboutMe}>
+            <h1 className={styles.title}>{header}</h1>
+            <p className={styles.content}>{description}</p>
+          </div>
         </div>
-      </div>
   );
 };
 
