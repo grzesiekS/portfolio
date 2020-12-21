@@ -12,6 +12,7 @@ class ScrollButton extends React.Component {
 
   state = {
     scrollButtonDisplay: false,
+    scrollButtonFadeOut: false,
   }
 
   handleScrollTop = () => {
@@ -22,6 +23,7 @@ class ScrollButton extends React.Component {
     this.setState({
       ...this.state,
       scrollButtonDisplay: scrollPosition >= this.props.scrollButtonDisplayPosition ? true : false,
+      scrollButtonFadeOut: this.state.scrollButtonDisplay ? true : this.state.scrollButtonFadeOut,
     });
   }
 
@@ -38,7 +40,8 @@ class ScrollButton extends React.Component {
     return (
       <div className={styles.container} >
         {children}
-        <div className={this.state.scrollButtonDisplay ? clsx(styles.scrollButton, styles.show) : styles.scrollButton}>
+        <div className={this.state.scrollButtonDisplay ? clsx(styles.scrollButton, styles.show) 
+          : this.state.scrollButtonFadeOut ? clsx(styles.scrollButton, styles.fadeOut) : styles.scrollButton}>
           <Button Type='div' onClick={() => this.handleScrollTop()}>
             <FontAwesomeIcon icon={faCaretUp} className={styles.scrollIcon} />
           </Button>
