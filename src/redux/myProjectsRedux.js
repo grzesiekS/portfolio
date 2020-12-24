@@ -26,7 +26,7 @@ export const fetchError = payload => ({ payload, type: FETCH_ERROR });
 /* thunk creators */
 export const fetchProjects = () => {
   return (dispatch, getState) => {
-    dispatch(fetchSuccess());
+    dispatch(fetchStarted());
 
     Axios.all([
       Axios.get(`${API_URL}/myProjects/data`),
