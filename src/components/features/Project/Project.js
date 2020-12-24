@@ -92,7 +92,7 @@ class Project extends React.Component {
             </Button>
             <Button href={gitLink} target="_blank">
               <FontAwesomeIcon icon={faGithub} className={styles.linkIcon} />
-              GitHub Link
+              GitHub
             </Button>
           </div>
         </section>
