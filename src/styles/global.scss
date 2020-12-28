@@ -22,3 +22,13 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background-color: $scrollbar-color;
 }
+
+.switchWrapper {
+  position: relative;
+
+  > :first-child ~ * {
+      position: absolute;
+      left: -100%;
+      width: 100%;
+  }
+}

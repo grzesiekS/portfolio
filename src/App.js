@@ -14,8 +14,9 @@ const App = () => (
     <MainLayout>
       <AnimatedSwitch
         atEnter={{ opacity: 0 }}
-        atLeave={{ opacity: 1 }}
+        atLeave={{ opacity: 0 }}
         atActive={{ opacity: 1 }}
+        className='switchWrapper'
       >
         <Route exact path='/' component={Homepage} />
         <Route exact path='/contact' component={ContactPage} />
