@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Raleway&display=swap");
 
-$font-anton: 'Anton', sans-serif;
+$font-anton: 'Anton', sans-serif; //use for titles
 $font-raleway: 'Raleway', sans-serif;
 
 // SETTINGS
@@ -127,3 +127,7 @@ $footer-border-color: $mintyGreen;
 // LOAD
 $load-border-top-color: $mintyGreen;
 $load-border-color: $white;
+
+// ERROR MSG
+$errorMsg-text-color: $white;
+$errorMsg-title-text-color: $mintyGreen;
