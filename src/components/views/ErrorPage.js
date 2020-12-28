@@ -1,8 +1,10 @@
 import React from 'react';
 
+import ErrorMsg from '../features/ErrorMsg/ErrorMsg';
+
 const ErrorPage = () => (
   <div>
-    <p>ERROR</p>
+    <ErrorMsg />
   </div>
 );
 
