@@ -58,6 +58,18 @@
     color: $textarea-text-color;
     resize: none;
   }
+
+  textarea::-webkit-scrollbar {
+    width: 0.4em;
+  }
+  
+  textarea::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  textarea::-webkit-scrollbar-thumb {
+    background-color: $scrollbar-color;
+  }
 }
 
 @media(max-width: 650px) {
