@@ -2,4 +2,15 @@
 
 .container {
   text-align: center;
+  margin: 120px 0;
+  color: $errorMsg-text-color;
+}
+
+.msg {
+  font-size: 22px;
+}
+
+.title {
+  font-family: $font-anton;
+  color: $errorMsg-title-text-color;
 }
