@@ -38,6 +38,17 @@ export const fetchFormData = () => {
   };
 };
 
+export const sendEmail = post => {
+  return async dispatch => {
+    try {
+      await Axios.post(`${API_URL}/forms/send-email`, post);
+      await new Promise(resolve => resolve());
+    } catch(e) {
+      console.log(e.message);
+    }
+  };
+};
+
 // reducer
 export default function reducer(statePart = [], action = []) {
   switch(action.type) {
