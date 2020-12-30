@@ -5,6 +5,7 @@ import {
   changeInputValue, 
   fetchFormData, 
   getLoadingStatus,
+  sendEmail,
 } from '../../../redux/formsRedux';
 
 import {getLanguage} from '../../../redux/globalSettingsRedux';
@@ -20,6 +21,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   changeInputValue: (id, newValue) => dispatch(changeInputValue({id, newValue})),
   fetchFormData: () => dispatch(fetchFormData()),
+  sendEmail: (name, lastName, email, phoneNo, message) => dispatch(sendEmail({name, lastName, email, phoneNo, message})),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ContactForm);

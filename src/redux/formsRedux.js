@@ -15,12 +15,18 @@ const CHANGE_INPUT_VALUE = createActionName('CHANGE_INPUT_VALUE');
 const FETCH_START = createActionName('FETCH_START');
 const FETCH_SUCCESS = createActionName('FETCH_SUCCESS');
 const FETCH_ERROR = createActionName('FETCH_ERROR');
+const POST_START = createActionName('POST_START');
+const POST_SUCCESS = createActionName('POST_SUCCESS');
+const POST_ERROR = createActionName('POST_ERROR');
 
 // Action creators
 export const fetchStarted = payload => ({ payload, type: FETCH_START });
 export const fetchSuccess = payload => ({ payload, type: FETCH_SUCCESS });
 export const fetchError = payload => ({ payload, type: FETCH_ERROR });
 export const changeInputValue = payload => ({ ...payload, type: CHANGE_INPUT_VALUE });
+export const postStarted = payload => ({ payload, type: POST_START });
+export const postSuccess = payload => ({ payload, type: POST_SUCCESS });
+export const postError = payload => ({ payload, type: POST_ERROR });
 
 /* thunk creators */
 export const fetchFormData = () => {
@@ -35,6 +41,20 @@ export const fetchFormData = () => {
       .catch(err => {
         dispatch(fetchError(err.message || false));
       });
+  };
+};
+
+export const sendEmail = post => {
+  return async dispatch => {
+    dispatch(postStarted());
+
+    try {
+      await Axios.post(`${API_URL}/forms/send-email`, post);
+      await new Promise(resolve => resolve());
+      dispatch(postSuccess());
+    } catch(err) {
+      dispatch(postError(err.message || false));
+    }
   };
 };
 
@@ -80,6 +100,40 @@ export default function reducer(statePart = [], action = []) {
                 value: action.newValue,
               }
               : {...data}),
+      };
+    }
+    case POST_START: {
+      return {
+        ...statePart,
+        postLoading: {
+          active: true,
+          error: false,
+        },
+      };
+    }
+    case POST_SUCCESS: {
+      const newData = statePart.data.map(dataPart => {
+        return {
+          ...dataPart,
+          value: '',
+        };
+      });
+      return {
+        ...statePart,
+        data: newData,
+        postLoading: {
+          active: false,
+          error: false,
+        },
+      };
+    }
+    case POST_ERROR: {
+      return {
+        ...statePart,
+        postLoading: {
+          active: false,
+          error: action.payload,
+        },
       };
     }
     default:

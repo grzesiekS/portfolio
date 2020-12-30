@@ -15,7 +15,7 @@ class ContactForm extends React.Component {
   }
 
   render() {
-    const {formData, language, changeInputValue, loadingStatus} = this.props;
+    const {formData, language, changeInputValue, loadingStatus, sendEmail} = this.props;
 
     return (
       loadingStatus === undefined || loadingStatus.active
@@ -36,7 +36,11 @@ class ContactForm extends React.Component {
                   setOptionValue={(id, newVaule) => changeInputValue(id, newVaule)}
                 />
               ))}
-              <Button Type='div' animation={true}>
+              <Button 
+                Type='div' 
+                animation={true}
+                onClick={() => sendEmail(formData[0].value, formData[1].value, formData[2].value, formData[3].value, formData[4].value)}
+              >
                 Send Message
               </Button>
             </form>
@@ -51,6 +55,7 @@ ContactForm.propTypes = {
   changeInputValue: PropTypes.func,
   fetchFormData: PropTypes.func,
   loadingStatus: PropTypes.object,
+  sendEmail: PropTypes.func,
 };
 
 ContactForm.defaultProps = {
