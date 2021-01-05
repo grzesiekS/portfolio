@@ -7,6 +7,9 @@ import Button from '../../common/Button/Button';
 import Load from '../../common/Load/Load';
 
 class ContactForm extends React.Component {
+  state = {
+    formInputError: [],
+  }
 
   componentDidMount() {
     const {fetchFormData} = this.props;
@@ -14,8 +17,78 @@ class ContactForm extends React.Component {
     fetchFormData();
   }
 
+  addFormInputError = id => {
+    const newErrorInput = this.state.formInputError;
+    if(this.state.formInputError.indexOf(id) === -1) newErrorInput.push(id);
+
+    this.setState({
+      formInputError: [
+        ...this.state.formInputError,
+        id,
+      ],
+    });
+  }
+
+  removeFormInputError = id => {
+    this.setState({
+      formInputError: this.state.formInputError.filter(input => input !== id),
+    });
+  }
+
+  handleEmailSend = () => {
+    const { sendEmail, formData } = this.props;
+    const emailData = {
+      name: {
+        _id: formData[0]._id,
+        value: formData[0].value,
+      },
+      lastName: {
+        _id: formData[1]._id,
+        value: formData[1].value,
+      },
+      email: {
+        _id: formData[2]._id,
+        value: formData[2].value,
+      },
+      phoneNo: {
+        _id: formData[3]._id,
+        value: formData[3].value,
+      },
+      subject: {
+        _id: formData[4]._id,
+        value: formData[4].value,
+      },
+      message: {
+        _id: formData[5]._id,
+        value: formData[5].value,
+      },
+    };
+
+    if(emailData.name.value
+      && emailData.lastName.value
+      && emailData.email.value
+      && emailData.email.value.split('@').length === 2
+      && emailData.email.value.split('.').length === 2
+      && emailData.email.value.split('.')[1] !== ''
+      && emailData.email.value.indexOf(' ') === -1
+      && emailData.phoneNo.value
+      && emailData.subject.value
+      && emailData.message.value
+    ) {
+      sendEmail(
+        emailData.name.value,
+        emailData.lastName.value,
+        emailData.email.value,
+        emailData.phoneNo.value,
+        emailData.subject.value,
+        emailData.message.value
+      );
+    }
+
+  }
+
   render() {
-    const {formData, language, changeInputValue, loadingStatus, sendEmail, postStatus} = this.props;
+    const {formData, language, changeInputValue, loadingStatus, postStatus} = this.props;
 
     return (
       loadingStatus === undefined || loadingStatus.active
@@ -41,7 +114,7 @@ class ContactForm extends React.Component {
                 <Button 
                   Type='div' 
                   animation={true}
-                  onClick={() => sendEmail(formData[0].value, formData[1].value, formData[2].value, formData[3].value, formData[4].value, formData[5].value)}
+                  onClick={() => this.handleEmailSend()}
                 >
                   Send Message
                 </Button>
