@@ -64,7 +64,23 @@
       ]
   },
   {
-      "_id": 5,
+    "_id": 5,
+    "type": "input",
+    "value":"",
+    "inputType": "text",
+    "titles": [
+        {
+            "language": "EN",
+            "title": "Subject"
+        },
+        {
+            "language": "PL",
+            "title": "Temat"
+        }
+    ]
+},
+  {
+      "_id": 6,
       "value":"",
       "type": "textarea",
       "inputType": "",
