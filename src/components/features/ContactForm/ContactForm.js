@@ -11,21 +11,12 @@ class ContactForm extends React.Component {
     formInputError: [],
   }
 
-  componentDidMount() {
-    const {fetchFormData} = this.props;
-
-    fetchFormData();
-  }
-
   addFormInputError = id => {
     const newErrorInput = this.state.formInputError;
     if(this.state.formInputError.indexOf(id) === -1) newErrorInput.push(id);
 
     this.setState({
-      formInputError: [
-        ...this.state.formInputError,
-        id,
-      ],
+      formInputError: newErrorInput,
     });
   }
 
@@ -83,8 +74,25 @@ class ContactForm extends React.Component {
         emailData.subject.value,
         emailData.message.value
       );
+    } else {
+      if(!emailData.name.value) this.addFormInputError(emailData.name._id);
+      if(!emailData.lastName.value) this.addFormInputError(emailData.lastName._id);
+      if(!emailData.email.value
+        || emailData.email.value.split('@').length !== 2
+        || emailData.email.value.split('.').length !== 2
+        || emailData.email.value.split('.')[1] === ''
+        || emailData.email.value.indexOf(' ') !== -1) this.addFormInputError(emailData.email._id);
+      if(!emailData.phoneNo.value) this.addFormInputError(emailData.phoneNo._id);
+      if(!emailData.subject.value) this.addFormInputError(emailData.subject._id);
+      if(!emailData.message.value) this.addFormInputError(emailData.message._id);
     }
 
+  }
+
+  componentDidMount() {
+    const {fetchFormData} = this.props;
+
+    fetchFormData();
   }
 
   render() {
