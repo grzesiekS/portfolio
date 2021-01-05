@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 
 import styles from './Option.module.scss';
 
-const OptionTextarea = ({value, title, setOptionValue, id}) => (
+const OptionTextarea = ({value, title, setOptionValue, id, error}) => (
   <label className={styles.textarea}>
     <p className={styles.title}>{title}</p>
     <textarea
+      className={error ? styles.error : null}
       value={value || ''}
       onChange={e => setOptionValue(id, e.currentTarget.value)}
     >
@@ -22,6 +23,7 @@ OptionTextarea.propTypes = {
     PropTypes.string,
     PropTypes.number,
   ]),
+  error: PropTypes.bool,
 };
 
 OptionTextarea.defaultProps = {
