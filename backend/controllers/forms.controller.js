@@ -18,7 +18,7 @@ exports.sendEmail = async (req, res) => {
   try {
 
     const bodySanitize = sanitize(req.body);
-    const {name, lastName, email, phoneNo, message} = bodySanitize;
+    const {name, lastName, email, phoneNo, subject, message} = bodySanitize;
     const htmlMessage = message.replace(/\n/g, '<br>\n') + '<br><br>' 
     + `<b>${name} ${lastName}</b><br>`
     + `<b>E-Mail: ${email}</b><br>`
@@ -36,7 +36,7 @@ exports.sendEmail = async (req, res) => {
     await transporter.sendMail({
       from: emailPass.emailDetails.user, // sender address
       to: emailPass.emailDetails.myEmail, // list of receivers
-      subject: 'Hello ✔', // Subject line
+      subject: subject, // Subject line
       html: htmlMessage, // html body
     });
 

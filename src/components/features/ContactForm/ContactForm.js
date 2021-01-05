@@ -39,7 +39,7 @@ class ContactForm extends React.Component {
               <Button 
                 Type='div' 
                 animation={true}
-                onClick={() => sendEmail(formData[0].value, formData[1].value, formData[2].value, formData[3].value, formData[4].value)}
+                onClick={() => sendEmail(formData[0].value, formData[1].value, formData[2].value, formData[3].value, formData[4].value, formData[5].value)}
               >
                 Send Message
               </Button>
