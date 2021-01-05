@@ -86,6 +86,11 @@ class ContactForm extends React.Component {
 
   }
 
+  handleInputError = id => {
+    if(this.state.formInputError.indexOf(id) !== -1) return true;
+    else return false;
+  }
+
   componentDidMount() {
     const {fetchFormData} = this.props;
 
@@ -114,6 +119,7 @@ class ContactForm extends React.Component {
                     inputType={data.inputType}
                     title={data.titles.filter(title => title.language === language)[0].title}
                     setOptionValue={(id, newVaule) => changeInputValue(id, newVaule)}
+                    error={this.handleInputError(data._id)}
                   />
                 ))}
                 <Button 

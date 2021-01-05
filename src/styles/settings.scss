@@ -40,6 +40,7 @@ $mintyGreen: #67f890;
 $white: #ffffff;
 $darkGrey: #545454;
 $lightGrey: #d3d3d3;
+$chiGong: #d63031;
 
 // BODY
 $bg-color: $darkGrey;
@@ -110,12 +111,14 @@ $project-image-before-border-side-color: $lightGrey;
   $input-bg-color: $darkGrey;
   $input-border-color: $mintyGreen;
   $input-text-color: $mintyGreen;
+  $input-border-error-color: $chiGong;
 
   // TEXTAREA
   $textarea-title-color: $white;
   $textarea-bg-color: $darkGrey;
   $textarea-border-color: $mintyGreen;
   $textarea-text-color: $mintyGreen;
+  $textarea-border-error-color: $chiGong;
 
 // SCROLL BUTTON
 $scrollButton-bg-color: $darkGrey;
