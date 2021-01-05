@@ -15,149 +15,59 @@
   "projects": [
     {
       "_id": "1",
-      "title": "Project 1",
+      "title": "Banners and Links - Kodilla",
       "descriptionData": [
         {
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac velit vel purus condimentum placerat. Phasellus semper eu leo vitae viverra. Mauris efficitur nisl a justo tempor scelerisque. Ut vitae lobortis erat, nec pulvinar nisi.",
+          "description": "Project objectives: Creating administration panel view for system managing of banners and links. Front-end was created based on received documentation.",
           "language": "EN"
         },
         {
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac velit vel purus condimentum placerat. Phasellus semper eu leo vitae viverra. Mauris efficitur nisl a justo tempor scelerisque. Ut vitae lobortis erat, nec pulvinar nisi.",
+          "description": "Projekt polegał na stworzeniu widoku panelu administracyjnego do systemu zarządzania bannerami i linkami na podstawie dostarczonej specyfikacji.",
           "language": "PL"
         }
       ],
-      "link": "http://www.myProject.com",
-      "gitLink": "http://www.gitMyProject.com",
-      "picture": "./images/projects/AdministrationPanel.jpg",
+      "link": "https://grzesieks.github.io/AdministrationPanel-Website/",
+      "gitLink": "https://github.com/grzesiekS/administration_panel-banners_links",
+      "picture": "/images/projects/AdministrationPanel.jpg",
       "skills": [3, 2, 1],
       "tech": [1, 12, 3]
     },
     {
       "_id": "2",
-      "title": "Project 2",
+      "title": "Furniture Shop - Kodilla",
       "descriptionData": [
         {
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac velit vel purus condimentum placerat. Phasellus semper eu leo vitae viverra. Mauris efficitur nisl a justo tempor scelerisque. Ut vitae lobortis erat, nec pulvinar nisi.",
+          "description": "This was a group project. 6 individuals and PM participated in this project. Project objectives: Finishing the website of furniture shop.",
           "language": "EN"
         },
         {
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac velit vel purus condimentum placerat. Phasellus semper eu leo vitae viverra. Mauris efficitur nisl a justo tempor scelerisque. Ut vitae lobortis erat, nec pulvinar nisi.",
+          "description": "Był to projekt grupowy. W projekcie brało udział 6 osób + PM. Zadaniem projektu było dokończenie prac nad stroną internetową sklepu meblowego.",
           "language": "PL"
         }
       ],
-      "link": "http://www.myProject.com",
-      "gitLink": "http://www.gitMyProject.com",
-      "picture": "./images/projects/AdministrationPanel.jpg",
-      "skills": [3, 2],
+      "link": "https://dreadful-demon-79855.herokuapp.com",
+      "gitLink": "https://github.com/grzesiekS/WDP-Furniture-shop",
+      "picture": "/images/projects/FurnitureShop.png",
+      "skills": [3, 2, 1],
       "tech": [4, 5, 1, 2, 3, 12, 13, 14]
     },
     {
       "_id": "3",
-      "title": "Project 3",
+      "title": "Online Game Shop - Kodilla",
       "descriptionData": [
         {
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac velit vel purus condimentum placerat. Phasellus semper eu leo vitae viverra. Mauris efficitur nisl a justo tempor scelerisque. Ut vitae lobortis erat, nec pulvinar nisi.",
+          "description": "Project objectives: Creating full-stack application, which includes frontend and backend. Application is a website of the company who offers video games for sale.",
           "language": "EN"
         },
         {
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac velit vel purus condimentum placerat. Phasellus semper eu leo vitae viverra. Mauris efficitur nisl a justo tempor scelerisque. Ut vitae lobortis erat, nec pulvinar nisi.",
+          "description": "Projekt polegał na stworzeniu full-stackowej aplikacji, zawierającej frontend oraz backend. Aplikacja jest stroną firmy oferującej gry video na zamówienie.",
           "language": "PL"
         }
-      ],"link": "http://www.myProject.com",
-      "gitLink": "http://www.gitMyProject.com",
-      "picture": "./images/projects/AdministrationPanel.jpg",
+      ],"link": "https://onlinegameshop.herokuapp.com",
+      "gitLink": "https://github.com/grzesiekS/online_shop",
+      "picture": "/images/projects/OnlineGameShop.png",
       "skills": [3, 2, 1],
-      "tech": [1, 12, 3]
-    },
-    {
-      "_id": "4",
-      "title": "Project 4",
-      "descriptionData": [
-        {
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac velit vel purus condimentum placerat. Phasellus semper eu leo vitae viverra. Mauris efficitur nisl a justo tempor scelerisque. Ut vitae lobortis erat, nec pulvinar nisi.",
-          "language": "EN"
-        },
-        {
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac velit vel purus condimentum placerat. Phasellus semper eu leo vitae viverra. Mauris efficitur nisl a justo tempor scelerisque. Ut vitae lobortis erat, nec pulvinar nisi.",
-          "language": "PL"
-        }
-      ],"link": "http://www.myProject.com",
-      "gitLink": "http://www.gitMyProject.com",
-      "picture": "./images/projects/AdministrationPanel.jpg",
-      "skills": [3, 2],
-      "tech": [4, 5, 1, 2, 3, 12, 13, 14]
-    },
-    {
-      "_id": "5",
-      "title": "Project 5",
-      "descriptionData": [
-        {
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac velit vel purus condimentum placerat. Phasellus semper eu leo vitae viverra. Mauris efficitur nisl a justo tempor scelerisque. Ut vitae lobortis erat, nec pulvinar nisi.",
-          "language": "EN"
-        },
-        {
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac velit vel purus condimentum placerat. Phasellus semper eu leo vitae viverra. Mauris efficitur nisl a justo tempor scelerisque. Ut vitae lobortis erat, nec pulvinar nisi.",
-          "language": "PL"
-        }
-      ],"link": "http://www.myProject.com",
-      "gitLink": "http://www.gitMyProject.com",
-      "picture": "./images/projects/AdministrationPanel.jpg",
-      "skills": [3, 2, 1],
-      "tech": [1, 12, 3]
-    },
-    {
-      "_id": "6",
-      "title": "Project 3",
-      "descriptionData": [
-        {
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac velit vel purus condimentum placerat. Phasellus semper eu leo vitae viverra. Mauris efficitur nisl a justo tempor scelerisque. Ut vitae lobortis erat, nec pulvinar nisi.",
-          "language": "EN"
-        },
-        {
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac velit vel purus condimentum placerat. Phasellus semper eu leo vitae viverra. Mauris efficitur nisl a justo tempor scelerisque. Ut vitae lobortis erat, nec pulvinar nisi.",
-          "language": "PL"
-        }
-      ],"link": "http://www.myProject.com",
-      "gitLink": "http://www.gitMyProject.com",
-      "picture": "./images/projects/AdministrationPanel.jpg",
-      "skills": [3, 2, 1],
-      "tech": [1, 12, 3]
-    },
-    {
-      "_id": "7",
-      "title": "Project 4",
-      "descriptionData": [
-        {
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac velit vel purus condimentum placerat. Phasellus semper eu leo vitae viverra. Mauris efficitur nisl a justo tempor scelerisque. Ut vitae lobortis erat, nec pulvinar nisi.",
-          "language": "EN"
-        },
-        {
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac velit vel purus condimentum placerat. Phasellus semper eu leo vitae viverra. Mauris efficitur nisl a justo tempor scelerisque. Ut vitae lobortis erat, nec pulvinar nisi.",
-          "language": "PL"
-        }
-      ],"link": "http://www.myProject.com",
-      "gitLink": "http://www.gitMyProject.com",
-      "picture": "./images/projects/AdministrationPanel.jpg",
-      "skills": [3, 2],
-      "tech": [4, 5, 1, 2, 3, 12, 13, 14]
-    },
-    {
-      "_id": "8",
-      "title": "Project 5",
-      "descriptionData": [
-        {
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac velit vel purus condimentum placerat. Phasellus semper eu leo vitae viverra. Mauris efficitur nisl a justo tempor scelerisque. Ut vitae lobortis erat, nec pulvinar nisi.",
-          "language": "EN"
-        },
-        {
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac velit vel purus condimentum placerat. Phasellus semper eu leo vitae viverra. Mauris efficitur nisl a justo tempor scelerisque. Ut vitae lobortis erat, nec pulvinar nisi.",
-          "language": "PL"
-        }
-      ],"link": "http://www.myProject.com",
-      "gitLink": "http://www.gitMyProject.com",
-      "picture": "./images/projects/AdministrationPanel.jpg",
-      "skills": [3, 2, 1],
-      "tech": [1, 12, 3]
+      "tech": [4, 5, 1, 14, 9, 10, 7, 8, 3, 12]
     }
   ]
 }
