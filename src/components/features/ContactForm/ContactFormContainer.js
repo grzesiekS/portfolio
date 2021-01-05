@@ -6,6 +6,7 @@ import {
   fetchFormData, 
   getLoadingStatus,
   sendEmail,
+  getPostStatus,
 } from '../../../redux/formsRedux';
 
 import {getLanguage} from '../../../redux/globalSettingsRedux';
@@ -16,6 +17,7 @@ const mapStateToProps = state => ({
   formData: getFormData(state),
   language: getLanguage(state),
   loadingStatus: getLoadingStatus(state),
+  postStatus: getPostStatus(state),
 });
 
 const mapDispatchToProps = dispatch => ({

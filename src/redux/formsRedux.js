@@ -4,6 +4,7 @@ import {API_URL} from '../config';
 /* SELECTORS */
 export const getFormData = ({forms}) => forms.data;
 export const getLoadingStatus = ({forms}) => forms.loading;
+export const getPostStatus = ({forms}) => forms.postLoading;
 
 /* ACTIONS */
 // action name creator
