@@ -21,7 +21,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   changeInputValue: (id, newValue) => dispatch(changeInputValue({id, newValue})),
   fetchFormData: () => dispatch(fetchFormData()),
-  sendEmail: (name, lastName, email, phoneNo, message) => dispatch(sendEmail({name, lastName, email, phoneNo, message})),
+  sendEmail: (name, lastName, email, phoneNo, subject, message) => dispatch(sendEmail({name, lastName, email, phoneNo, subject, message})),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ContactForm);
