@@ -13,16 +13,13 @@ class ContactForm extends React.Component {
 
   addFormInputError = id => {
     const newErrorInput = this.state.formInputError;
-    if(this.state.formInputError.indexOf(id) === -1) newErrorInput.push(id);
+    if(this.state.formInputError.indexOf(id) === -1) {
+      newErrorInput.push(id);
+    }
 
     this.setState({
+      ...this.state,
       formInputError: newErrorInput,
-    });
-  }
-
-  removeFormInputError = id => {
-    this.setState({
-      formInputError: this.state.formInputError.filter(input => input !== id),
     });
   }
 
