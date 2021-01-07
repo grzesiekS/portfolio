@@ -59,6 +59,7 @@ class Project extends React.Component {
           className={this.state.descriptionActive
             ? clsx(styles.description, styles.active) : styles.description}>
           <p>{this.fliterDescriptionData()}</p>
+          <p>Technologies and tools:</p>
           <div className={styles.skillTech}>
             <div className={styles.skill}>
               {skillsList.map(skill => (
