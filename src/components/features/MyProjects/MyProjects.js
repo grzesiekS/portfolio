@@ -87,33 +87,39 @@ class MyProjects extends React.Component {
             <div id='myProjects' className={styles.myProjects}>
               <h1 className={styles.title}>{title}</h1>
               <p>{description}</p>
-              <div className={styles.pageNav}>
-                <Button
-                  Type='div'
-                  subType='icon'
-                  onClick={() => this.previousPage()}
-                  active={this.state.activePreviusPage}
-                >
-                  <FontAwesomeIcon
-                    icon={faCaretSquareLeft}
-                    className={styles.changeIconLeft}
-                  />
-                </Button>
-                {numbers.map(number => (
-                  number
-                ))}
-                <Button
-                  Type='div'
-                  subType='icon'
-                  onClick={() => this.nextPage()}
-                  active={this.state.activeNextPage}
-                >
-                  <FontAwesomeIcon
-                    icon={faCaretSquareRight}
-                    className={styles.changeIconRight}
-                  />
-                </Button>
-              </div>
+              {numbers.length > 1
+                ?
+                <div className={styles.pageNav}>
+                  <Button
+                    Type='div'
+                    subType='icon'
+                    onClick={() => this.previousPage()}
+                    active={this.state.activePreviusPage}
+                  >
+                    <FontAwesomeIcon
+                      icon={faCaretSquareLeft}
+                      className={styles.changeIconLeft}
+                    />
+                  </Button>
+                  {numbers.map(number => (
+                    number
+                  ))}
+                  <Button
+                    Type='div'
+                    subType='icon'
+                    onClick={() => this.nextPage()}
+                    active={this.state.activeNextPage}
+                  >
+                    <FontAwesomeIcon
+                      icon={faCaretSquareRight}
+                      className={styles.changeIconRight}
+                    />
+                  </Button>
+                </div>
+                :
+                null
+              }
+              
               <Swipeable
                 leftAction={() => this.previousPage()}
                 rightAction={() => this.nextPage()}
