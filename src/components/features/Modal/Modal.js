@@ -4,7 +4,7 @@ import clsx from 'clsx';
 
 import styles from './Modal.module.scss';
 
-const Modal = ({msg, type, children}) => {
+const Modal = ({type, display, msg, children}) => {
   return (
     <div className={styles.container}>
       <div className={clsx(styles.message, styles[type])}>
@@ -21,6 +21,7 @@ Modal.propTypes = {
   msg: PropTypes.string,
   type: PropTypes.string,
   children: PropTypes.node,
+  display: PropTypes.bool,
 };
 
 export default Modal;

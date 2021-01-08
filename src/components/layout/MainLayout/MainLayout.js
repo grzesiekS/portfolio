@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Header from '../Header/Header';
 import Footer from '../Footer/FooterContainer';
 import ScrollButton from '../../features/ScrollButton/ScrollButtonContainer';
-import Modal from '../../features/Modal/Modal';
+import Modal from '../../features/Modal/ModalContainer';
 
 const MainLayout = ({children}) => (
   <Modal>
