@@ -12,9 +12,15 @@ const createActionName = name => `app/${reducerName}/${name}`;
 
 // Action types
 const CHANGE_LANGUAGE = createActionName('CHANGE_LANGUAGE');
+const MODAL_SUCCESS = createActionName('MODAL_SUCCESS');
+const MODAL_ERROR = createActionName('MODAL_ERROR');
+const MODAL_DISABLE = createActionName('MODAL_DISABLE');
 
 // Action creators
 export const changeLanguage = payload => ({ payload, type: CHANGE_LANGUAGE });
+export const modalSuccess = payload => ({ ...payload, type: MODAL_SUCCESS });
+export const modalError = payload => ({ ...payload, type: MODAL_ERROR });
+export const modalDisable = payload => ({ ...payload, type: MODAL_DISABLE });
 
 // reducer
 export default function reducer(statePart = [], action =[]) {
@@ -25,6 +31,39 @@ export default function reducer(statePart = [], action =[]) {
         data: {
           ...statePart.data,
           globalLanguage: action.payload,
+        },
+      };
+    }
+    case MODAL_SUCCESS: {
+      return {
+        ...statePart,
+        modal: {
+          ...statePart.modal,
+          type: 'success',
+          display: true,
+          msg: action.msg,
+        },
+      };
+    }
+    case MODAL_ERROR: {
+      return {
+        ...statePart,
+        modal: {
+          ...statePart.modal,
+          type: 'error',
+          display: true,
+          msg: action.msg,
+        },
+      };
+    }
+    case MODAL_DISABLE: {
+      return {
+        ...statePart,
+        modal: {
+          ...statePart.modal,
+          type: '',
+          display: false,
+          msg: '',
         },
       };
     }
