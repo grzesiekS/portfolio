@@ -1,0 +1,17 @@
+@import "../../../styles/settings.scss";
+
+.container {
+  position: absolute;
+}
+
+.message {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  .success {
+    border: $border-width solid $modal-border-color-success;
+    border-radius: $border-radius;
+  }
+}
