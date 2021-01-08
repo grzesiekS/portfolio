@@ -2,7 +2,7 @@
 export const getLanguage = ({globalSettings}) => globalSettings.data.globalLanguage;
 export const getLanguagesList = ({globalSettings}) => globalSettings.data.languages;
 export const getScrollButtonDisplayPosition = ({globalSettings}) => globalSettings.data.scrollButtonDisplayPosition;
-export const getModalData = ({globalSettings}) => globalSettings.modal;
+export const getModalData = ({globalSettings}) => globalSettings.modal || {};
 
 /* ACTIONS */
 
@@ -61,9 +61,7 @@ export default function reducer(statePart = [], action =[]) {
         ...statePart,
         modal: {
           ...statePart.modal,
-          type: '',
           display: false,
-          msg: '',
         },
       };
     }

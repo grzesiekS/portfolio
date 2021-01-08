@@ -11,14 +11,20 @@ const Modal = ({type, display, msg, children}) => {
 
   const handleIconTypeSelection = type => {
     if (type === 'success') return faThumbsUp;
-    if (type === 'error') return faSurprise;
+    else return faSurprise;
   };
 
   return (
     <div className={styles.container}>
-      {display
+      {type !== undefined && display !== undefined && msg !== undefined
         ?
-        <div className={clsx(styles.message, styles[type])}>
+        <div className={
+          display
+            ?
+            clsx(styles.message, styles[type])
+            :
+            clsx(styles.message, styles[type], styles.disable)
+        }>
           <FontAwesomeIcon className={styles.icon} icon={handleIconTypeSelection(type)} />
           <h2 className={styles.subTitle}>
             {msg}
