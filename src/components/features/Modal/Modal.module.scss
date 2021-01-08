@@ -46,4 +46,13 @@
     border-radius: $border-radius;
     color: $modal-text-color-error;
   }
+
+  &.disable {
+    animation: fadeOut 1s ease-in-out;
+    animation-fill-mode: forwards;
+
+    &::before {
+      content: none;
+    }
+  }
 }
