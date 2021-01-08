@@ -1,14 +1,16 @@
 @import "../../../styles/settings.scss";
 
 .container {
-  position: absolute;
+  position: relative;
 }
 
 .message {
-  position: relative;
+  position: absolute;
   left: 50%;
-  top: 50%;
+  top: 50vh;
   transform: translate(-50%, -50%);
+  z-index: 1000;
+  background-color: $modal-bg-color;
 
   .success {
     border: $border-width solid $modal-border-color-success;

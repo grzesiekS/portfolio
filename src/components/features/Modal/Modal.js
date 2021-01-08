@@ -6,14 +6,14 @@ import styles from './Modal.module.scss';
 
 const Modal = ({msg, type, children}) => {
   return (
-    <section>
+    <div className={styles.container}>
       <div className={clsx(styles.message, styles[type])}>
         <h2 className={styles.subTitle}>
-          {msg}
+          Test Message
         </h2>
       </div>
       {children}
-    </section>
+    </div>
   );
 };
 
