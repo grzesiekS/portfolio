@@ -16,12 +16,17 @@ const Modal = ({type, display, msg, children}) => {
 
   return (
     <div className={styles.container}>
-      <div className={clsx(styles.message, styles[type])}>
-        <FontAwesomeIcon className={styles.icon} icon={handleIconTypeSelection(type)} />
-        <h2 className={styles.subTitle}>
-          {msg}
-        </h2>
-      </div>
+      {display
+        ?
+        <div className={clsx(styles.message, styles[type])}>
+          <FontAwesomeIcon className={styles.icon} icon={handleIconTypeSelection(type)} />
+          <h2 className={styles.subTitle}>
+            {msg}
+          </h2>
+        </div>
+        :
+        null
+      }
       {children}
     </div>
   );
