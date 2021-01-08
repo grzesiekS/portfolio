@@ -3,6 +3,10 @@
     "globalLanguage": "EN",
     "languages": ["EN", "PL"],
     "scrollButtonDisplayPosition": 700
+  },
+  "modal": {
+    "type": "",
+    "display": false,
+    "msg": ""
   }
-
 }
