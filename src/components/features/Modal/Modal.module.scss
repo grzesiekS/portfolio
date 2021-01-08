@@ -11,9 +11,27 @@
   transform: translate(-50%, -50%);
   z-index: 1000;
   background-color: $modal-bg-color;
+  padding: 15px;
+  user-select: none;
+  font-family: $font-anton;
+  display: flex;
+  align-items: center;
+  box-shadow: 5px 5px 11px 6px rgba(0,0,0,0.63);
 
-  .success {
+  .icon {
+    font-size: 55px;
+    margin-right: 25px;
+  }
+
+  &.success {
     border: $border-width solid $modal-border-color-success;
     border-radius: $border-radius;
+    color: $modal-text-color-success;
+  }
+
+  &.error {
+    border: $border-width solid $modal-border-color-error;
+    border-radius: $border-radius;
+    color: $modal-text-color-error;
   }
 }
