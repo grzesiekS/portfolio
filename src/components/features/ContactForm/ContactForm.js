@@ -98,10 +98,10 @@ class ContactForm extends React.Component {
     fetchFormData();
   }
 
-  componentDidUpdate(prevProps) {
+  componentDidUpdate() {
     const { modalDisplay, modalDisable } = this.props;
 
-    if(prevProps.modalDisplay !== modalDisplay) {
+    if(modalDisplay) {
       setTimeout(() => {
         modalDisable();
       }, 4000);
