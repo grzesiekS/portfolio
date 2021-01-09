@@ -98,8 +98,14 @@ class ContactForm extends React.Component {
     fetchFormData();
   }
 
-  componentDidUpdate() {
-    const { modalDisplay, modalDisable } = this.props;
+  componentDidUpdate(prevProps) {
+    const { modalDisplay, modalDisable, postStatus, modalSuccess, modalError } = this.props;
+
+    if(postStatus !== undefined && !postStatus.active && prevProps.postStatus.active) {
+      modalSuccess('Message was sent successfully');
+    } else if(postStatus !== undefined && postStatus.error && !prevProps.postStatus.error) {
+      modalError('Something went wrong...');
+    }
 
     if(modalDisplay) {
       setTimeout(() => {
@@ -157,6 +163,7 @@ ContactForm.propTypes = {
   modalDisplay: PropTypes.bool,
   modalError: PropTypes.func,
   modalDisable: PropTypes.func,
+  modalSuccess: PropTypes.func,
 };
 
 ContactForm.defaultProps = {
