@@ -24,7 +24,7 @@ class ContactForm extends React.Component {
   }
 
   handleEmailSend = () => {
-    const { sendEmail, formData } = this.props;
+    const { sendEmail, formData, modalError } = this.props;
     const emailData = {
       name: {
         _id: formData[0]._id,
@@ -82,6 +82,7 @@ class ContactForm extends React.Component {
       if(!emailData.phoneNo.value) this.addFormInputError(emailData.phoneNo._id);
       if(!emailData.subject.value) this.addFormInputError(emailData.subject._id);
       if(!emailData.message.value) this.addFormInputError(emailData.message._id);
+      modalError('Something went wrong...');
     }
 
   }
@@ -95,6 +96,22 @@ class ContactForm extends React.Component {
     const {fetchFormData} = this.props;
 
     fetchFormData();
+  }
+
+  componentDidUpdate(prevProps) {
+    const { modalDisplay, modalDisable, postStatus, modalSuccess, modalError } = this.props;
+
+    if(postStatus !== undefined && !postStatus.active && prevProps.postStatus.active) {
+      modalSuccess('Message was sent successfully');
+    } else if(postStatus !== undefined && postStatus.error && !prevProps.postStatus.error) {
+      modalError('Something went wrong...');
+    }
+
+    if(modalDisplay) {
+      setTimeout(() => {
+        modalDisable();
+      }, 4000);
+    }
   }
 
   render() {
@@ -143,6 +160,10 @@ ContactForm.propTypes = {
   loadingStatus: PropTypes.object,
   sendEmail: PropTypes.func,
   postStatus: PropTypes.object,
+  modalDisplay: PropTypes.bool,
+  modalError: PropTypes.func,
+  modalDisable: PropTypes.func,
+  modalSuccess: PropTypes.func,
 };
 
 ContactForm.defaultProps = {
