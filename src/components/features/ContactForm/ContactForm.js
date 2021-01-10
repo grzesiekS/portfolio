@@ -92,6 +92,13 @@ class ContactForm extends React.Component {
     else return false;
   }
 
+  setDefaultInputError = () => {
+    this.setState({
+      ...this.state,
+      formInputError: [],
+    });
+  }
+
   componentDidMount() {
     const {fetchFormData} = this.props;
 
@@ -110,6 +117,7 @@ class ContactForm extends React.Component {
     if(modalDisplay) {
       setTimeout(() => {
         modalDisable();
+        this.setDefaultInputError();
       }, 4000);
     }
   }
