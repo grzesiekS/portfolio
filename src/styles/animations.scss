@@ -75,3 +75,9 @@
       box-shadow: 0 0 0 0 rgba(103,248,144, 0);
   }
 }
+
+@keyframes modalFadeOut {
+  0% { opacity: 1; }
+  99% { opacity: 0; }
+  100% { opacity: 0; z-index: -1000; }
+}

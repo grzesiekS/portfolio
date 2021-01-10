@@ -48,7 +48,7 @@
   }
 
   &.disable {
-    animation: fadeOut 1s ease-in-out;
+    animation: modalFadeOut 1s;
     animation-fill-mode: forwards;
 
     &::before {
