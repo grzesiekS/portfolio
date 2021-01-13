@@ -46,6 +46,7 @@
 
     .image {
       animation: none;
+      border-color: transparent;
     }
   }
 }
@@ -70,7 +71,9 @@
   width: $image-width;
   height: $image-height;
   border-radius: 50%;
+  border: 2px solid $project-image-border-color;
   animation: pulse $animation-time infinite ease-in-out;
+  transition: $transition;
 
   img {
     object-fit: contain;
@@ -82,6 +85,7 @@
 
   &.animationDisable {
     animation: none;
+    border-color: transparent;
   }
 }
 
