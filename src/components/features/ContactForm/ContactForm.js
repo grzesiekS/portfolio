@@ -5,6 +5,7 @@ import styles from './ContactForm.module.scss';
 import Option from '../Option/Option';
 import Button from '../../common/Button/Button';
 import Load from '../../common/Load/Load';
+import SendMsg from '../../common/SendMsg/SendMsg';
 
 class ContactForm extends React.Component {
   state = {
@@ -131,7 +132,7 @@ class ContactForm extends React.Component {
         loadingStatus === undefined || loadingStatus.error ? null : <Load />
         :
         loadingStatus === undefined || loadingStatus.error ? null :
-          postStatus !== undefined && postStatus.active ? <Load />
+          postStatus !== undefined && postStatus.active ? <SendMsg />
             :
             <div className={styles.container}>
               <form>

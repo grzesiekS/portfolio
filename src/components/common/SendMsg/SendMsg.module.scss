@@ -1,0 +1,37 @@
+@import "../../../styles/settings.scss";
+@import "../../../styles//animations.scss";
+
+.container {
+  text-align: center;
+  color: $sendMsg-color;
+  margin: 75px 0;
+}
+
+.subtitle {
+  display: inline-block;
+}
+
+.dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: $sendMsg-dots-bg-color;
+  margin-left: 7px;
+  animation: bounce $sendMsg-animation-time infinite;
+}
+
+.dot_2 {
+  animation-delay: $sendMsg-short-delay;
+}
+
+.dot_3 {
+  animation-delay: $sendMsg-long-delay;
+}
+
+.icon {
+  margin: 15px auto;
+  font-size: 3rem;
+  display: block;
+  animation: twinkle $sendMsg-animation-long-time infinite ease-in-out;
+}
