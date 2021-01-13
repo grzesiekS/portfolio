@@ -33,4 +33,5 @@
   margin: 15px auto;
   font-size: 3rem;
   display: block;
+  animation: twinkle $sendMsg-animation-long-time infinite ease-in-out;
 }
