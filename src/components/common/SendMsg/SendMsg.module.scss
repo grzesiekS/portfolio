@@ -18,6 +18,15 @@
   border-radius: 50%;
   background-color: $sendMsg-dots-bg-color;
   margin-left: 7px;
+  animation: bounce $sendMsg-animation-time infinite;
+}
+
+.dot_2 {
+  animation-delay: $sendMsg-short-delay;
+}
+
+.dot_3 {
+  animation-delay: $sendMsg-long-delay;
 }
 
 .icon {
