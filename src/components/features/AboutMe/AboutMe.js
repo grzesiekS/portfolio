@@ -6,7 +6,7 @@ import Load from '../../common/Load/Load';
 
 const AboutMe = (props) => {
   
-  const {header, description} = props.content[0] !== undefined && props.content[0];
+  const {header, description, title} = props.content[0] !== undefined && props.content[0];
   const { loadingStatus } = props;
 
   useEffect(() => {
@@ -24,6 +24,7 @@ const AboutMe = (props) => {
         <div className={styles.container}>
           <div id='aboutMe' className={styles.aboutMe}>
             <h1 className={styles.title}>{header}</h1>
+            <h2 className={styles.subtitle}>{title}</h2>
             <p className={styles.content}>{description}</p>
           </div>
         </div>
