@@ -1,11 +1,13 @@
 [
   {
     "header": "About Me",
-    "description": "I am a beginner web developer, who wants to start working in IT. I am very ambitious person who like to take new challenges. I want to continuously elevate my skills and learn new techniques and technologies",
+    "title": "Hi, My name is Grzesiek. Nice to meet You.",
+    "description": "I'm a beginner web developer, who wants to start working in IT. I'm very ambitious person who like to take new challenges. My ability of analytical thinking helps me to quickly solve any problem in my work. Adapting to new work environment or requirements it is not a problem for me thanks to my ability to quickly acquire new skills and knowledge.",
     "language": "EN"
   },
   {
     "header": "O mnie",
+    "title": "Cześć, jestem Grzesiek. Miło mi Cię poznać",
     "description": "Jestem początkującym web developerem, który chce wejść do branży IT. Jestem osobą ambitną, lubiącą podejmować wyzwania oraz poznawać i uczyć się nowych rzeczy",
     "language": "PL"
   }
