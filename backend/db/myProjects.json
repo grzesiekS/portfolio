@@ -68,6 +68,42 @@
       "picture": "/images/projects/OnlineGameShop.png",
       "skills": [3, 2, 1],
       "tech": [4, 5, 1, 14, 9, 10, 7, 8, 3, 12, 15]
+    },
+    {
+      "_id": "4",
+      "title": "Pizzeria - Kodilla",
+      "descriptionData": [
+        {
+          "description": "This was one of the task in Kodilla Bootcamp. Task objective: Creating website for Pizzeria, where customer can order food or book a table",
+          "language": "EN"
+        },
+        {
+          "description": "Jedno z zadań na Bootcampie Kodilla. Zadanie polegało na stworzeniu strony dla Pizzeri, gdzie klient może zamówić jedzenie lub zarezerwować stolik",
+          "language": "PL"
+        }
+      ],"link": "https://sheltered-stream-59382.herokuapp.com/",
+      "gitLink": "https://github.com/grzesiekS/project-pizzeria",
+      "picture": "/images/projects/PizzeriaWebsite.png",
+      "skills": [3, 2, 1],
+      "tech": [1, 12, 3]
+    },
+    {
+      "_id": "5",
+      "title": "Music Festival - Kodilla",
+      "descriptionData": [
+        {
+          "description": "This was one of the task in Kodilla Bootcamp. Task objective: Creating backend for the festival website. Implementing new functionality",
+          "language": "EN"
+        },
+        {
+          "description": "Jedno z zadań na Bootcampie Kodilla. Zadanie polegało na stworzeniu backendu dla strony festiwalu muzycznaego i dodaniu nowych funkcjonalności",
+          "language": "PL"
+        }
+      ],"link": "https://mysterious-fortress-07127.herokuapp.com/",
+      "gitLink": "https://github.com/grzesiekS/server_api",
+      "picture": "/images/projects/FestivalWebsite.png",
+      "skills": [3, 2, 1],
+      "tech": [4, 5, 1, 14, 9, 10, 7, 8, 3, 12]
     }
   ]
 }
