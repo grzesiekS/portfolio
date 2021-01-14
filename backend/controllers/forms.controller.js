@@ -2,7 +2,7 @@ const Forms = require('../db/forms.json');
 const nodemailer = require('nodemailer');
 const sanitize = require('mongo-sanitize');
 
-const emailPass = require('../../secureVariables/emailPass');
+const emailPass = process.env.NODE_ENV === 'production' ? null : require('../../secureVariables/emailPass');
 
 exports.loadAll = async (req, res) => {
   try {
