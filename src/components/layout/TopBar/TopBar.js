@@ -51,7 +51,8 @@ const TopBar = ({languageList, selectedLanguage, changeLanguage}) => {
             <li>
               <a href='/#myProjects'>My Projects</a>
             </li>
-            <li className={styles.languageSelector}>
+            {/* Language Selector */}
+            {/* <li className={styles.languageSelector}>
               <a
                 href='/#'
                 onClick={event => event.preventDefault()}
@@ -75,7 +76,7 @@ const TopBar = ({languageList, selectedLanguage, changeLanguage}) => {
                   </li>
                 ))}
               </ul>
-            </li>
+            </li> */}
           </ul>
         </nav>
         <div className={styles.navContact}>
@@ -89,7 +90,7 @@ const TopBar = ({languageList, selectedLanguage, changeLanguage}) => {
 };
 
 TopBar.propTypes = {
-  languageList: PropTypes.array.isRequired,
+  languageList: PropTypes.array,
   selectedLanguage: PropTypes.string,
   changeLanguage: PropTypes.func,
 };
