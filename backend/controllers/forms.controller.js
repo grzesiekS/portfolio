@@ -38,15 +38,15 @@ exports.sendEmail = async (req, res) => {
       let transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-          user: emailPass.emailDetails.user,
-          pass: emailPass.emailDetails.pass,
+          user: process.env.NODE_ENV === 'production' ? process.env.USER : emailPass.emailDetails.user,
+          pass: process.env.NODE_ENV === 'production' ? process.env.PASS : emailPass.emailDetails.pass,
         },
       });
     
       // send mail with defined transport object
       await transporter.sendMail({
-        from: emailPass.emailDetails.user, // sender address
-        to: emailPass.emailDetails.myEmail, // list of receivers
+        from: process.env.NODE_ENV === 'production' ? process.env.USER : emailPass.emailDetails.user, // sender address
+        to: process.env.NODE_ENV === 'production' ? process.env.MY_EMAIL : emailPass.emailDetails.myEmail, // list of receivers
         subject: subject, // Subject line
         html: htmlMessage, // html body
       });
