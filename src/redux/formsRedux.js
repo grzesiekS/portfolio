@@ -50,9 +50,15 @@ export const sendEmail = post => {
     dispatch(postStarted());
 
     try {
-      await Axios.post(`${API_URL}/forms/send-email`, post);
+      let res = await Axios.post(`${API_URL}/forms/send-email`, post);
       await new Promise(resolve => resolve());
-      dispatch(postSuccess());
+
+      if(res.data.message === 'email sent') {
+        dispatch(postSuccess());
+      } else {
+        dispatch(postError(false));
+      }
+      
     } catch(err) {
       dispatch(postError(err.message || false));
     }

@@ -109,8 +109,8 @@ class ContactForm extends React.Component {
   componentDidUpdate(prevProps) {
     const { modalDisplay, modalDisable, postStatus, modalSuccess, modalError } = this.props;
 
-    if(postStatus !== undefined && !postStatus.active && prevProps.postStatus.active) {
-      modalSuccess('Message was sent successfully');
+    if(postStatus !== undefined && !postStatus.active && prevProps.postStatus.active && !postStatus.error) {
+      modalSuccess('Message sent successfully');
     } else if(postStatus !== undefined && postStatus.error && !prevProps.postStatus.error) {
       modalError('Something went wrong...');
     }
