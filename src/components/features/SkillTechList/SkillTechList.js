@@ -24,11 +24,11 @@ const SkillTechList = (props) => {
       loadingStatus === undefined || loadingStatus.error ? null : <Load />
       :
       loadingStatus === undefined || loadingStatus.error ? null :
-        <div id='techSkills' className={styles.container}>
+        <section id='techSkills' className={styles.container}>
           <h1 className={styles.title}>{props.title}</h1>
           <div className={styles.flexBox}>
-            <div className={styles.skills}>
-              <h2>{props.skillTitle}</h2>
+            <article className={styles.skills}>
+              <h2 className={styles.subtitle}>{props.skillTitle}</h2>
               {props.skills.map(skill => (
                 <IconsGenerator
                   key={props.skills.indexOf(skill)}
@@ -39,9 +39,9 @@ const SkillTechList = (props) => {
                   {skill.name}
                 </IconsGenerator>
               ))}
-            </div>
-            <div className={styles.techs}>
-              <h2>{props.techTitle}</h2>
+            </article>
+            <article className={styles.techs}>
+              <h2 className={styles.subtitle}>{props.techTitle}</h2>
               {props.techs.map(tech => (
                 <IconsGenerator
                   key={props.techs.indexOf(tech)}
@@ -52,9 +52,9 @@ const SkillTechList = (props) => {
                   {tech.name}
                 </IconsGenerator>
               ))}
-            </div>
+            </article>
           </div>
-        </div>
+        </section>
   );
 };
 
