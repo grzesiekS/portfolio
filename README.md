@@ -1,10 +1,10 @@
+## Link 
+Link to my portfolio: [Grzegorz Swieboda Portfolio](https://grzegorz-swieboda.herokuapp.com/)
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
 
 Before You sart You need to create folder secureVariables in main root.<br />
 Then create there file emailPass.js <br />
@@ -12,6 +12,10 @@ In this file create and export object emailDetails containing keys: <br />
 - user: email address, from where You want to send messages <br />
 - pass: password for the email mentioned above <br />
 - myEmail: email address, where You want to receive messages <br />
+
+In the project directory, you can run:
+
+### `yarn start`
 
 Runs the server.<br />
 Open [http://localhost:8000](http://localhost:8000) to view it in the browser.
