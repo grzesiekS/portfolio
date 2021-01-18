@@ -12,6 +12,7 @@ In this file create and export object emailDetails containing keys: <br />
 - user: email address, from where You want to send messages <br />
 - pass: password for the email mentioned above <br />
 - myEmail: email address, where You want to receive messages <br />
+- emailService: set email service <br />
 
 In the project directory, you can run:
 
