@@ -36,7 +36,7 @@ exports.sendEmail = async (req, res) => {
       + `<b>Phone number: ${phoneNo}</b>`;
 
       let transporter = nodemailer.createTransport({
-        service: 'gmail',
+        service: process.env.NODE_ENV === 'production' ? process.env.EMAIL_SERVICE : emailPass.emailDetails.emailService,
         auth: {
           user: process.env.NODE_ENV === 'production' ? process.env.USER : emailPass.emailDetails.user,
           pass: process.env.NODE_ENV === 'production' ? process.env.PASS : emailPass.emailDetails.pass,
