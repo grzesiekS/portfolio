@@ -82,6 +82,20 @@
   }
 }
 
+@media(max-width: 1456px) {
+  .textarea {
+    textarea {
+      width: 50vw;
+    }
+  }
+}
+
+.input {
+  input {
+    width: 50vw;
+  }
+}
+
 @media(max-width: 650px) {
   .textarea {
     textarea {
