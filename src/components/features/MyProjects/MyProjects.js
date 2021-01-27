@@ -86,7 +86,7 @@ class MyProjects extends React.Component {
           <div className={styles.container}>
             <div id='myProjects' className={styles.myProjects}>
               <h1 className={styles.title}>{title}</h1>
-              <p>{description}</p>
+              <p className={styles.description}>{description}</p>
               {numbers.length > 1
                 ?
                 <div className={styles.pageNav}>
