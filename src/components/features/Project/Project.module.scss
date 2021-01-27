@@ -9,6 +9,7 @@
   margin-right: 12px;
   position: relative;
   animation: fadeIn $animationTime;
+  align-self: stretch;
 
   &:last-child {
     margin-right: 0;
@@ -157,7 +158,7 @@
   }
 }
 
-@media (max-width: 1025px) {
+@media (max-width: 1012px) {
   .project {
     flex: 100%;
     margin: 0 12px 25px 12px;

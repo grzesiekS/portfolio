@@ -60,3 +60,10 @@
   font-size: 21px;
   vertical-align: middle;
 }
+
+@media (max-width: 525px) {
+  .description {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+}

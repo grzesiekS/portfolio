@@ -9,6 +9,7 @@
 .aboutMe {
   border: $border-width solid $border-color;
   border-radius: $border-radius;
+  margin: 0 12px;
 }
 
 .title {
@@ -19,6 +20,7 @@
 
 .subtitle {
   color: $text-color;
+  padding: 0 15px;
 }
 
 .content {
