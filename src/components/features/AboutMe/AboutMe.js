@@ -24,7 +24,7 @@ const AboutMe = (props) => {
         <div className={styles.container}>
           <div id='aboutMe' className={styles.aboutMe}>
             <h1 className={styles.title}>{header}</h1>
-            <h2 className={styles.subtitle}>{title}</h2>
+            <p className={styles.subtitle}>{title}</p>
             <p className={styles.content}>{description}</p>
           </div>
         </div>
