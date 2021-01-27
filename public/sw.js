@@ -1,6 +1,8 @@
 /* eslint-disable no-restricted-globals */
 var cacheName = 'app-name';
-var filesToCache = [];
+var filesToCache = [
+  '/',
+];
 self.addEventListener('install', function(e) {
   console.log('[ServiceWorker] Install');
   e.waitUntil(
