@@ -33,3 +33,23 @@
     font-size: 25px;
     padding: 0 5px;
 }
+
+@media (max-width: 1024px) {
+    .scrollButton {
+        padding: 0;
+        right: 3%;
+    }
+}
+
+@media (max-width: 768px) {
+    .scrollButton {
+        top: 89%;
+    }
+}
+
+@media (max-width: 411px) {
+    .scrollButton {
+        top: 86%;
+        right: 6%;
+    }
+}
