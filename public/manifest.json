@@ -1,8 +1,26 @@
 {
-  "name": "The front-end UI for Portfolio",
+  "name": "Portfolio - Grzegorz Świeboda",
   "short_name": "Portfolio",
   "start_url": "/index.html",
   "display": "standalone",
-  "background_color": "#FFF",
-  "theme_color": "#FFF"
+  "background_color": "#545454",
+  "theme_color": "#67f890",
+  "icons": [{
+    "src": "icons/icon-70x70.png",
+      "sizes": "70x70",
+      "type": "image/png"
+    }, {
+      "src": "icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }, {
+      "src": "icons/icon-150x150.png",
+      "sizes": "150x150",
+      "type": "image/png"
+    }, {
+      "src": "icons/icon-310x310.png",
+      "sizes": "310x310",
+      "type": "image/png"
+    }
+  ]
 }
