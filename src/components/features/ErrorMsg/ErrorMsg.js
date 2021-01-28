@@ -16,7 +16,7 @@ ErrorMsg.propTypes = {
 };
 
 ErrorMsg.defaultProps = {
-  title: `Website You are looking for, doesn't exist.`,
+  title: `Website You are looking for doesn't exist.`,
   msg: `The entered address is incorrect.`,
 };
 
