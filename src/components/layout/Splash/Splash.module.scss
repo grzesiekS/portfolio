@@ -36,6 +36,12 @@
   animation: fadeInResize $animation-time;
 }
 
+@media (max-height: 780px) {
+  .title {
+    margin-top: 10vh;
+  }
+}
+
 @media (max-width: 470px) {
   .title {
     margin-top: 1vh;
