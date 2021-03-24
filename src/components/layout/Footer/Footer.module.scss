@@ -2,8 +2,19 @@
 
 .footer {
   text-align: center;
-  border-top: $border-width solid $footer-border-color;
   margin-top: 25px;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 60vw;
+    height: 3px;
+    background: linear-gradient(to left, rgba(84,84,84,1), rgba(103,248,144,0.7) 30%, rgba(103,248,144,0.7) 70%, rgba(84,84,84,1) 100%);
+    top: -25px;
+    left: 50%;
+    transform: translate(-50%);
+  }
 }
 
 .title {
