@@ -1,9 +1,15 @@
 @import "../../../styles/settings.scss";
+@import "../../../styles//animations.scss";
 
 .container {
   max-width: $container-width;
   margin: $margin-top-buttom-section auto;
   text-align: center;
+  opacity: 0;
+
+  &.visible {
+    animation: fadeIn $animation-time ease-in-out forwards;
+  }
 }
 
 .aboutMe {
