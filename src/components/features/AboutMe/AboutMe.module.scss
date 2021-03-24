@@ -7,9 +7,10 @@
 }
 
 .aboutMe {
-  border: $border-width solid $border-color;
-  border-radius: $border-radius;
+  border: $border-width solid;
+  border-image: linear-gradient(to left, rgba(84,84,84,1), rgba(103,248,144,0.7)) 1;
   margin: 0 12px;
+  box-shadow: 15px 1px 25px 0px rgba(103,248,144,0.5);
 }
 
 .title {
