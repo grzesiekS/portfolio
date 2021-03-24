@@ -5,18 +5,17 @@
   margin: 0;
   padding: 0;
   position: relative;
-  z-index: 100;
+  z-index: -100;
 
   &::before {
     position: fixed;
     content: '';
     top: 0;
     left: 0;
-    width: 0;
-    height: 0;
-    border-top: 30vh solid $triangle-color;
-    border-right: 30vh solid transparent;
-    z-index: -1;
+    width: 30vh;
+    height: 30vh;
+    clip-path: polygon(100% 0, 0% 100%, 0 0);
+    background: linear-gradient(135deg, rgba(103,248,144,1) 0%, rgba(84,84,84,1) 50%);
   }
   &::after {
     position: fixed;
@@ -24,11 +23,10 @@
     top: 100%;
     left: 100%;
     transform: translate(-100%, -100%);
-    width: 0;
-    height: 0;
-    border-bottom: 30vh solid $triangle-color;
-    border-left: 30vh solid transparent;
-    z-index: -1;
+    width: 30vh;
+    height: 30vh;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    background: linear-gradient(135deg, rgba(84,84,84,1) 50%, rgba(103,248,144,1) 100%);
   }
 }
 
