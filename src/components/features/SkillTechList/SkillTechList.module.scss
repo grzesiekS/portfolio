@@ -19,8 +19,9 @@
 }
 
 .techs, .skills {
-    border: $border-width solid $skillTechList-border-color;
-    border-radius: $border-radius;
+    border: $border-width solid;
+    border-image: linear-gradient(to left, rgba(84,84,84,1), rgba(103,248,144,0.7)) 1;
+    box-shadow: 15px 1px 25px 0px rgba(103,248,144,0.5);
     width: 250px;
     text-align: center;
     color: $skillTechList-text-color;
@@ -33,7 +34,8 @@
     }
 
     h2 {
-        border-bottom: $border-width solid $skillTechList-border-color;
+        border-bottom: $border-width solid;
+        border-image: linear-gradient(to left, rgba(84,84,84,1), rgba(103,248,144,0.3)) 1;
         margin: 0;
         padding: 15px 0;
     }
@@ -45,30 +47,32 @@
     &::before {
         position: absolute;
         content: '';
-        z-index: -1;
+        z-index: 1;
         top: 0;
-        left: -0.5px;
-        width: 0;
-        height: 0;
-        border-top: $before-after-triangle-size solid $skillTechList-triangle-color;
-        border-right: $before-after-triangle-size solid transparent;
+        left: 0;
+        width: $before-after-triangle-size;
+        height: $before-after-triangle-size;
+        clip-path: polygon(100% 0, 0% 100%, 0 0);
+        background: linear-gradient(135deg, rgba(103,248,144,1) 0%, rgba(84,84,84,1) 50%);
     }
 
     &::after {
         position: absolute;
         content: '';
-        z-index: -1;
+        z-index: 1;
         top: 100%;
         right: -0.5px;
         transform: translateY(-100%);
-        width: 0;
-        height: 0;
-        border-bottom: $before-after-triangle-size solid $triangle-color;
-        border-left: $before-after-triangle-size solid transparent;
+        width: $before-after-triangle-size;
+        height: $before-after-triangle-size;
+        clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+        background: linear-gradient(135deg, rgba(84,84,84,1) 50%, rgba(103,248,144,1) 100%);
     }
 }
 
 .subtitle {
+    position: relative;
+    z-index: 100;
     text-shadow: 
         2px 2px 0 $skillTechList-subtitle-shadow-color,
         -1px -1px 0 $skillTechList-subtitle-shadow-color,  

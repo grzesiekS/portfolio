@@ -3,7 +3,7 @@
 
 .project {
   border: $border-width solid $project-border-color;
-  border-radius: $border-radius;
+  border-image: linear-gradient(to left, rgba(103,248,144,0.7), rgba(84,84,84,1) 30%, rgba(84,84,84,1) 70%, rgba(103,248,144,0.7) 100%) 1;
   padding: 20px;
   flex: 0 0 28%;
   margin-right: 12px;
@@ -17,26 +17,24 @@
   &::before {
     position: absolute;
     content: '';
-    z-index: -1;
-    top: 0;
+    top: -0.5px;
     left: -0.5px;
-    width: 0;
-    height: 0;
-    border-top: $before-after-triangle-size solid $skillTechList-triangle-color;
-    border-right: $before-after-triangle-size solid transparent;
+    width: $before-after-triangle-size;
+    height: $before-after-triangle-size;
+    clip-path: polygon(100% 0, 0% 100%, 0 0);
+    background: linear-gradient(135deg, rgba(103,248,144,1) 0%, rgba(84,84,84,1) 50%);
   }
 
   &::after {
       position: absolute;
       content: '';
-      z-index: -1;
       top: 100%;
-      right: -0.5px;
+      right: 0;
       transform: translateY(-100%);
-      width: 0;
-      height: 0;
-      border-bottom: $before-after-triangle-size solid $triangle-color;
-      border-left: $before-after-triangle-size solid transparent;
+      width: $before-after-triangle-size;
+      height: $before-after-triangle-size;
+      clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+      background: linear-gradient(135deg, rgba(84,84,84,1) 50%, rgba(103,248,144,1) 100%);
   }
 
   &:hover {
@@ -52,6 +50,8 @@
 }
 
 .subtitle {
+  position: relative;
+  z-index: 100;
   margin-top: 0;
   font-family: $font-raleway;
   color: $project-title-color;
