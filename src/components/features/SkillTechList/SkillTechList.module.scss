@@ -45,30 +45,32 @@
     &::before {
         position: absolute;
         content: '';
-        z-index: -1;
+        z-index: 1;
         top: 0;
-        left: -0.5px;
-        width: 0;
-        height: 0;
-        border-top: $before-after-triangle-size solid $skillTechList-triangle-color;
-        border-right: $before-after-triangle-size solid transparent;
+        left: 0;
+        width: $before-after-triangle-size;
+        height: $before-after-triangle-size;
+        clip-path: polygon(100% 0, 0% 100%, 0 0);
+        background: linear-gradient(135deg, rgba(103,248,144,1) 0%, rgba(84,84,84,1) 50%);
     }
 
     &::after {
         position: absolute;
         content: '';
-        z-index: -1;
+        z-index: 1;
         top: 100%;
         right: -0.5px;
         transform: translateY(-100%);
-        width: 0;
-        height: 0;
-        border-bottom: $before-after-triangle-size solid $triangle-color;
-        border-left: $before-after-triangle-size solid transparent;
+        width: $before-after-triangle-size;
+        height: $before-after-triangle-size;
+        clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+        background: linear-gradient(135deg, rgba(84,84,84,1) 50%, rgba(103,248,144,1) 100%);
     }
 }
 
 .subtitle {
+    position: relative;
+    z-index: 100;
     text-shadow: 
         2px 2px 0 $skillTechList-subtitle-shadow-color,
         -1px -1px 0 $skillTechList-subtitle-shadow-color,  
