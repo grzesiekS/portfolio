@@ -113,6 +113,22 @@
 
 }
 
+@media (max-width: 570px) {
+    .techs {
+        &:hover {
+            box-shadow: -15px 1px 25px 0px rgba(103,248,144,0.5);
+            transform: none;
+        }
+    }
+
+    .skills {
+        &:hover {
+            box-shadow: 15px 1px 25px 0px rgba(103,248,144,0.5);
+            transform: none;
+        }
+    }
+}
+
 @media (max-width: 525px) {
     .techs, .skills {
         flex: 100%;

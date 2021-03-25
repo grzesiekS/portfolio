@@ -31,7 +31,7 @@ const SkillTechList = (props) => {
 
   useEffect(() => {
     if(skillTech.current!== null) {
-      setComponentTopView((skillTech.current.clientHeight + 200));
+      setComponentTopView((skillTech.current.clientHeight + 400));
       setComponentBottomView(skillTech.current.offsetTop + skillTech.current.clientHeight);
     }
 
