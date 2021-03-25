@@ -1,8 +1,21 @@
 @import "../../../styles/settings.scss";
+@import "../../../styles/animations.scss";
 
 .container {
     max-width: $container-width;
     margin: $margin-top-buttom-section auto;
+    opacity: 0;
+    
+    &.visible {
+        animation: fadeIn 1s ease-in-out forwards;
+        .techs {
+            animation: slideRightComponentLoad 1s ease-in-out forwards;
+        }
+        
+        .skills {
+            animation: slideLeftComponentLoad 1s ease-in-out forwards;
+        }
+    }
 }
 
 .title {
