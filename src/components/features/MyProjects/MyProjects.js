@@ -17,6 +17,29 @@ class MyProjects extends React.Component {
     projectsOnPage: 3,
     activePreviusPage: false,
     activeNextPage: true,
+    componentTopView: 0,
+    componentBottomView: 0,
+    componentVisible: false,
+  }
+
+  myProjects = React.createRef();
+
+  setComponentTopView = offsetPosition => {
+    this.setState({
+      componentTopView: offsetPosition,
+    });
+  }
+
+  setComponentBottomView = offsetPosition => {
+    this.setState({
+      componentBottomView: offsetPosition,
+    });
+  }
+
+  setComponentVisible = () => {
+    this.setState({
+      componentVisible: true,
+    });
   }
 
   changeActivePage = (pageNumber) => {
@@ -58,6 +81,25 @@ class MyProjects extends React.Component {
     getProjectsData();
   }
 
+  componentDidUpdate() {
+    const {currentViewPosition} = this.props;
+
+    if(this.myProjects.current !== null && this.state.componentTopView !== this.myProjects.current.offsetTop - 500) {
+      this.setComponentTopView(this.myProjects.current.offsetTop - 500);
+    }
+
+    if(this.myProjects.current !== null 
+    && this.state.componentBottomView !== this.myProjects.current.offsetTop + this.myProjects.current.clientHeight) {
+      this.setComponentBottomView(this.myProjects.current.offsetTop + this.myProjects.current.clientHeight);
+    }
+
+    if(currentViewPosition > this.state.componentTopView 
+      && currentViewPosition < this.state.componentBottomView
+      && !this.state.componentVisible) {
+      this.setComponentVisible();
+    }
+  }
+
   render() {
 
     const {title, description, projects, globalLanguage, loadingStatus} = this.props;
@@ -83,7 +125,7 @@ class MyProjects extends React.Component {
         loadingStatus === undefined || loadingStatus.error ? null : <Load />
         :
         loadingStatus === undefined || loadingStatus.error ? null :
-          <div className={styles.container}>
+          <div className={this.state.componentVisible ? clsx(styles.container, styles.visible) : styles.container} ref={this.myProjects}>
             <div id='myProjects' className={styles.myProjects}>
               <h1 className={styles.title}>{title}</h1>
               <p className={styles.description}>{description}</p>
@@ -124,7 +166,7 @@ class MyProjects extends React.Component {
                 leftAction={() => this.previousPage()}
                 rightAction={() => this.nextPage()}
               >
-                <div className={styles.flexBox}>
+                <div className={clsx(styles.flexBox, styles.projects)}>
                   {projects
                     .slice(this.state.activePage * this.state.projectsOnPage, (this.state.activePage + 1) * this.state.projectsOnPage)
                     .map(project => (
@@ -145,6 +187,7 @@ MyProjects.propTypes = {
   globalLanguage: PropTypes.string,
   getProjectsData: PropTypes.func,
   loadingStatus: PropTypes.object,
+  currentViewPosition: PropTypes.number,
 };
 
 MyProjects.defaultProps = {
