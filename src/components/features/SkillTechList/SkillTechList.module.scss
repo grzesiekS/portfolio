@@ -1,8 +1,21 @@
 @import "../../../styles/settings.scss";
+@import "../../../styles/animations.scss";
 
 .container {
     max-width: $container-width;
     margin: $margin-top-buttom-section auto;
+    opacity: 0;
+    
+    &.visible {
+        animation: fadeIn 1s ease-in-out forwards;
+        .techs {
+            animation: slideRightComponentLoad 1s ease-in-out forwards;
+        }
+        
+        .skills {
+            animation: slideLeftComponentLoad 1s ease-in-out forwards;
+        }
+    }
 }
 
 .title {
@@ -20,13 +33,12 @@
 
 .techs, .skills {
     border: $border-width solid;
-    border-image: linear-gradient(to left, rgba(84,84,84,1), rgba(103,248,144,0.7)) 1;
-    box-shadow: 15px 1px 25px 0px rgba(103,248,144,0.5);
     width: 250px;
     text-align: center;
     color: $skillTechList-text-color;
     font-weight: $bold-font-weight;
     position: relative;
+    transition: 2s all;
 
     svg {
       margin-right: 15px;
@@ -70,6 +82,25 @@
     }
 }
 
+.skills {
+    border-image: linear-gradient(to left, rgba(84,84,84,1), rgba(103,248,144,0.7)) 1;
+    box-shadow: 15px 1px 25px 0px rgba(103,248,144,0.5);
+
+    &:hover {
+        box-shadow: -15px 1px 25px 0px rgba(103,248,144,0.5);
+        transform: skew(5deg, 5deg);
+    }
+}
+
+.techs {
+    border-image: linear-gradient(to right, rgba(84,84,84,1), rgba(103,248,144,0.7)) 1;
+    box-shadow: -15px 1px 25px 0px rgba(103,248,144,0.5);
+    &:hover {
+        box-shadow: 15px 1px 25px 0px rgba(103,248,144,0.5);
+        transform: skew(-5deg, -5deg);
+    }
+}
+
 .subtitle {
     position: relative;
     z-index: 100;
@@ -80,6 +111,22 @@
         -1px 1px 0 $skillTechList-subtitle-shadow-color,
         1px 1px 0 $skillTechList-subtitle-shadow-color;
 
+}
+
+@media (max-width: 570px) {
+    .techs {
+        &:hover {
+            box-shadow: -15px 1px 25px 0px rgba(103,248,144,0.5);
+            transform: none;
+        }
+    }
+
+    .skills {
+        &:hover {
+            box-shadow: 15px 1px 25px 0px rgba(103,248,144,0.5);
+            transform: none;
+        }
+    }
 }
 
 @media (max-width: 525px) {

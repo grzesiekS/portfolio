@@ -1,14 +1,27 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux';
+import clsx from 'clsx';
 
 import { fab, faCodepen } from '@fortawesome/free-brands-svg-icons';
 import { faCode } from '@fortawesome/free-solid-svg-icons';
+
+import { getCurrentViewPosition } from '../../../redux/globalSettingsRedux';
 
 import styles from './SkillTechList.module.scss';
 import IconsGenerator from '../../common/IconsGenerator/IconsGenerator';
 import Load from '../../common/Load/Load';
 
 const SkillTechList = (props) => {
+  const {loadingStatus} = props;
+
+  const skillTech = useRef(<></>);
+
+  const [componentTopView, setComponentTopView] = useState(0);
+  const [componentBottomView, setComponentBottomView] = useState(0);
+  const [componentVisible, setComponentVisibility] = useState(false);
+
+  const currentViewPosition = useSelector(state => getCurrentViewPosition(state));
 
   useEffect(() => {
     const { fetchSkillTech } = props;
@@ -16,7 +29,22 @@ const SkillTechList = (props) => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const {loadingStatus} = props;
+  useEffect(() => {
+    if(skillTech.current!== null) {
+      setComponentTopView((skillTech.current.clientHeight + 400));
+      setComponentBottomView(skillTech.current.offsetTop + skillTech.current.clientHeight);
+    }
+
+  }, [loadingStatus, componentTopView, componentBottomView]);
+
+  useEffect(() => {
+    if(currentViewPosition > componentTopView && currentViewPosition < componentBottomView) {
+      if(!componentVisible) {
+        setComponentVisibility(true);
+      }
+    }
+
+  }, [currentViewPosition, componentTopView, componentBottomView, componentVisible]);
 
   return (
     loadingStatus === undefined || loadingStatus.active || loadingStatus.error
@@ -24,7 +52,11 @@ const SkillTechList = (props) => {
       loadingStatus === undefined || loadingStatus.error ? null : <Load />
       :
       loadingStatus === undefined || loadingStatus.error ? null :
-        <section id='techSkills' className={styles.container}>
+        <section 
+          id='techSkills' 
+          className={!componentVisible ? styles.container : clsx(styles.container, styles.visible)} 
+          ref={skillTech}
+        >
           <h1 className={styles.title}>{props.title}</h1>
           <div className={styles.flexBox}>
             <article className={styles.skills}>

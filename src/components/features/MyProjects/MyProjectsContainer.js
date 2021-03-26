@@ -5,7 +5,7 @@ import {
   getProjectsData, 
   fetchProjects, 
   getLoadingStatus} from '../../../redux/myProjectsRedux';
-import { getLanguage } from '../../../redux/globalSettingsRedux';
+import { getLanguage, getCurrentViewPosition } from '../../../redux/globalSettingsRedux';
 
 const mapStateToProps = state => ({
   title: getProjectsData(state).title,
@@ -13,6 +13,7 @@ const mapStateToProps = state => ({
   projects: getProjects(state),
   globalLanguage: getLanguage(state),
   loadingStatus: getLoadingStatus(state),
+  currentViewPosition: getCurrentViewPosition(state),
 });
 
 const mapDispatchToProps = dispatch => ({

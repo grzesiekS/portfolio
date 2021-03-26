@@ -1,8 +1,27 @@
 @import "../../../styles/settings.scss";
+@import "../../../styles/animations.scss";
 
 .container {
   max-width: $container-width;
   margin: $margin-top-buttom-section auto;
+  opacity: 0;
+
+  &.visible {
+    animation: fadeIn 2s ease-in-out forwards;
+
+    .projects {
+      div {
+        position: relative;
+        
+        &:first-child {
+          animation: slideLeftComponentLoad 1s ease-in-out;
+        }
+        &:last-child {
+          animation: slideRightComponentLoad 1s ease-in-out;
+        }
+      }
+    }
+  }
 }
 
 .myProjects {
