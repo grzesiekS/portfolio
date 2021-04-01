@@ -9,6 +9,7 @@
   margin-right: 12px;
   position: relative;
   animation: fadeIn $animationTime;
+  background-color: $project-bg-color;
 
   &:last-child {
     margin-right: 0;
