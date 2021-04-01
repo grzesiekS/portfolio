@@ -12,10 +12,11 @@
     .projects {
       div {
         position: relative;
-        
+
         &:first-child {
           animation: slideLeftComponentLoad 1s ease-in-out;
         }
+        
         &:last-child {
           animation: slideRightComponentLoad 1s ease-in-out;
         }
