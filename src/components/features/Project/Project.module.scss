@@ -8,7 +8,8 @@
   flex: 0 0 28%;
   margin-right: 12px;
   position: relative;
-  animation: fadeIn $animationTime;
+  animation: fadeIn $animationTime ease-in;
+  background-color: $project-bg-color;
 
   &:last-child {
     margin-right: 0;
