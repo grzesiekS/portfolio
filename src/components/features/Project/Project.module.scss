@@ -39,6 +39,12 @@
   }
 
   &:hover {
+    cursor: pointer;
+
+    .rotateIcon {
+      color: $project-rotate-icon-hover-color;
+    }
+
     .rotate {
       animation: none;
     }
@@ -106,11 +112,6 @@
     transition: $transition;
     animation: rotate $animationTime;
     animation-fill-mode: forwards;
-
-    &:hover {
-      cursor: pointer;
-      color: $project-rotate-icon-hover-color;
-    }
 
     &.active {
       animation: rotateBackwards $animationTime;
