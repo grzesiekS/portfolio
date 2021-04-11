@@ -27,10 +27,14 @@ class Project extends React.Component {
   };
 
   changeDescriptionActive = () => {
-    this.setState({
-      ...this.state,
-      descriptionActive: !this.state.descriptionActive,
-    });
+    window.onclick = e => {
+      if(e.target.getAttribute('href') === null) {
+        this.setState({
+          ...this.state,
+          descriptionActive: !this.state.descriptionActive,
+        });
+      }
+    };
   }
 
   render() {
@@ -38,7 +42,10 @@ class Project extends React.Component {
     const {title, link, gitLink, picture, skillsList, techList} = this.props;
 
     return (
-      <div className={styles.project}>
+      <div 
+        className={styles.project}
+        onClick={() => this.changeDescriptionActive()}  
+      >
         <h2 className={styles.subtitle}>{title}</h2>
         <div className={this.state.descriptionActive ? clsx(styles.image, styles.animationDisable) : styles.image}>
           <img src={picture} alt={title} />
@@ -51,7 +58,6 @@ class Project extends React.Component {
             icon={faAngleUp}
             className={this.state.descriptionActive
               ? clsx(styles.rotateIcon, styles.active) : styles.rotateIcon}
-            onClick={() => this.changeDescriptionActive()}
           />
         </div>
 
