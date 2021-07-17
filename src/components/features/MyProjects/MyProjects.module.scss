@@ -49,34 +49,29 @@
   justify-content: center;
 }
 
-.pageNumber {
+.pageNumberContainer {
   display: inline-block;
-  margin: 0 15px 0 0;
-  font-size: 18px;
-  user-select: none;
-  transition: $transition;
+  margin: 25px 7px 0 7px; 
 
-  &:last-child {
-    margin-right: 0;
-  }
-
-  &.active {
-    color: $myProjects-pageNumber-active-color;
-  }
-
-  &:hover {
-    cursor: pointer;
-    color: $myProjects-pageNumber-hover-color;
+  .pageNumber {
+    display: inline-block;
+    margin: 0 10px 0 10px;
+    font-size: 18px;
+    user-select: none;
+    transition: $transition;
+  
+    &.active {
+      color: $myProjects-pageNumber-active-color;
+    }
+  
+    &:hover {
+      cursor: pointer;
+      color: $myProjects-pageNumber-hover-color;
+    }
   }
 }
 
-.changeIconLeft {
-  font-size: 21px;
-  margin-right: 15px;
-  vertical-align: middle;
-}
-
-.changeIconRight {
+.changeIconLeft, .changeIconRight {
   font-size: 21px;
   vertical-align: middle;
 }

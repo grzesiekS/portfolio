@@ -143,9 +143,11 @@ class MyProjects extends React.Component {
                       className={styles.changeIconLeft}
                     />
                   </Button>
-                  {numbers.map(number => (
-                    number
-                  ))}
+                  <div className={styles.pageNumberContainer}>
+                    {numbers.map(number => (
+                      number
+                    ))}
+                  </div>
                   <Button
                     Type='div'
                     subType='icon'
