@@ -30,8 +30,9 @@
   color: $icon-color;
   font-size: 9rem;
   margin: 35px 0;
-  padding: 18px;
+  padding: 25px;
   border: 2px solid $icon-border-color;
+  box-shadow: inset 0 0 0.3em $icon-boxShadow-color, 0 0 0.3em $icon-boxShadow-color;
   border-radius: 50px;
   animation: fadeInResize $animation-time;
 }
