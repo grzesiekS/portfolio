@@ -25,6 +25,7 @@
   left: 50%;
   transform: translateX(-50%);
   color: $subtitle-color;
+  text-shadow: 0 1em 0.5em $subtitle-text-shadow-color;
 }
 
 .icon {
