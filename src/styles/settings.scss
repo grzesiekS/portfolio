@@ -60,12 +60,15 @@ $triangle-color: $mintyGreen;
 // SPLASH
 $icon-color: $mintyGreen;
 $icon-border-color: $mintyGreen;
+$icon-boxShadow-color: $mintyGreen;
 $title-color: $mintyGreen;
 $subtitle-color: $white;
+$subtitle-text-shadow-color: $darkGrey;
 
 // BUTTON
 $button-border-color: $mintyGreen;
 $button-content-color: $mintyGreen;
+$button-box-shadow-main-color: $mintyGreen;
 
 $button-content-hover-color: $white;
 $button-bg-hover-color: $mintyGreen;
@@ -137,6 +140,7 @@ $project-bg-color: $darkGrey;
 
 // SCROLL BUTTON
 $scrollButton-bg-color: $darkGrey;
+$scrollButton-border-color: $mintyGreen;
 
 // FOOTER
 $footer-title-color: $white;
