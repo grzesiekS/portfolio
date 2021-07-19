@@ -16,6 +16,8 @@
   animation: slideInRight $animation-time;
   color: $title-color;
   position: relative;
+  letter-spacing: 0.2rem;
+  text-shadow: 0 0 0.4rem #545454, 0 0 0.3rem white, 0 0 0.5rem #67f890;
 }
 
 .subtitle {
