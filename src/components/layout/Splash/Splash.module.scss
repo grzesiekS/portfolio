@@ -7,7 +7,6 @@
   position: relative;
   height: 80vh;
   overflow-x: hidden;
-  z-index: 1000;
 }
 
 .title {
@@ -58,6 +57,7 @@
     filter: blur(7em);
     opacity: 0.7;
     animation: fadeInResizePseudo $animation-time;
+    z-index: 1000;
   }
 }
 
