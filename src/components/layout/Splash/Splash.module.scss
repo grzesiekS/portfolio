@@ -1,11 +1,14 @@
 @import "../../../styles/global.scss";
 @import "../../../styles/animations.scss";
 
+@include fadeInResizeIconMixin(fadeResize-big, 0.25em);
+@include fadeInResizeIconMixin(fadeResize-small, 0.15em);
+
 .container {
   margin: auto;
   text-align: center;
   position: relative;
-  height: 80vh;
+  height: 100vh;
   overflow-x: hidden;
 }
 
@@ -38,12 +41,13 @@
   border: 2px solid $icon-border-color;
   box-shadow: inset 0 0 0.25em $icon-boxShadow-color, 0 0 0.25em $icon-boxShadow-color;
   border-radius: 50px;
-  animation: fadeInResizeIcon $animation-time;
+  animation: fadeResize-big $animation-time;
 }
 
 .iconContainer {
   position: relative;
   display: inline-block;
+  overflow: visible;
 
   &::before {
     content: '';
@@ -71,15 +75,16 @@
     margin-top: 1vh;
     font-size: 2.5rem;
   }
-
-  .iconContainer::before {
-    content: none;
-  }
 }
 
 @media (max-width: 375px) {
   .title {
-    font-size: 2.2rem;
+    font-size: 2.0rem;
+  }
+
+  .icon {
+    box-shadow: inset 0 0 0.15em $icon-boxShadow-color, 0 0 0.15em $icon-boxShadow-color;
+    animation: fadeResize-small $animation-time;
   }
 
   .subtitle {
