@@ -36,6 +36,7 @@
     color: $input-text-color;
     font-family: $input-font-family;
     transition: $transition;
+    box-shadow: inset 0 0 0.5rem $mintyGreen, 0 0 0.5rem $mintyGreen;
 
     &.error {
       border-color: $input-border-error-color;
@@ -64,6 +65,7 @@
     color: $textarea-text-color;
     resize: none;
     transition: $transition;
+    box-shadow: inset 0 0 0.5rem $mintyGreen, 0 0 0.5rem $mintyGreen;
 
     &.error {
       border-color: $textarea-border-error-color;
