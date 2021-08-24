@@ -30,7 +30,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   changeInputValue: (id, newValue) => dispatch(changeInputValue({id, newValue})),
   fetchFormData: () => dispatch(fetchFormData()),
-  sendEmail: (name, lastName, email, phoneNo, subject, message) => dispatch(sendEmail({name, lastName, email, phoneNo, subject, message})),
+  sendEmail: (name, email, message) => dispatch(sendEmail({name, email, message})),
   modalSuccess: msg => dispatch(modalSuccess({msg})),
   modalError: msg => dispatch(modalError({msg})),
   modalDisable: () => dispatch(modalDisable()),
