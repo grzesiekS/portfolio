@@ -31,57 +31,36 @@ class ContactForm extends React.Component {
         _id: formData[0]._id,
         value: formData[0].value,
       },
-      lastName: {
+      email: {
         _id: formData[1]._id,
         value: formData[1].value,
       },
-      email: {
+      message: {
         _id: formData[2]._id,
         value: formData[2].value,
-      },
-      phoneNo: {
-        _id: formData[3]._id,
-        value: formData[3].value,
-      },
-      subject: {
-        _id: formData[4]._id,
-        value: formData[4].value,
-      },
-      message: {
-        _id: formData[5]._id,
-        value: formData[5].value,
       },
     };
 
     if(emailData.name.value
-      && emailData.lastName.value
       && emailData.email.value
       && emailData.email.value.split('@').length === 2
       && emailData.email.value.split('.').length === 2
       && emailData.email.value.split('.')[1] !== ''
       && emailData.email.value.indexOf(' ') === -1
-      && emailData.phoneNo.value
-      && emailData.subject.value
       && emailData.message.value
     ) {
       sendEmail(
         emailData.name.value,
-        emailData.lastName.value,
         emailData.email.value,
-        emailData.phoneNo.value,
-        emailData.subject.value,
         emailData.message.value
       );
     } else {
       if(!emailData.name.value) this.addFormInputError(emailData.name._id);
-      if(!emailData.lastName.value) this.addFormInputError(emailData.lastName._id);
       if(!emailData.email.value
         || emailData.email.value.split('@').length !== 2
         || emailData.email.value.split('.').length !== 2
         || emailData.email.value.split('.')[1] === ''
         || emailData.email.value.indexOf(' ') !== -1) this.addFormInputError(emailData.email._id);
-      if(!emailData.phoneNo.value) this.addFormInputError(emailData.phoneNo._id);
-      if(!emailData.subject.value) this.addFormInputError(emailData.subject._id);
       if(!emailData.message.value) this.addFormInputError(emailData.message._id);
       modalError('Something went wrong...');
     }

@@ -16,22 +16,6 @@
     ]
   },
   {
-      "_id": 2,
-      "value":"",
-      "type": "input",
-      "inputType": "text",
-      "titles": [
-          {
-              "language": "EN",
-              "title": "Last Name"
-          },
-          {
-              "language": "PL",
-              "title": "Nazwisko"
-          }
-      ]
-  },
-  {
       "_id": 3,
       "value":"",
       "type": "input",
@@ -47,38 +31,6 @@
           }
       ]
   },
-  {
-      "_id": 4,
-      "type": "input",
-      "value":"",
-      "inputType": "tel",
-      "titles": [
-          {
-              "language": "EN",
-              "title": "Phone Number"
-          },
-          {
-              "language": "PL",
-              "title": "Numer telefonu"
-          }
-      ]
-  },
-  {
-    "_id": 5,
-    "type": "input",
-    "value":"",
-    "inputType": "text",
-    "titles": [
-        {
-            "language": "EN",
-            "title": "Subject"
-        },
-        {
-            "language": "PL",
-            "title": "Temat"
-        }
-    ]
-},
   {
       "_id": 6,
       "value":"",

@@ -18,22 +18,18 @@ exports.sendEmail = async (req, res) => {
   try {
 
     const bodySanitize = sanitize(req.body);
-    const {name, lastName, email, phoneNo, subject, message} = bodySanitize;
+    const {name, email, message} = bodySanitize;
     if (name
-      && lastName
       && email
       && email.split('@').length === 2
       && email.split('.').length === 2
       && email.split('.')[1] !== ''
       && email.indexOf(' ') === -1
-      && phoneNo
-      && subject
       && message
     ) {
       const htmlMessage = message.replace(/\n/g, '<br>\n') + '<br><br>' 
-      + `<b>${name} ${lastName}</b><br>`
-      + `<b>E-Mail: ${email}</b><br>`
-      + `<b>Phone number: ${phoneNo}</b>`;
+      + `<b>${name}</b><br>`
+      + `<b>E-Mail: ${email}</b><br>`;
 
       let transporter = nodemailer.createTransport({
         service: process.env.NODE_ENV === 'production' ? process.env.EMAIL_SERVICE : emailPass.emailDetails.emailService,
@@ -47,7 +43,7 @@ exports.sendEmail = async (req, res) => {
       await transporter.sendMail({
         from: process.env.NODE_ENV === 'production' ? process.env.USER : emailPass.emailDetails.user, // sender address
         to: process.env.NODE_ENV === 'production' ? process.env.MY_EMAIL : emailPass.emailDetails.myEmail, // list of receivers
-        subject: subject, // Subject line
+        subject: `Message from Portfolio website`, // Subject line
         html: htmlMessage, // html body
       });
 
